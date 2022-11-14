@@ -1,0 +1,1199 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	.carousel {
+		margin: 50px auto;
+		padding: 0 70px;
+	}
+
+	.carousel .item {
+		color: #999;
+		overflow: hidden;
+		min-height: 120px;
+		font-size: 13px;
+	}
+
+	.carousel .media img {
+		width: 80px;
+		height: 80px;
+		display: block;
+		border-radius: 50%;
+	}
+
+	.carousel .testimonial {
+		padding: 0 15px 0 60px;
+		position: relative;
+	}
+
+	.carousel .testimonial::before {
+		content: "\201C";
+		font-family: Arial, sans-serif;
+		color: #e2e2e2;
+		font-weight: bold;
+		font-size: 68px;
+		line-height: 54px;
+		position: absolute;
+		left: 15px;
+		top: 0;
+	}
+
+	.carousel .overview b {
+		text-transform: uppercase;
+		color: #1c47e3;
+	}
+
+	.carousel .carousel-indicators {
+		bottom: -40px;
+		z-index: 0 !important;
+	}
+
+	.carousel-indicators li,
+	.carousel-indicators li.active {
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		margin: 1px 3px;
+		
+	}
+
+	.carousel-indicators li {
+		background: #000000 !important;
+		border: 4px solid rgb(0, 0, 0) !important;
+		
+	}
+
+	.carousel-indicators li.active {
+		color: rgb(0, 0, 0) !important;
+		background: #ffffff !important;
+		border: 5px double;
+		
+	}
+</style>
+
+
+<!--Main-->
+<main class="ptf-main">
+	<article class="ptf-page ptf-page--home-default">
+		<section class="has-accent-1-background">
+
+			<div class="ptf-spacer" style=" --ptf-xxl: 7rem;"></div>
+			<div class="container-xxl">
+				<div class="row">
+					<div class="col-xl-7 col-sm-6 col-6">
+						<div class="ptf-spacer" style=" --ptf-xxl: 0.625rem;"></div>
+						<!-- Animated Block-->
+						<!-- <div class="ptf-animated-block" data-aos="fade" data-aos-delay="100">
+                                <p class="fz-40 fw-bold lh-1p3 text-uppercase has-white-color">Crafting Digital
+                                    <br>Agency</p>
+                            </div> -->
+						<!--Spacer -->
+						<div class="ptf-spacer" style=" --ptf-xxl: 4.125rem; --ptf-md: 4.0625rem;"></div>
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="200">
+							<h2><img src="../static/img/adsa.png" alt="" style="width: 11%;"><b>Digital Studio</b> </h2>
+							<p class="fz-70 fz-40--md fw-extrabold lh-1p1 has-white-color">Good design mean that
+								<br>good business
+							</p>
+						</div>
+						<!--Spacer-->
+						<!-- <div class="ptf-spacer" style=" --ptf-xxl: 9.375rem; --ptf-md: 4.6875rem;"></div> -->
+						<div class="row">
+							<div class="col-xl-8 col-sm-12 col-12">
+								<div style="max-width: 545px">
+									<!--Animated Block-->
+									<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+										<!--Divider-->
+
+										<!--Spacer-->
+										<div class="ptf-spacer" style=" --ptf-xxl: 2.375rem; --ptf-md: 2.1875rem;">
+										</div>
+										<p class="fz-24 has-white-color">We help our client suceed by creating
+											identities, digital experiences, and printmaterials that communicate
+											clearly, achieve marketing goals & look fantastic Lorem uispum dolor sit
+											amert tunoer poea opefse ceefo goipully.</p>
+									</div>
+									<!--Spacer-->
+									<div class="ptf-spacer" style=" --ptf-xxl: 4.875rem; --ptf-md: 3.4375rem;">
+									</div>
+									<!--Animated Block-->
+									<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+										<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed"
+											href="about-us.html" target="_self">Learn More</a>
+										<a class="ptf-btn ptf-btn--primary ptf-btn--inversed" href="about-us.html"
+											target="_self">Get A Quote</a>
+									</div>
+									<div class="ptf-spacer" style=" --ptf-xxl: 4.875rem; --ptf-md: 3.4375rem;"></div>
+									<div class="ptf-animated-block">
+										<ul class="d-flex" style="list-style:none;">
+											<li style="padding-right: 75px;"><b>+91 9526 850 904 </b></li>
+											<li><b>
+													info@stunsky.com</b></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-5 col-sm-6 col-6">
+						<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active image-size">
+									<img src="../static/img/about-me-main-image.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item image-size">
+									<img src="../static/img/about-me-main-image.jpg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item image-size">
+									<img src="../static/img/about-me-main-image.jpg" class="d-block w-100" alt="...">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+								data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleControls" role="button"
+								data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!--Spacer-->
+				<div class="ptf-spacer" style=" --ptf-xxl: 0.5rem; --ptf-md: 6.25rem;"></div>
+			</div>
+		</section>
+		<section>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem;"></div>
+			<div class="container-xxl">
+				<div class="row">
+					<div class="col-lg-5">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+							<h3><img src="../static/img/adsa.png" alt="" style="width: 8%;">What We Do</h3>
+							<h1><b>Explore Creative And
+									Digital Solutions
+									For Business</b></h1>
+							<!--Spacer-->
+							<div class="ptf-spacer" style=" --ptf-xxl: 2.5rem;"></div>
+							<p class="fz-18">We help ambitious businesses like yours generate more profits by
+								building awareness, driving web traffic, connecting with customers and growing
+								overall sales.</p>
+						</div>
+
+						<div class="ptf-animated-block">
+							<div class="ptf-spacer" style=" --ptf-xxl: 2.5rem;"></div>
+							<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed" href="about-us.html"
+								target="_self">Learn More <i style="padding-left:20px;"
+									class="lnil lnil-arrow-right"></i></a>
+
+						</div>
+						<!--Spacer-->
+						<div class="ptf-spacer" style=" --ptf-lg: 4.375rem; --ptf-md: 2.1875rem;"></div>
+					</div>
+					<div class="col-lg-6 offset-lg-1">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+							<!--Services Box-->
+							<div class="ptf-service-box "><a class="ptf-service-box__link"
+									href="service-detail.html"></a>
+								<div class="ptf-service-box__icon"><i class="lnil lnil-cup"></i></div>
+								<h5 class="ptf-service-box__title">Brand <br>Consultant</h5>
+								<div class="ptf-service-box__content">
+									<p>We build and activate brands throung cultural insight &amp; strategic vision.
+									</p>
+								</div>
+								<div class="ptf-service-box__arrow"><i class="lnil lnil-chevron-right"></i></div>
+							</div>
+						</div>
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+							<!--Services Box-->
+							<div class="ptf-service-box "><a class="ptf-service-box__link"
+									href="service-detail.html"></a>
+								<div class="ptf-service-box__icon"><i class="lnil lnil-website-rank"></i></div>
+								<h5 class="ptf-service-box__title">UI/UX <br>Solution</h5>
+								<div class="ptf-service-box__content">
+									<p>We build and activate brands throung cultural insight &amp; strategic vision.
+									</p>
+								</div>
+								<div class="ptf-service-box__arrow"><i class="lnil lnil-chevron-right"></i></div>
+							</div>
+						</div>
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+							<!--Services Box-->
+							<div class="ptf-service-box "><a class="ptf-service-box__link"
+									href="service-detail.html"></a>
+								<div class="ptf-service-box__icon"><i class="lnil lnil-3d"></i></div>
+								<h5 class="ptf-service-box__title">Packaging</h5>
+								<div class="ptf-service-box__content">
+									<p>We build and activate brands throung cultural insight &amp; strategic vision.
+									</p>
+								</div>
+								<div class="ptf-service-box__arrow"><i class="lnil lnil-chevron-right"></i></div>
+							</div>
+						</div>
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+							<!--Services Box-->
+							<div class="ptf-service-box "><a class="ptf-service-box__link"
+									href="service-detail.html"></a>
+								<div class="ptf-service-box__icon"><i class="lnil lnil-video-camera-alt-1"></i>
+								</div>
+								<h5 class="ptf-service-box__title">Motion Video <br>& TVC</h5>
+								<div class="ptf-service-box__content">
+									<p>We build and activate brands throung cultural insight &amp; strategic vision.
+									</p>
+								</div>
+								<div class="ptf-service-box__arrow"><i class="lnil lnil-chevron-right"></i></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+		</section>
+		<section>
+			<div class="container-xxl">
+				<div class="row align-items-center">
+					<div class="col-12 col-md-10">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="0">
+							<img src="../static/img/adsa.png" alt="" style="width: 4%;padding-bottom: 10px;">
+							<h2 class="h1 large-heading d-inline-flex">Latest Works</h2><a
+								class="ptf-link-with-arrow fz-18 text-uppercase fw-semibold has-black-color d-none d-lg-inline-flex"
+								href="portfolio-grid.html" style="margin-left: 5.625rem;"></a>
+						</div>
+					</div>
+					<div class="col-12 col-md-2 text-md-end">
+						<!--Spacer-->
+						<div class="ptf-spacer" style=" --ptf-md: 1.875rem;"></div>
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+							<!--Slider Controls-->
+							<!-- <div class="ptf-slider-controls ptf-slider-controls--style-1 ptf-portfolio-slider">
+								<div class="ptf-swiper-button-prev ptf-swiper-button-prev--style-1"><i
+										class="lnil lnil-chevron-left"></i></div>
+								<div class="ptf-swiper-button-next ptf-swiper-button-next--style-1"><i
+										class="lnil lnil-chevron-right"></i></div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+				<!--Spacer-->
+				<div class="ptf-spacer" style=" --ptf-xxl: 6.25rem;"></div>
+				<!--Animated Block-->
+				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+					<!--Content Slider-->
+
+					<div class="row">
+						<div class="col-lg-4">
+							<div>
+								<!--Portfolio Item-->
+								<article class="ptf-work ptf-work--style-3">
+									<div class="ptf-work__media"><a class="ptf-work__link"
+											href="portfolio-showcase-1.html"></a>
+										<img class="rounded" src=" {% static 'img/portfolio/work-1.png' %} " alt=""
+											loading="lazy">
+										<div class="text-block">
+											<h4>Nature</h4>
+
+										</div>
+									</div>
+									<!-- <div class="ptf-work__meta">
+												<div class="ptf-work__category">UI/UX
+												</div>
+												<h4 class="ptf-work__title"><a href="portfolio-showcase-1.html">Taskly
+														Dashboard</a>
+												</h4>
+												
+											</div> -->
+								</article>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div>
+								<!--Portfolio Item-->
+								<article class="ptf-work ptf-work--style-3">
+									<div class="ptf-work__media"><a class="ptf-work__link"
+											href="portfolio-showcase-1.html"></a><img class="rounded"
+											src=" {% static 'img/portfolio/work-2.png' %} " alt="" loading="lazy">
+										<div class="text-block">
+											<h4>Nature</h4>
+
+										</div>
+									</div>
+									<!-- <div class="ptf-work__meta">
+												<div class="ptf-work__category">Product
+												</div>
+												<h4 class="ptf-work__title"><a href="portfolio-showcase-1.html">Film
+														&amp; Art Festival</a>
+												</h4>
+											</div> -->
+								</article>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div>
+								<!--Portfolio Item-->
+								<article class="ptf-work ptf-work--style-3">
+									<div class="ptf-work__media"><a class="ptf-work__link"
+											href="portfolio-showcase-1.html"></a><img class="rounded"
+											src=" {% static 'img/portfolio/work-3.png' %} " alt="" loading="lazy">
+									</div>
+									<!-- <div class="ptf-work__meta">
+												<div class="ptf-work__category">Branding, Packaging
+												</div>
+												<h4 class="ptf-work__title"><a href="portfolio-showcase-1.html">Dark
+														Wishky Wine</a>
+												</h4>
+											</div> -->
+								</article>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mt-5">
+						<div class="col-lg-4">
+							<div>
+								<!--Portfolio Item-->
+								<article class="ptf-work ptf-work--style-3">
+									<div class="ptf-work__media"><a class="ptf-work__link"
+											href="portfolio-showcase-1.html"></a><img class="rounded"
+											src=" {% static 'img/portfolio/work-4.png' %} " alt="" loading="lazy">
+									</div>
+									<!-- <div class="ptf-work__meta">
+												<div class="ptf-work__category">Illustration
+												</div>
+												<h4 class="ptf-work__title"><a href="portfolio-showcase-1.html">Swiss
+														Style Poster</a>
+												</h4>
+											</div> -->
+								</article>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div>
+								<!--Portfolio Item-->
+								<article class="ptf-work ptf-work--style-3">
+									<div class="ptf-work__media"><a class="ptf-work__link"
+											href="portfolio-showcase-1.html"></a><img class="rounded"
+											src=" {% static 'img/portfolio/work-5.png' %} " alt="" loading="lazy">
+									</div>
+									<!-- <div class="ptf-work__meta">
+												<div class="ptf-work__category">UI/UX
+												</div>
+												<h4 class="ptf-work__title"><a href="portfolio-showcase-1.html">Liarch
+														Architecture Firm</a>
+												</h4>
+											</div> -->
+								</article>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div>
+								<!--Portfolio Item-->
+								<article class="ptf-work ptf-work--style-3">
+									<div class="ptf-work__media"><a class="ptf-work__link"
+											href="portfolio-showcase-1.html"></a><img class="rounded"
+											src=" {% static 'img/portfolio/work-6.png' %} " alt="" loading="lazy">
+									</div>
+									<!-- <div class="ptf-work__meta">
+												<div class="ptf-work__category">Branding, Packaging, Motion Video
+												</div>
+												<h4 class="ptf-work__title"><a href="portfolio-showcase-1.html">FG Print
+														Brand</a>
+												</h4>
+											</div> -->
+								</article>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			</div>
+			</div>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+		</section>
+		<section class="has-accent-1-background"
+			style="background-image: url( {% static 'img/service-detail.jpg' %} ); background-repeat: no-repeat;	background-position: 100% calc(100% + 120px);">
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 2rem; --ptf-md: 5rem;"></div>
+			<div class="container-xxl">
+				<!--Animated Block-->
+				<div class="ptf-animated-block" data-aos-delay="0">
+					<h2 class="h1 large-heading">Our Approach</h2>
+				</div>
+				<!--Spacer-->
+				<div class="ptf-spacer" style=" --ptf-xxl: 2.5rem; --ptf-md: 3.75rem;"></div>
+				<div class="row" style="--bs-gutter-x: 3.75rem; --bs-gutter-y: 4.5rem">
+					<div class="col-xl-4 col-lg-6">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="0">
+							<!--Approach Box-->
+							<div class="ptf-approach-box space-approach"
+								style="--ptf-title-color: var(--ptf-color-white);padding-bottom: 11px;">
+								<!-- <div class="ptf-approach-box__subtitle">One
+								</div>
+								<h3 class="ptf-approach-box__title h1">Research
+								</h3> -->
+								<div class="ptf-approach-box__content d-flex">
+									<p style="padding-right: 20px;"> CALL US DIRECTLY</p>
+									<p>+91 9526 850 904 </p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-6">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="100">
+							<!--Approach Box-->
+							<div class="ptf-approach-box space-approach"
+								style="--ptf-title-color: var(--ptf-color-white);">
+								<!-- <div class="ptf-approach-box__subtitle">Two
+								</div>
+								<h3 class="ptf-approach-box__title h1">Concept
+								</h3> -->
+								<div class="ptf-approach-box__content d-flex">
+									<p style="padding-right: 101px;padding-left: 26px;">1000+</p>
+									<p>HAPPY CLIENTS
+										IN 10 YEARS</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-6">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="200">
+							<!--Approach Box-->
+							<div class="ptf-approach-box space-approach"
+								style="--ptf-title-color: var(--ptf-color-white);">
+								<!-- <div class="ptf-approach-box__subtitle">Three
+								</div>
+								<h3 class="ptf-approach-box__title h1">Development
+								</h3> -->
+								<div class="ptf-approach-box__content d-flex">
+									<p style="padding-right: 101px;">10000+</p>
+									<p>PROJECTS COMPLETED
+										ON
+										THE WORLDWIDE</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-2">
+
+					</div>
+					<div class="col-xl-8">
+						<h2>Do you have a project, maybe you are looking for
+							creative solutions for web and app development</h2>
+					</div>
+					<center>
+						<div class="ptf-animated-block" data-aos-delay="0" style="color: black;">
+							<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed" href="about-us.html"
+								target="_self">REQUEST A QUOTE</a>
+						</div>
+					</center>
+
+					<div class="col-xl-2">
+
+					</div>
+				</div>
+			</div>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem;"></div>
+		</section>
+
+		<section>
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem;"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<center>
+							<img src="../static/img/adsa.png" alt="" style="width: 4%;padding-bottom: 10px;">
+							<h2 class="h1 large-heading d-inline-flex">Client Reviews</h2><img
+								src="../static/img/adsa.png" alt="" style="width: 4%;padding-bottom: 10px;">
+						</center>
+						<center>
+							<h1><b> People Say About Our Works And
+									Say Our Agency</b></h1>
+						</center>
+
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+							<!-- Carousel indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li data-target="#myCarousel" data-slide-to="2"></li>
+							</ol>
+							<!-- Wrapper for carousel items -->
+							<div class="carousel-inner">
+								<div class="item active">
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="media">
+												<div class="media-left d-flex mr-3">
+													<a href="#">
+														<img src="/examples/images/clients/1.jpg" alt="">
+													</a>
+												</div>
+												<div class="media-body">
+													<div class="testimonial">
+														<p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem
+															scelerisque tempor, varius quam luctus dui. Mauris magna
+															metus nec.</p>
+														<p class="overview"><b>Paula Wilson</b>, Media Analyst</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="media">
+												<div class="media-left d-flex mr-3">
+													<a href="#">
+														<img src="/examples/images/clients/2.jpg" alt="">
+													</a>
+												</div>
+												<div class="media-body">
+													<div class="testimonial">
+														<p>Vestibulum quis quam ut magna consequat faucibus.
+															Pellentesque eget mi suscipit tincidunt. Utmtc tempus
+															dictum. Pellentesque virra.</p>
+														<p class="overview"><b>Antonio Moreno</b>, Web Developer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="media">
+												<div class="media-left d-flex mr-3">
+													<a href="#">
+														<img src="/examples/images/clients/3.jpg" alt="">
+													</a>
+												</div>
+												<div class="media-body">
+													<div class="testimonial">
+														<p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem
+															scelerisque tempor, varius quam luctus dui. Mauris magna
+															metus nec.</p>
+														<p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="media">
+												<div class="media-left d-flex mr-3">
+													<a href="#">
+														<img src="/examples/images/clients/4.jpg" alt="">
+													</a>
+												</div>
+												<div class="media-body">
+													<div class="testimonial">
+														<p>Vestibulum quis quam ut magna consequat faucibus.
+															Pellentesque eget mi suscipit tincidunt. Utmtc tempus
+															dictum. Pellentesque virra.</p>
+														<p class="overview"><b>Mary Saveley</b>, Web Designer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="media">
+												<div class="media-left d-flex mr-3">
+													<a href="#">
+														<img src="/examples/images/clients/5.jpg" alt="">
+													</a>
+												</div>
+												<div class="media-body">
+													<div class="testimonial">
+														<p>Lorem ipsum dolor sit amet, consec adipiscing elit. Nam eusem
+															scelerisque tempor, varius quam luctus dui. Mauris magna
+															metus nec.</p>
+														<p class="overview"><b>Martin Sommer</b>, UX Analyst</p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6">
+											<div class="media">
+												<div class="media-left d-flex mr-3">
+													<a href="#">
+														<img src="/examples/images/clients/6.jpg" alt="">
+													</a>
+												</div>
+												<div class="media-body">
+													<div class="testimonial">
+														<p>Vestibulum quis quam ut magna consequat faucibus.
+															Pellentesque eget mi suscipit tincidunt. Utmtc tempus
+															dictum. Pellentesque virra.</p>
+														<p class="overview"><b>John Williams</b>, Web Developer</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+			<div class="container-xxl">
+				<div class="row">
+					<div class="col-12">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="0">
+							<h1><img src="../static/img/adsa.png" alt="" style="width: 4%;padding-bottom: 10px;"><b>	Partners & Clients</b></h1>
+							<h1 style="font-size: 50px;"><b>Partnered with 180+ brands
+								<br>from 15+ countries</b></h1>
+						</div>
+						<!--Spacer-->
+						<div class="ptf-spacer" style=" --ptf-xxl: 7.5rem; --ptf-md: 3.75rem;"></div>
+					</div>
+				</div>
+				<div class="row" style="--bs-gutter-y: 0rem;">
+					<div class="col-6 col-md-3 col-lg-2  px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="0">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #fcf8f4; --ptf-image-height: 85px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-1.png' %} " alt="Zeplin"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">Zeplin
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="100">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #f3f7fc; --ptf-image-height: 78px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-2.png' %} " alt="Dropbox"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">Dropbox
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="200">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #f9fcf3; --ptf-image-height: 90px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-3.png' %} " alt="Shopify"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">Shopify
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="300">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #f9f9f9; --ptf-image-height: 90px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-4.png' %} " alt="Slack" loading="lazy">
+								</div>
+								<h6 class="ptf-partner-box__title">Slack
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="400">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #fdf4fb; --ptf-image-height: 62px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-5.png' %} " alt="WooCommerce"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">WooCommerce
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="500">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #fdf4fb; --ptf-image-height: 77px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-6.png' %} " alt="InvisionApp"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">InvisionApp
+								</h6>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-6 col-md-3 col-lg-2  px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="0">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #fcf8f4; --ptf-image-height: 85px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-1.png' %} " alt="Zeplin"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">Zeplin
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="100">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #f3f7fc; --ptf-image-height: 78px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-2.png' %} " alt="Dropbox"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">Dropbox
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="200">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #f9fcf3; --ptf-image-height: 90px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-3.png' %} " alt="Shopify"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">Shopify
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="300">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #f9f9f9; --ptf-image-height: 90px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-4.png' %} " alt="Slack" loading="lazy">
+								</div>
+								<h6 class="ptf-partner-box__title">Slack
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="400">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #fdf4fb; --ptf-image-height: 62px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-5.png' %} " alt="WooCommerce"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">WooCommerce
+								</h6>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 col-lg-2   px-0 py-0">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos-delay="500">
+							<!--Partner Box-->
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #fdf4fb; --ptf-image-height: 77px;">
+								<div class="ptf-partner-box__image"><img
+										src=" {% static 'img/root/partners/image-6.png' %} " alt="InvisionApp"
+										loading="lazy"></div>
+								<h6 class="ptf-partner-box__title">InvisionApp
+								</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% comment %}
+				<div class="row">
+					<div class="col-12">
+						<!--Spacer-->
+						<div class="ptf-spacer" style=" --ptf-xxl: 8.75rem; --ptf-md: 4.375rem;"></div>
+						<!--Divider-->
+						<div class="ptf-divider"></div>
+						<!--Spacer-->
+						<div class="ptf-spacer" style=" --ptf-xxl: 6.25rem; --ptf-md: 3.125rem;"></div>
+					</div>
+				</div>
+				<div class="row" style="--bs-gutter-y: 2rem;">
+					<div class="col-6 col-lg-3">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+							<!--Counter Up-->
+							<div class="ptf-counter-up ptf-counter-up--style-1">
+								<div class="ptf-counter-up__value" data-prefix="" data-suffix="">12
+								</div>
+								<h5 class="ptf-counter-up__title">Years of <br>Experience</h5>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="100">
+							<!--Counter Up-->
+							<div class="ptf-counter-up ptf-counter-up--style-1">
+								<div class="ptf-counter-up__value" data-prefix="" data-suffix="">820
+								</div>
+								<h5 class="ptf-counter-up__title">Satisfaction <br>Clients</h5>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="200">
+							<!--Counter Up-->
+							<div class="ptf-counter-up ptf-counter-up--style-1">
+								<div class="ptf-counter-up__value" data-prefix="" data-suffix="">643
+								</div>
+								<h5 class="ptf-counter-up__title">Employees on <br>Worldwide</h5>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="300">
+							<!--Counter Up-->
+							<div class="ptf-counter-up ptf-counter-up--style-1">
+								<div class="ptf-counter-up__value" data-prefix="" data-suffix="">1875
+								</div>
+								<h5 class="ptf-counter-up__title">Projects Completed <br>on 60 Countries</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endcomment %}
+			</div>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+		</section>
+
+
+{% comment %}
+		<section>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 11.875rem; --ptf-md: 5.9375rem;"></div>
+			<div class="container-xxl">
+				<div class="row">
+					<div class="col-lg-4">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+							<h2 class="h1 large-heading">Our<br>Awards</h2>
+						</div>
+						<!--Spacer-->
+						<div class="ptf-spacer" style=" --ptf-lg: 3.75rem;"></div>
+					</div>
+					<div class="col-lg-8">
+						<!--Rewards List-->
+						<ul class="ptf-rewards-list ptf-rewards-list--small"
+							style="--ptf-border-width: 2px; --ptf-border-color: var(--ptf-color-black);">
+							<li class="ptf-rewards-item" data-aos="fade" data-aos-delay="0">
+								<div class="ptf-rewards-item__date">2021
+								</div>
+								<div class="ptf-rewards-item__logo"><img
+										src=" {% static 'img/root/rewards/logo-4.png' %} " alt="" loading="lazy">
+								</div>
+								<div class="ptf-rewards-item__content">
+									<div class="ptf-rewards-project">
+										<div class="ptf-rewards-project__content">
+											<h5><a href="#">POTY 2021</a>
+											</h5><span>SPA Brand Redesign</span>
+										</div>
+										<div class="ptf-rewards-project__link"><a
+												class="ptf-link-with-arrow text-uppercase fz-14" href="#">See
+												project</a></div>
+									</div>
+									<div class="ptf-rewards-project">
+										<div class="ptf-rewards-project__content">
+											<h5><a href="#">Design Inspiration #5</a>
+											</h5><span>MNX Business Card</span>
+										</div>
+										<div class="ptf-rewards-project__link"><a
+												class="ptf-link-with-arrow text-uppercase fz-14" href="#">See
+												project</a></div>
+									</div>
+								</div>
+							</li>
+							<li class="ptf-rewards-item" data-aos="fade" data-aos-delay="100">
+								<div class="ptf-rewards-item__date">2020
+								</div>
+								<div class="ptf-rewards-item__logo"><img
+										src=" {% static 'img/root/rewards/logo-2.png' %} " alt="" loading="lazy">
+								</div>
+								<div class="ptf-rewards-item__content">
+									<div class="ptf-rewards-project">
+										<div class="ptf-rewards-project__content">
+											<h5><a href="#">Websites Of The Year 2020</a>
+											</h5><span>Lewis Studio</span>
+										</div>
+										<div class="ptf-rewards-project__link"><a
+												class="ptf-link-with-arrow text-uppercase fz-14" href="#">See
+												project</a></div>
+									</div>
+									<div class="ptf-rewards-project">
+										<div class="ptf-rewards-project__content">
+											<h5><a href="#">Websites Of The Month, August 2020</a>
+											</h5><span>Liarch Architecture Firm Website</span>
+										</div>
+										<div class="ptf-rewards-project__link"><a
+												class="ptf-link-with-arrow text-uppercase fz-14" href="#">See
+												project</a></div>
+									</div>
+									<div class="ptf-rewards-project">
+										<div class="ptf-rewards-project__content">
+											<h5><a href="#">Best 20 Websites Favourite 2020</a>
+											</h5><span>Bauhaus Arc Site</span>
+										</div>
+										<div class="ptf-rewards-project__link"><a
+												class="ptf-link-with-arrow text-uppercase fz-14" href="#">See
+												project</a></div>
+									</div>
+								</div>
+							</li>
+							<li class="ptf-rewards-item" data-aos="fade" data-aos-delay="200">
+								<div class="ptf-rewards-item__date">2019
+								</div>
+								<div class="ptf-rewards-item__logo"><img
+										src=" {% static 'img/root/rewards/logo-3.png' %} " alt="" loading="lazy">
+								</div>
+								<div class="ptf-rewards-item__content">
+									<div class="ptf-rewards-project">
+										<div class="ptf-rewards-project__content">
+											<h5><a href="#">1st Winner Portfolio Review US 2019</a>
+											</h5><span>Designer Logan Cee</span>
+										</div>
+										<div class="ptf-rewards-project__link"><a
+												class="ptf-link-with-arrow text-uppercase fz-14" href="#">See
+												project</a></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+		</section>
+		<section>
+			<div class="container-xxl">
+				<!--Divider-->
+				<div class="ptf-divider"></div>
+			</div>
+		</section>
+		<section>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+			<div class="container-xxl">
+				<!--Animated Block-->
+				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+					<div class="ptf-isotope-grid" data-columns="3" data-layout="masonry" data-x-gap="100"
+						data-y-gap="90">
+						<div class="grid-sizer"></div>
+						<div class=" grid-item filter-1 filter-4">
+							<!--Blog Post-->
+							<article class="ptf-post ptf-post--style-4">
+								<div class="ptf-post__media"><img src=" {% static 'img/home/default/post-1.png' %} "
+										alt="" loading="lazy">
+									<div class="ptf-post__media__content">
+										<header class="ptf-post__header">
+											<div class="ptf-post__meta"><span class="cat">Product</span><span
+													class="date">Dec 15, 2021</span>
+											</div>
+											<h3 class="ptf-post__title">Review product BWIB</h3>
+										</header>
+									</div>
+								</div>
+								<div class="ptf-post__content">
+									<header class="ptf-post__header">
+										<div class="ptf-post__meta"><span class="cat">Product</span><span
+												class="date">Dec 15, 2021</span>
+										</div>
+										<h3 class="ptf-post__title"><a href="single-post.html">Review product
+												BWIB</a>
+										</h3>
+									</header>
+									<div class="ptf-post__excerpt">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim
+											tortor vitae mattis tempor...
+										</p>
+									</div>
+									<footer class="ptf-post__footer"><a class="ptf-read-more-link"
+											href="single-post.html">Continue</a></footer>
+								</div>
+							</article>
+						</div>
+						<div class=" grid-item filter-1 filter-4">
+							<!--Blog Post-->
+							<article class="ptf-post ptf-post--style-4">
+								<div class="ptf-post__media"><img src=" {% static 'img/home/default/post-2.png' %} "
+										alt="" loading="lazy">
+									<div class="ptf-post__media__content">
+										<header class="ptf-post__header">
+											<div class="ptf-post__meta"><span class="cat">Inspiration</span><span
+													class="date">Dec 7, 2021</span>
+											</div>
+											<h3 class="ptf-post__title">Site inspiration with Swiss style</h3>
+										</header>
+									</div>
+								</div>
+								<div class="ptf-post__content">
+									<header class="ptf-post__header">
+										<div class="ptf-post__meta"><span class="cat">Inspiration</span><span
+												class="date">Dec 7, 2021</span>
+										</div>
+										<h3 class="ptf-post__title"><a href="single-post.html">Site inspiration with
+												Swiss style</a>
+										</h3>
+									</header>
+									<div class="ptf-post__excerpt">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim
+											tortor vitae mattis tempor...
+										</p>
+									</div>
+									<footer class="ptf-post__footer"><a class="ptf-read-more-link"
+											href="single-post.html">Continue</a></footer>
+								</div>
+							</article>
+						</div>
+						<div class=" grid-item filter-1 filter-4">
+							<!--Blog Post-->
+							<article class="ptf-post ptf-post--style-4">
+								<div class="ptf-post__media"><img src=" {% static 'img/home/default/post-3.png' %} "
+										alt="" loading="lazy">
+									<div class="ptf-post__media__content">
+										<header class="ptf-post__header">
+											<div class="ptf-post__meta"><span class="cat">Community</span><span
+													class="date">Dec 7, 2021</span>
+											</div>
+											<h3 class="ptf-post__title">Minimalist Trends</h3>
+										</header>
+									</div>
+								</div>
+								<div class="ptf-post__content">
+									<header class="ptf-post__header">
+										<div class="ptf-post__meta"><span class="cat">Community</span><span
+												class="date">Dec 7, 2021</span>
+										</div>
+										<h3 class="ptf-post__title"><a href="single-post.html">Minimalist Trends</a>
+										</h3>
+									</header>
+									<div class="ptf-post__excerpt">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dignissim
+											tortor vitae mattis tempor...
+										</p>
+									</div>
+									<footer class="ptf-post__footer"><a class="ptf-read-more-link"
+											href="single-post.html">Continue</a></footer>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+		</section>
+
+{% endcomment %}
+	</article>
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+	crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+
+
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+<script>
+	$(document).ready(function () {
+		$('#demo2').owlCarousel({
+			loop: true,
+			margin: 10,
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 1,
+					nav: true
+				},
+				600: {
+					items: 1,
+					nav: false
+				},
+				1000: {
+					items: 2,
+					nav: true,
+					loop: false,
+					margin: 20
+				}
+			}
+		})
+	})
+</script>
+
+{% endblock %}

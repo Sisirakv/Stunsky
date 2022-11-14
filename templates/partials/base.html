@@ -1,0 +1,59 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html
+    class="no-js ptf-is--home-default ptf-is--header-style-3 ptf-is--footer-style-1 ptf-is--custom-cursor ptf-is--footer-fixed"
+    lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Moonex - Home Default</title>
+    <meta name="description" content="Multipurpose HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href=" {% static 'img/root/favicon.png' %} ">
+    <!--Framework-->
+    <link rel="stylesheet" href=" {% static 'css/framework/bootstrap-reboot.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/framework/bootstrap-grid.min.css' %} ">
+    <link rel="stylesheet" href=" {% static 'css/framework/bootstrap-utilities.min.css' %} ">
+    <!--Plugins-->
+    <link rel="stylesheet" href=" {% static 'css/ptf-plugins.min.css' %} ">
+    <!--Fonts-->
+    <link rel="stylesheet" href="../../../fonts.googleapis.com/css2b222.css?family=Amiri&amp;display=swap">
+    <link rel="stylesheet" href=" {% static 'fonts/CerebriSans/style.css' %} ">
+    <!--Icons-->
+    <link rel="stylesheet"
+        href=" {% static 'fonts/LineIcons-PRO/WebFonts/Pro-Light/font-css/LinIconsPro-Light.css' %} ">
+    <link rel="stylesheet" href=" {% static 'fonts/LineIcons-PRO/WebFonts/Pro-Regular/font-css/LineIcons.css' %} ">
+    <link rel="stylesheet" href=" {% static 'fonts/Socicons/socicon.css' %} ">
+    <!--Style-->
+    <link rel="stylesheet" href=" {% static 'css/ptf-main.min.css' %} ">
+    <!--Custom-->
+    <link rel="stylesheet" href=" {% static 'css/custom.css' %} ">
+</head>
+
+<body>
+    <!--Site Wrapper-->
+    <div class="ptf-site-wrapper animsition">
+
+        <div class="ptf-site-wrapper__inner">
+            {% include 'partials/header.html' %}
+
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+  
+    {% include 'partials/footer.html' %}
+
+    </div>
+            <!--Libs-->
+            <script src=" {% static 'scripts/ptf-plugins.min.js' %} "></script>
+            <script src=" {% static 'scripts/ptf-helpers.js' %} "></script>
+            <script src=" {% static 'scripts/ptf-controllers.min.js' %} "></script>
+</body>
+
+</html>

@@ -188,7 +188,86 @@
 		position: relative;
 		z-index: 2;
 	}
+	/* .ptf-approach-box{
+		padding-bottom: 6px
+	} */
+	.space-approach{
+		padding-top: 0.75rem !important;
+		padding-bottom: 6px;
+	}
+	.parabox{
+		padding-right: 12px;
+	}
+	.parabox1{
+		padding-right: 32px !important;
+    	padding-left: 26px !important;
+	}
+	.parabox2{
+		padding-right: 16px !important;
+		padding-left: 14px !important;
+	}
+	.carousel .carousel-indicators{
+		bottom: -51px !important;
+	}
+	.partnertitle{
+		font-size: 1.5rem !important;
+
+	}
+	.partnertitleimage{
+		width: 3% !important;
+    	padding-bottom: 3px !important;
+	}
+	.partneh1{
+		font-size: 40px !important; 
+	}
+	.carousel-inner{
+		width: 100% !important;
+	}
+	.carousel{
+		margin: 50px auto;
+		padding: 0 70px;
+	}
+
+	.carousel-control-prev{
+		left: 64px !important;
+	}
+	.image-size {
+		margin-top: 77px;
+		width: 71% !important;
+	
+	}
+	.carousel-control-next {
+		right: 170px !important;
+	}
+	.bannerli{
+		padding-right: 75px;
+		font-size: 20px;
+	}
+	.bannerli1{
+		/* padding-right: 75px; */
+		font-size: 20px;
+	}
+	.subscribe-form button {
+		position: absolute;
+		right: 0;
+		background: #ff5e14;
+		padding: 13px 20px;
+		border: 1px solid #ff5e14;
+		top: 0;
+	}
+	.black{
+		width: 24%;
+	}
+	.ptf-navbar-logo{
+		width: 549px;
+	}
+	.blogtitle{
+		color: black !important;
+		font-weight: 200px !important;
+	}
+	
 }
+
 
 /* max-width 767px */
 @media (max-width: 767px) {
@@ -205,6 +284,20 @@
 	.ptf-custom--1631 {
 		font-size: 38px;
 	}
+	.subscribe-form button {
+		position: absolute;
+		right: 0;
+		background: #ff5e14;
+		padding: 13px 20px;
+		border: 1px solid #ff5e14;
+		top: 0;
+	}
+	.black{
+		width: 36%;
+	}
+	.carousel-control-next{
+		
+	}
 }
 
 /* max-width 991px */
@@ -218,6 +311,50 @@
 		font-size: 48px;
 		line-height: 60px;
 	}
+	.parabox{
+		padding-right: 8px;
+	}
+	.parabox1{
+		padding-right: 101px;
+		padding-left: 26px;
+	}
+	.parabox2{
+		padding-right: 101px;
+		padding-left: 26px;
+	}
+	.ptf-service-box{
+		grid-template-columns: -1fr !important;
+	}
+	.carousel .media img{
+		width: 40px !important;
+		height: 40px !important;
+	}
+	.carousel .testimonial{
+		padding: 0 1px 0 0px !important;
+	}
+	.carousel .testimonial::before{
+		left:200px !important;
+	}
+	.carousel .carousel-indicators{
+		bottom: -61px !important;
+	}
+
+	.partneh1{
+		font-size: 26px;
+	}
+	.partnertitle{
+		font-size: 1.5rem !important;
+
+	}
+	.partnertitleimage{
+		width: 3% !important;
+    	padding-bottom: 3px !important;
+	}
+	.black{
+		width: 18%;
+	}
+	
+	
 }
 
 /* max-width 575px */
@@ -235,28 +372,95 @@
 	.ptf-custom--0531 {
 		bottom: 5%;
 	}
+	.carousel-inner {
+		
+		width: 144% !important;
+	}
+	.testimonialcaurosal{
+		width: 100% !important;
+	}
+	.carousel{
+		margin: 76px auto !important;
+    	padding: 0 0px !important;
+	}
+	.carousel-control-prev{
+		left: 149px !important;
+	}
+
+	.carousel-control-next {
+		right: 124px !important;
+	}
+	.image-size {
+		margin-top: 77px;
+		width: 80% !important;
+	
+	}
+	.ptf-btn{
+		padding: 1.4375rem 4.000001px;
+
+	}
+	.bannerli{
+		padding-right: 2px;
+	}
+	.bannerli1{
+		margin-left: 1px;
+	}
+	.parabox{
+		padding-right: 87px;
+	}
+	.black{
+		width: 38%;
+	}
 
 
 }
 
+@media (max-width: 320px) {
+	.image-size {
+		margin-top: 77px;
+		width: 82% !important;
+	}
+	.carousel-control-next {
+		right: 94px !important;
+	}
+	.carousel-control-prev {
+		left: 115px !important;
+	}
+	h2 b{
+			font-size: 1rem;
+	}
+	.fz-40--md {
+		font-size: 1.5rem;
+	}
+	.fz-24 {
+		font-size: 1rem;
+	}
+	.ptf-btn {
+		padding: 1rem 8.000001px;
+		margin: 0px 0px 9px 0px;
+	}
+	.bannerli {
+		padding-right: 58px;
+	}
+	.subscribe-form button{
+		padding: 6px 5px;
+	}
+	.black{
+		width: 56%;
+	}
+}
 
-.lnir-menu-alt-5 {
+
+/* .lnir-menu-alt-5 {
 	padding-right: 159px;
-}
+} */
 
 .has-white-color {
 	line-height: 1;
 }
 
-.image-size {
-	margin-top: 77px;
-	width: 75% !important;
 
-}
 
-.carousel-control-next {
-	right: 137px !important;
-}
 
 .d-block {
 	border-radius: 5%;
@@ -528,14 +732,7 @@
   border: 1px solid #2E2E2E;
   color: #fff;
 }
-.subscribe-form button {
-    position: absolute;
-    right: 0;
-    background: #ff5e14;
-    padding: 13px 20px;
-    border: 1px solid #ff5e14;
-    top: 0;
-}
+
 .subscribe-form button i {
   color: #fff;
   font-size: 22px;
@@ -567,9 +764,6 @@
 
 
 
-.carousel-control-prev{
-	left: 64px !important;
-}
 
 .atag{
 	color: black !important;

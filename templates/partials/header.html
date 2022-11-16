@@ -126,97 +126,40 @@
 <div class="ptf-offcanvas-menu">
     <div class="ptf-offcanvas-menu__header">
         <div class="ptf-language-switcher"><a class="is-active" href="#">Eng</a><a href="#">Fra</a><a href="#">Ger</a>
-        </div><a class="ptf-offcanvas-menu-icon js-offcanvas-menu-toggle" href="#"><i class="lnir lnir-close"></i></a>
+        </div><a class="ptf-offcanvas-menu-icon js-offcanvas-menu-toggle" href="#"><i class="lnil lnil-close"></i></a>
     </div>
     <div class="ptf-offcanvas-menu__navigation">
         <!--Navigation-->
         <nav class="ptf-nav ptf-nav--offcanvas">
             <!--Menu-->
             <ul class="sf-menu">
-                <li class="menu-item-has-children two-columns"><a href="index.html"><span>Home</span></a>
+                <li class="menu-item-has-children two-columns"><a href="{% url 'index' %}"><span>Home</span></a>
+                
+                </li>
+                <li class="menu-item-has-children"><a href="{% url 'about us' %}"><span>About</span></a>
+                  
+                </li>
+                <li class="menu-item-has-children"><a href="#"><span>Services</span></a>
                     <ul class="sub-menu">
-                        <li class=" current-menu-item"><a href="index.html"><span>Home Default</span></a>
+                        <li><a href="#"><span>Graphics Design</span></a>
                         </li>
-                        <li><a href="home-studio.html"><span>Home Studio</span></a>
+                        <li><a href="{% url 'UI UX' %}"><span>UI/UX Solution</span></a>
                         </li>
-                        <li><a href="home-agency.html"><span>Home Agency</span></a>
+                        <li><a href="#"><span>Packaging</span></a>
                         </li>
-                        <li><a href="home-minimal.html"><span>Home Minimal</span></a>
-                        </li>
-                        <li><a href="home-dark.html"><span>Home Dark</span></a>
-                        </li>
-                        <li><a href="home-parallax.html"><span>Home Parallax</span></a>
-                        </li>
-                        <li><a href="home-freelancer.html"><span>Home Freelancer</span></a>
-                        </li>
-                        <li><a href="home-vertical.html"><span>Home Vertical</span></a>
-                        </li>
-                        <li><a href="home-trending.html"><span>Home Trending</span></a>
-                        </li>
-                        <li><a href="home-modern.html"><span>Home Modern</span></a>
+                        <li><a href="#"><span>Web development</span></a>
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item-has-children"><a href="#"><span>Portfolio</span></a>
-                    <ul class="sub-menu">
-                        <li><a href="portfolio-grid.html"><span>Works Grid</span></a>
-                        </li>
-                        <li><a href="portfolio-masonry.html"><span>Works Masonry</span></a>
-                        </li>
-                        <li><a href="portfolio-listing.html"><span>Works Listing</span></a>
-                        </li>
-                        <li><a href="portfolio-carousel.html"><span>Works Carousel</span></a>
-                        </li>
-                        <li><a href="portfolio-showcase-1.html"><span>Work Showcase 1</span></a>
-                        </li>
-                        <li><a href="portfolio-showcase-2.html"><span>Work Showcase 2</span></a>
-                        </li>
-                    </ul>
+                <li class="menu-item-has-children two-columns"><a href="{% url 'Blog' %}"><span>Blog</span></a>
                 </li>
-                <li class="menu-item-has-children"><a href="#"><span>Blog</span></a>
-                    <ul class="sub-menu">
-                        <li><a href="blog-grid.html"><span>Blog Grid</span></a>
-                        </li>
-                        <li><a href="blog-masonry.html"><span>Blog Masonry</span></a>
-                        </li>
-                        <li><a href="blog-sidebar.html"><span>Blog Sidebar</span></a>
-                        </li>
-                        <li><a href="single-post.html"><span>Single Post</span></a>
-                        </li>
-                        <li><a href="single-post-sidebar.html"><span>Single Post Sidebar</span></a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children two-columns"><a href="#"><span>Pages</span></a>
-                    <ul class="sub-menu">
-                        <li><a href="about-us.html"><span>About Us</span></a>
-                        </li>
-                        <li><a href="about-me.html"><span>About Me</span></a>
-                        </li>
-                        <li><a href="services.html"><span>Services</span></a>
-                        </li>
-                        <li><a href="service-detail.html"><span>Service Detail</span></a>
-                        </li>
-                        <li><a href="pricing.html"><span>Pricing</span></a>
-                        </li>
-                        <li><a href="team.html"><span>Team</span></a>
-                        </li>
-                        <li><a href="faq.html"><span>FAQ</span></a>
-                        </li>
-                        <li><a href="contact.html"><span>Contact</span></a>
-                        </li>
-                        <li><a href="404.html"><span>Page 404</span></a>
-                        </li>
-                        <li><a href="coming-soon.html"><span>Coming Soon</span></a>
-                        </li>
-                    </ul>
+                <li class="menu-item-has-children two-columns"><a href="{% url 'contact' %}"><span>Contact</span></a>
                 </li>
             </ul>
         </nav>
     </div>
     <div class="ptf-offcanvas-menu__footer">
-        <p class="ptf-offcanvas-menu__copyright">© 2021 <span>Moonex</span>. All Rights Reserved. <br>Development by
-            <span>Paul Studio</span>.
+        <p class="ptf-offcanvas-menu__copyright">© 2022 Stunsky Design and Technologies. All rights reserved.
         </p>
         <div class="ptf-offcanvas-menu__socials">
             <!--Social Icon--><a class="ptf-social-icon ptf-social-icon--style-3 twitter" href="#" target="_blank"><i

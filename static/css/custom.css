@@ -377,6 +377,32 @@
 	.ptf-post__title a{ 
 		font-size: 2rem;
 	}
+	.ptf-filters--style-1{
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
+	.ptf-work__category{
+		font-size: 1.5rem !important;
+		/* font-weight: 700; */
+	}
+	.ptf-work__title a{
+		font-size: 2.4rem !important;
+		font-weight: 700;
+		color: black !important;
+	}
+	.container-new {
+		width: 95% !important;
+	}
+	.fontabout{
+		font-size: 1.5rem;
+	}
+	.stunsky{
+		font-size: 4rem;
+	}
+	.bannerdigital p{
+		font-size: 8.375rem !important;
+	}
+		
 }
 
 
@@ -639,6 +665,18 @@
 	}
 	.ptf-offcanvas-menu__header .ptf-offcanvas-menu-icon{
 		color: black !important;
+	}
+	.fontabout{
+		font-size: 1rem;
+	}
+	.stunsky{
+		font-size: 4rem;
+	}
+	.ptf-mask-image img{
+		width: 100% !important;
+	}
+	.ptf-team-member__function{
+		font-size: 1rem !important;
 	}
 
 }
@@ -1017,3 +1055,18 @@ menu button span:last-of-type {
 	text-transform: uppercase;
 }
 
+
+.collapse{
+	cursor: pointer;
+	display: block;
+	background: #cdf;
+  }
+  .collapse + input{
+	display: none; /* hide the checkboxes */
+  }
+  .collapse + input + div{
+	display:none;
+  }
+  .collapse + input:checked + div{
+	display:block;
+  }

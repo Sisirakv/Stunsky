@@ -18,5 +18,14 @@ def contact(requset):
 def blog(requset):
     return render(requset, 'blog.html')
 
+
+def portfolio(requset):
+    return render(requset, 'portfolio.html')
+
+
+def careers(requset):
+    return render(requset, 'Careers.html')
+
+
 def ui_ux(requset):
     return render(requset, 'ui-ux.html')

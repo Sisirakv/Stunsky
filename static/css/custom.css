@@ -233,11 +233,11 @@
 	}
 	.image-size {
 		margin-top: 77px;
-		width: 71% !important;
+		width: 100% !important;
 	
 	}
 	.carousel-control-next {
-		right: 170px !important;
+		right: 69px !important;
 	}
 	.bannerli{
 		padding-right: 75px;
@@ -343,6 +343,39 @@
 	}
 	.ptf-offcanvas-menu__header .ptf-offcanvas-menu-icon{
 		color: black !important;
+	}
+	.ptf-nav--default .sf-menu>li>a{
+		font-size: 1.5rem;
+		font-weight: 700;
+		line-height: 1;
+		text-transform: uppercase;
+	}
+	.fz-18{
+		font-size: 1.5rem;
+	}
+	.ptf-service-box__content p{
+		font-size: 1.5rem;
+	}
+	.ptf-approach-box__content{
+		font-size: 1.5rem;
+	}
+	.testip{
+		font-size: 1.5rem;
+	}
+	.h1title{
+		font-size: 4rem;
+	}
+	.fz-21{
+		font-size: 2rem;
+	}
+	.ptf-news-slide__excerpt p{ 
+		font-size: 1.5rem;
+	}
+	.ptf-post__meta span{
+		font-size: 1rem;
+	}
+	.ptf-post__title a{ 
+		font-size: 2rem;
 	}
 }
 

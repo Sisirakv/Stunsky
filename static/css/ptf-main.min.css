@@ -7558,7 +7558,7 @@ p.form-submit {
 }
 
 .ptf-partner-box {
-    padding: 1.125rem .9375rem 2.5rem;
+    padding: 1.125rem .9375rem 1.125rem;
     -webkit-transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
     text-align: center;
@@ -7595,7 +7595,7 @@ p.form-submit {
 .ptf-partner-box__title {
     font-size: 0.8rem;
     font-weight: 700;
-    margin-top: 2.1875rem;
+    margin-top: 1.1875rem;
     -webkit-transition: color var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: color var(--ptf-transition-duration) var(--ptf-transition-easing);
     text-transform: uppercase;

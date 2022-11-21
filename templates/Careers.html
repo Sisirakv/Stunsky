@@ -5,6 +5,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+{% comment %}
 <style>
 	.accordion {
 		padding: 4rem;
@@ -108,7 +109,7 @@
 						<div class="ptf-animated-block  btnpadding">
 							<div class="ptf-spacer" style=" --ptf-xxl: 2.5rem;"></div>
 							<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed rounded"
-								 target="_self">Apply Now<i style="padding-left:7px;"
+								target="_self">Apply Now<i style="padding-left:7px;"
 									class="lnil lnil-arrow-right"></i></a>
 
 						</div>
@@ -128,9 +129,10 @@
 						</ul>
 						<h5 class="jobdetails">Job type : Full time</h5>
 						<h5 class="jobdetails">Salary : 15k+</h5>
-						<div class="ptf-animated-block  btnpadding" >
+						<div class="ptf-animated-block  btnpadding">
 							<div class="ptf-spacer" style=" --ptf-xxl: 2.5rem;"></div>
-							<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed rounded" type="button" target="_self" id="enqrybtn">Apply Now<i style="padding-left:7px;"
+							<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed rounded" type="button"
+								target="_self" id="enqrybtn">Apply Now<i style="padding-left:7px;"
 									class="lnil lnil-arrow-right"></i></a>
 
 						</div>
@@ -154,62 +156,374 @@
 			<!--Spacer-->
 			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
 		</section>
+
+
 	</article>
 </main>
 
 
 <div class="modal fade" id="exampleModal" aria-hidden="true" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center" id="exampleModalToggleLabel">Enquiry Now</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-center" id="exampleModalToggleLabel">Enquiry Now</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
 
-            <form method="POST" action="#" class="sppb-addon-form-builder-form ajax"
-                enctype="multipart/form-data">{% csrf_token %}
-                <div class="modal-body">
+			<form method="POST" action="#" class="sppb-addon-form-builder-form ajax" enctype="multipart/form-data">{%
+				csrf_token %}
+				<div class="modal-body">
 
-                    <label for="recipient-name" class="col-form-label" required>Name: </label>
-                    <input type="text" name="name" class="form-control" id="recipient-name" required>{{forms.name}}
+					<label for="recipient-name" class="col-form-label" required>Name: </label>
+					<input type="text" name="name" class="form-control" id="recipient-name" required>{{forms.name}}
 
-                    <label for="phn-name" class="col-form-label">Phone Number: </label>
-                    <input type="text" name="phone" class="form-control" id="phn-name" required>{{forms.phone}}
+					<label for="phn-name" class="col-form-label">Phone Number: </label>
+					<input type="text" name="phone" class="form-control" id="phn-name" required>{{forms.phone}}
 
-                    <label for="prdct-name" class="col-form-label">Product name: </label>
-                    <input type="text" name="product_name" class="form-control" id="prdct-name"
-                        required>{{forms.product_name}}
+					<label for="prdct-name" class="col-form-label">Product name: </label>
+					<input type="text" name="product_name" class="form-control" id="prdct-name"
+						required>{{forms.product_name}}
 
-                    <label for="qty-name" class="col-form-label">Quantity: </label>
-                    <input type="number" name="quantity" class="form-control" id="qty-name" required>{{forms.quantity}}
+					<label for="qty-name" class="col-form-label">Quantity: </label>
+					<input type="number" name="quantity" class="form-control" id="qty-name" required>{{forms.quantity}}
 
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" data-bs-target="#exampleModalToggleLabel"
-                        data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                </div>
-            </form>
-        </div>
-    </div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary" data-bs-target="#exampleModalToggleLabel"
+						data-bs-toggle="modal" data-bs-dismiss="modal">Submit</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+						aria-label="Close">Close</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
 
 
 
 <script type="text/javascript">
 
-    $(document).ready(function () {
+	$(document).ready(function () {
 
-        $('[id="enqrybtn"]').click(function () {
+		$('[id="enqrybtn"]').click(function () {
 
-            $('[id="exampleModal"]').modal('show');
+			$('[id="exampleModal"]').modal('show');
 
-        });
+		});
 
-    });
+	});
 
 
-    
+
 
 </script>
+
+{% endcomment %}
+
+<style>
+	.wrapper {
+		display: block;
+		margin-top: auto;
+		margin-left: auto;
+		width: 435px;
+		height: 260px;
+		position: relative;
+		padding: 10px;
+	}
+
+	.orange-border {
+		background-color: #FF8D00;
+		background-image: linear-gradient(130deg, #F88D32, #F9BC4F);
+		position: absolute;
+	}
+
+	.orange-top {
+		width: 100px;
+		height: 10px;
+		top: 0;
+		left: 0;
+	}
+
+	.orange-left {
+		width: 10px;
+		height: 100px;
+		top: 0;
+		left: 0;
+	}
+
+	@keyframes leftgrow {
+		0% {
+			height: 100px;
+			width: 10px;
+		}
+
+		40% {
+			height: 100%;
+			width: 10px;
+		}
+
+		100% {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@keyframes leftshrink {
+		0% {
+			width: 100%;
+			height: 100%;
+		}
+
+		60% {
+			height: 100%;
+			width: 10px;
+		}
+
+		100% {
+			height: 100px;
+			width: 10px;
+		}
+	}
+
+	@keyframes topgrow {
+		0% {
+			width: 100px;
+			height: 10px;
+		}
+
+		60% {
+			width: 100%;
+			height: 10px;
+		}
+
+		100% {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@keyframes topshrink {
+		0% {
+			width: 100%;
+			height: 100%;
+		}
+
+		40% {
+			width: 100%;
+			height: 10px;
+		}
+
+		100% {
+			width: 100px;
+			height: 10px;
+		}
+	}
+
+	.orange-left.grow {
+		animation: leftgrow .5s forwards;
+	}
+
+	.orange-left.shrink {
+		animation: leftshrink .5s forwards;
+	}
+
+	.orange-top.grow {
+		animation: topgrow .5s forwards;
+	}
+
+	.orange-top.shrink {
+		animation: topshrink .5s forwards;
+	}
+
+	.white-card {
+		display: block;
+		text-decoration: none;
+		position: absolute;
+		background-color: white;
+		left: 10px;
+		top: 10px;
+		width: calc(88% - 20px);
+		height: calc(106% - 20px);
+		text-align: center;
+		box-shadow: 0 10px 40px 0 rgba(0, 0, 0, .2);
+	}
+
+	.white-card img {
+		width: 30px;
+		margin-top: 44px;
+	}
+
+	.category {
+		font-size: 18px;
+		color: #222;
+		font-weight: 700;
+		margin: 20px 0 30px;
+	}
+
+	.CTA {
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 11px 40px 13px;
+		color: #FF8D00;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: 1px;
+		font-weight: 600;
+		border: 2px solid #FF8D00;
+		display: inline-block;
+		transition: all .5s;
+	}
+
+
+	.CTA.active {
+		background-color: #FF8D00;
+		color: white;
+	}
+
+	@media (max-width: 575px) {
+		.white-card {
+			display: block;
+			text-decoration: none;
+			position: absolute;
+			background-color: white;
+			left: 10px;
+			top: 11px;
+			width: calc(53% - -3px);
+			height: calc(106% - 36px);
+			text-align: center;
+			box-shadow: 0 10px 40px 0 rgb(0 0 0 / 20%);
+		}
+
+		.CTA {
+			text-decoration: none;
+			text-transform: uppercase;
+			padding: 7px 22px 7px;
+			color: #FF8D00;
+			font-size: 9px;
+			line-height: 16px;
+			letter-spacing: 1px;
+			font-weight: 600;
+			border: 2px solid #FF8D00;
+			display: inline-block;
+			transition: all .5s;
+		}
+	}
+
+	@media (max-width: 1024px) {
+			.white-card {
+				display: block;
+				text-decoration: none;
+				position: absolute;
+				background-color: white;
+				left: 10px;
+				top: 11px;
+				width: calc(48% - -3px);
+				height: calc(104% - 36px);
+				text-align: center;
+				box-shadow: 0 10px 40px 0 rgb(0 0 0 / 20%);
+			}
+
+			.CTA {
+				text-decoration: none;
+				text-transform: uppercase;
+				padding: 7px 22px 7px;
+				color: #FF8D00;
+				font-size: 9px;
+				line-height: 16px;
+				letter-spacing: 1px;
+				font-weight: 600;
+				border: 2px solid #FF8D00;
+				display: inline-block;
+				transition: all .5s;
+			}
+		}
+		}
+</style>
+<main class="ptf-main">
+	<article class="ptf-page ptf-page--portfolio-listing">
+		<section>
+			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+			<div class="container-xxl">
+				<div class="row">
+					<div class="col-xl-10">
+						<!--Animated Block-->
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+							<div class="ptf-spacer" style=" --ptf-xxl: 9rem; --ptf-md: 12rem;"></div>
+							<h1 class="fz-70 fz-40--md fw-extrabold lh-1p1 has-white-color">Career</h1>
+							<h4 class="fz-18">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Lorem Ipsum has been the industry's</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ptf-spacer" style=" --ptf-xxl: 4rem; --ptf-md: 5rem;"></div>
+		</section>
+		<section>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 16rem; --ptf-md: 12rem; --ptf-sm: 6rem;"></div>
+			<div class="container-xxl">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+						<div class="wrapper">
+							<div class="orange-top orange-border"></div>
+							<div class="orange-left orange-border"></div>
+							<a class="white-card" href="{% url 'careers Details' %}">
+								<img src="https://s3.amazonaws.com/levelup-assets/temp/design.png" alt="Design" />
+								<p class="category mb-2">Design & Engineering</p>
+								<p class="category mt-0">2 position</p>
+								<p><span class="CTA">For More Details</span></p>
+
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+						<div class="wrapper">
+							<div class="orange-top orange-border"></div>
+							<div class="orange-left orange-border"></div>
+							<a class="white-card" href="#">
+								<img src="https://s3.amazonaws.com/levelup-assets/temp/design.png" alt="Design" />
+								<p class="category mb-2">Design & Engineering</p>
+								<p class="category mt-0">2 position</p>
+								<p><span class="CTA">For More Details</span></p>
+
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-12">
+						<div class="wrapper">
+							<div class="orange-top orange-border"></div>
+							<div class="orange-left orange-border"></div>
+							<a class="white-card" href="#">
+								<img src="https://s3.amazonaws.com/levelup-assets/temp/design.png" alt="Design" />
+								<p class="category mb-2">Design & Engineering</p>
+								<p class="category mt-0">2 position</p>
+								<p><span class="CTA">For More Details</span></p>
+
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ptf-spacer" style=" --ptf-xxl: 16rem; --ptf-md: 12rem; --ptf-sm: 16rem;"></div>
+		</section>
+	</article>
+</main>
+
+
+<script>
+	$('.white-card').mouseenter(function () {
+		$('.orange-border').removeClass('shrink');
+		$('.orange-border').addClass('grow');
+		$('.CTA').addClass('active');
+	});
+
+	$('.white-card').mouseleave(function () {
+		$('.orange-border').removeClass('grow');
+		$('.orange-border').addClass('shrink');
+		$('.CTA').removeClass('active');
+	});
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 {% endblock %}

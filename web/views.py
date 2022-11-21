@@ -27,5 +27,9 @@ def careers(requset):
     return render(requset, 'Careers.html')
 
 
+def careers_details(requset):
+    return render(requset, 'Careers details.html')
+
+
 def ui_ux(requset):
     return render(requset, 'ui-ux.html')

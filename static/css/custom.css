@@ -256,7 +256,7 @@
 		top: 0;
 	}
 	.black{
-		width: 24%;
+		width: 33%;
 	}
 	.ptf-navbar-logo{
 		width: 549px;
@@ -402,9 +402,25 @@
 	.bannerdigital p{
 		font-size: 8.375rem !important;
 	}
+	.media{
+		border: 2px solid orange;
+		border-radius: 9px;
+		padding: 5px;
+		margin-bottom: 20px;
+	}
+	.carousel-indicators li{
+		width: 6px !important;
+		height: 6px !important;
+	}
 		
 }
 
+
+@media (max-width: 1024px){
+	.black {
+		width: 100%;
+	}
+}
 
 /* max-width 767px */
 @media (max-width: 767px) {
@@ -557,7 +573,7 @@
 		font-size: 1.4rem !important;
 	}
 	.h1title{
-		font-size: 2.3rem;
+		font-size: 2rem;
 	}
 	.ptf-service-box__title{
 		font-size: 1.2rem;
@@ -678,6 +694,16 @@
 	.ptf-team-member__function{
 		font-size: 1rem !important;
 	}
+	.media{
+		border: 2px solid orange;
+		border-radius: 9px;
+		padding: 5px;
+		margin-bottom: 20px;
+	}
+	.carousel-indicators li{
+		width: 6px !important;
+		height: 6px !important;
+	}
 
 }
 
@@ -687,16 +713,16 @@
 		width: 82% !important;
 	}
 	.carousel-control-next {
-		right: 94px !important;
+		right: -15px !important;
 	}
 	.carousel-control-prev {
-		left: 115px !important;
+		left: 5px !important;
 	}
 	h2 b{
 			font-size: 1rem;
 	}
 	.fz-40--md {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 	.fz-24 {
 		font-size: 1rem;
@@ -712,7 +738,17 @@
 		padding: 6px 5px;
 	}
 	.black{
-		width: 56%;
+		width: 46%;
+	}
+	.media{
+		border: 2px solid orange;
+		border-radius: 9px;
+		padding: 5px;
+		margin-bottom: 20px;
+	}
+	.carousel-indicators li{
+		width: 6px !important;
+		height: 6px !important;
 	}
 }
 

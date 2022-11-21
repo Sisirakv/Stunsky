@@ -1,0 +1,252 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+	body {
+		font-family: 'Muli';
+		font-size: 18px;
+		background-color: #fafafa;
+	}
+
+	#page-wrapper {
+		padding: 7%;
+	}
+
+	h1 {
+		font-family: Stint Ultra Expanded;
+		font-size: 50px;
+		line-height: 0px;
+	}
+
+	h2 {
+		font-family: Ultra;
+		font-size: 80px;
+		line-height: 60px;
+	}
+
+	.page {
+		min-width: 200px;
+		margin: 0 auto;
+		/* border: 1px solid; */
+		padding: 4%;
+		border-radius: 20px;
+	}
+
+	.left {
+		text-align: right;
+		vertical-align: top;
+	}
+
+	.right {
+		border-left: 1px solid black;
+	}
+
+	.pagenav {
+		text-align: center;
+	}
+
+	.btn {
+		display: inline-block;
+		border: 1px solid black;
+		padding: 10px;
+		width: 110px;
+		font-size: 20px;
+		margin-top: 30px;
+	}
+
+	.btn:hover {
+		cursor: pointer;
+		font-weight: bold;
+	}
+
+	#page1 {
+		background-color: #CEDCB4;
+	}
+
+	#page1 .btn {
+		background-color: #A7B983;
+	}
+
+	#page1 .btn:hover {
+		background-color: #ECF3DE;
+	}
+
+	#page2 {
+		background-color: #ffc1a5;
+	}
+
+	#page2 .btn {
+		background-color: #ff4f00;
+	}
+
+	#page2 .btn:hover {
+		background-color: #A9B1B8;
+	}
+
+	#page3 {
+		background-color: #fff9dd;
+	}
+
+	#page3 .btn {
+		background-color: #7A6086;
+	}
+
+	#page3 .btn:hover {
+		background-color: #B8ACBC;
+	}
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<section>
+	
+</section>
+
+<section>
+	<!--Spacer-->
+	<div class="ptf-spacer" style=" --ptf-xxl: 16rem; --ptf-md: 12rem; --ptf-sm: 16rem;"></div>
+	<div class="container-xxl">
+			<head>
+				<link href='https://fonts.googleapis.com/css?family=Ultra|Stint+Ultra+Expanded|Muli:300' rel='stylesheet'
+					type='text/css'>
+			</head>
+
+			<body>
+				<div id="page-wrapper">
+					<div id="page1" class="page row">
+						<div class="col-md-4 left">
+							<h1>Page</h1>
+							<h2>One</h2>
+						</div>
+						<div class="col-md-8 right">
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+								the blind texts.</p>
+							<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+							</p>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
+								paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+							<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
+								life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the
+								far World of Grammar.</p>
+						</div>
+						<div class="ptf-spacer" style=" --ptf-xxl: 6rem; --ptf-md: 12rem; --ptf-sm: 16rem;"></div>
+						<div class="row">
+							<div class="col-md-4 left">
+								<h1>Page</h1>
+								<h2>One</h2>
+							</div>
+							<div class="col-md-8 right">
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+									the blind texts.</p>
+								<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+								</p>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
+									paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
+									life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the
+									far World of Grammar.</p>
+							</div>
+						</div>
+					
+							<div class="pagenav row">
+								<div class="btn" onclick="nextpage(1);">Next</div>
+							</div>
+						
+						
+					</div>
+					<div id="page2" class="page" style="display:none;">
+						<div class="col-md-4 left">
+							<h1>Page</h1>
+							<h2>Two</h2>
+						</div>
+						<div class="col-md-8 right">
+							<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question
+								Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+							<p>She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+							<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of
+								her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the
+								Line Lane.</p>
+						</div>
+						<div class="pagenav">
+							<div class="btn" onclick="prevpage(2)">Previous</div>
+							&nbsp;&nbsp;&nbsp;
+							<div class="btn" onclick="nextpage(2)">Next</div>
+						</div>
+					</div>
+					<div id="page3" class="page" style="display:none;">
+						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="300">
+							<h5 class="fz-18 text-uppercase has-3-color fw-normal">Tell us about your project and goals.
+							</h5>
+							<!--Spacer-->
+							<div class="ptf-spacer" style=" --ptf-xxl: 3.125rem;"></div>
+							<form>
+								<div class="ptf-form-group">
+									<label class="fz-21">What’s your name?</label>
+									<input class="is-large" type="text">
+								</div>
+								
+								<div class="ptf-form-group">
+									<label class="fz-21">What’s your email address?</label>
+									<input class="is-large" type="text">
+								</div>
+								<div class="ptf-form-group">
+									<label class="fz-21">Tell us about your project goals</label>
+									<input class="is-large" type="text">
+								</div>
+								
+								<div class="ptf-form-group">
+									<label class="fz-21">What have you budgeted for this project?</label>
+									<input class="is-large" type="text">
+									<!-- <select class="is-large">
+										<option value="">$30,000 and under</option>
+										<option value="100-200">100$-200$</option>
+										<option value="200-500">200$-500$</option>
+										<option value="500-1000">500$-1000$</option>
+									</select> -->
+								</div>
+								<!--Spacer-->
+								<div class="ptf-spacer" style=" --ptf-xxl: 2.5rem;"></div>
+								<div class="ptf-form-group">
+									<label class="ptf-checkbox fz-18" for="terms">
+										<input class="d-none fz-18" type="checkbox" id="terms"><span
+											class="ptf-checkbox__checkmark"></span >I agree to receive occasional
+										Stunsky newsletters containing news & advice on creating personal and
+										business progress via digital tech.
+									</label>
+								</div>
+								<!--Spacer-->
+								<div class="ptf-spacer" style=" --ptf-xxl: 2.625rem;"></div>
+								<center>
+									<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+										<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed"
+											href="#" target="_self">Submit</a>
+									</div>
+								</center>
+								
+								<div class="pagenav">
+									<div class="btn ptf-btn ptf-btn--primary ptf-btn--inversed" target="_self" onclick="prevpage(3)">Previous</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</body>
+	</div>
+</section>
+
+<script>
+	function nextpage(pagenum) {
+		$("#page" + pagenum).slideUp("slow");
+		var nextpagenum = pagenum + 1;
+		$("#page" + nextpagenum).slideDown("slow");
+	}
+
+	function prevpage(pagenum) {
+		$("#page" + pagenum).slideUp("slow");
+		var prevpagenum = pagenum - 1;
+		$("#page" + prevpagenum).slideDown("slow");
+	}
+</script>
+
+{% endblock %}

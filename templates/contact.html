@@ -6,15 +6,16 @@
 
 <main class="ptf-main">
 	<article class="ptf-page ptf-page--contact">
-		<section>
-			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+		<section class="has-accent-1-background banner other" >
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 			<div class="container-xxl">
 				<div class="row">
 					<div class="col-xl-10">
 						<!--Animated Block-->
 						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 							<div class="ptf-spacer" style=" --ptf-xxl: 9rem; --ptf-md: 12rem;"></div>
-							<h1 class="fz-70 fz-40--md fw-extrabold lh-1p1 has-white-color" >Contact</h1>
+							<h1 class="fz-70 fz-40--md fw-extrabold lh-1p1 has-white-color">Contact</h1>
+							<div class="ptf-spacer" style=" --ptf-xxl: 2.5rem;"></div>
 							<h4 class="fz-18">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 								Lorem Ipsum has been the industry's</h4>
 						</div>
@@ -25,24 +26,27 @@
 		</section>
 		<section>
 			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 			<div class="container-xxl">
 				<div class="row">
 					<div class="col-xl-12">
 						<!--Animated Block-->
 						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-							<h3><img src="../static/img/adsa.png" alt="" style="width: 4%;">Our Projects</h3>
-							<h1 class="large-heading" style="font-size: 3rem;"><b>Let's get you an estimate</b>
-							</h1>
-							<div class="ptf-spacer" style=" --ptf-xxl: 2rem; --ptf-md: 5rem;"></div>
-							<p class="fz-18">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-								dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-								book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-								was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+							<h3 class="topheadingh3"><img class="bannersub" src="../static/img/adsa.png" alt="">What We Do</h3>
+							<h1 class="h1title"><b>Explore Creative And Digital Solutions For Business</b></h1>
+							<div class="ptf-spacer" style=" --ptf-xxl: 2rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
+							<p class="fz-18">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+								Lorem Ipsum has been the industry's standard
+								dummy text ever since the 1500s, when an unknown printer took a galley of type and
+								scrambled it to make a type specimen
+								book. It has survived not only five centuries, but also the leap into electronic
+								typesetting, remaining essentially unchanged. It
+								was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+								passages, and more recently with
 								desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 							<!--Spacer-->
 
-							
+
 						</div>
 					</div>
 				</div>
@@ -85,14 +89,16 @@
 						<!--Spacer-->
 						<div class="ptf-spacer" style=" --ptf-lg: 4.375rem; --ptf-md: 2.1875rem;"></div>
 
-						<div class="ptf-spacer" style=" --ptf-xxl: 2rem; --ptf-md: 5rem;"></div>
+						<div class="ptf-spacer" style=" --ptf-xxl: 2rem; --ptf-md: 5rem; --ptf-md: 1rem;"></div>
 
 						<!--Social Icon--><a class="ptf-social-icon ptf-social-icon--style-3 twitter" href="#"
-						target="_blank"><i class="socicon-twitter"></i></a>
-						<!--Social Icon--><a class="ptf-social-icon ptf-social-icon--style-3 facebook" href="#"
+							target="_blank"><i class="socicon-twitter"></i></a>
+						<!--Social Icon--><a class="ptf-social-icon ptf-social-icon--style-3 facebook"
+							href="https://m.facebook.com/story.php?story_fbid=pfbid028GbWPxZDEgLgbo8hztEo5bjbgxkwwJ6Yfu39VzqvyrJJoh4LCDy7L2zFVR2Srb5wl&id=103864742313913"
 							target="_blank"><i class="socicon-facebook"></i></a>
-						<!--Social Icon--><a class="ptf-social-icon ptf-social-icon--style-3 instagram" href="#"
-							target="_blank"><i class="socicon-instagram"></i></a>
+						<!--Social Icon--><a class="ptf-social-icon ptf-social-icon--style-3 instagram"
+							href="https://www.instagram.com/stunsky.dt/" target="_blank"><i
+								class="socicon-instagram"></i></a>
 						<!--Social Icon--><a class="ptf-social-icon ptf-social-icon--style-3 pinterest" href="#"
 							target="_blank"><i class="socicon-pinterest"></i></a>
 					</div>
@@ -103,37 +109,36 @@
 							</h5>
 							<!--Spacer-->
 							<div class="ptf-spacer" style=" --ptf-xxl: 3.125rem;"></div>
-							<form>
+							<form method="POST" class="ajax" enctype="multipart/form-data">{% csrf_token %}
 								<div class="ptf-form-group">
-									<label class="fz-21">What’s your name?</label>
-									<input class="is-large" type="text">
+									<label class="fz-18">What’s your name?</label>
+									{{forms.name}}
 								</div>
-								
+
 								<div class="ptf-form-group">
-									<label class="fz-21">What’s your email address?</label>
-									<input class="is-large" type="text">
+									<label class="fz-18">What’s your email address?</label>
+									{{forms.email}}
 								</div>
 								<div class="ptf-form-group">
-									<label class="fz-21">Tell us about your project goals</label>
-									<input class="is-large" type="text">
+									<label class="fz-18">What’s your phone number?</label>
+									<!-- <input class="is-large" type="text"> -->
+									{{forms.phone}}
 								</div>
-								
 								<div class="ptf-form-group">
-									<label class="fz-21">What have you budgeted for this project?</label>
-									<input class="is-large" type="text">
-									<!-- <select class="is-large">
-										<option value="">$30,000 and under</option>
-										<option value="100-200">100$-200$</option>
-										<option value="200-500">200$-500$</option>
-										<option value="500-1000">500$-1000$</option>
-									</select> -->
+									<label class="fz-18">Tell us about your project goals</label>
+									{{forms.project_goals}}
+								</div>
+								<div class="ptf-form-group">
+									<label class="fz-18">What have you budgeted for this project?</label>
+									{{forms.budeget}}
+
 								</div>
 								<!--Spacer-->
 								<div class="ptf-spacer" style=" --ptf-xxl: 2.5rem;"></div>
 								<div class="ptf-form-group">
 									<label class="ptf-checkbox fz-18" for="terms">
 										<input class="d-none fz-18" type="checkbox" id="terms"><span
-											class="ptf-checkbox__checkmark"></span >I agree to receive occasional
+											class="ptf-checkbox__checkmark"></span>I agree to receive occasional
 										Stunsky newsletters containing news & advice on creating personal and
 										business progress via digital tech.
 									</label>
@@ -141,9 +146,10 @@
 								<!--Spacer-->
 								<div class="ptf-spacer" style=" --ptf-xxl: 2.625rem;"></div>
 								<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-									<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed"
-										href="#" target="_self">Submit</a>
-									
+									<!--Button--><button type="submit"
+										class="ptf-btn ptf-btn--primary ptf-btn--inversed" href="#"
+										target="_self">Submit</button>
+
 								</div>
 							</form>
 						</div>
@@ -151,9 +157,10 @@
 				</div>
 			</div>
 			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 		</section>
 	</article>
 </main>
+
 
 {% endblock %}

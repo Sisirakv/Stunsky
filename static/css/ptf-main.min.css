@@ -845,11 +845,7 @@
     color: var(--ptf-color-white)
 }
 
-.ptf-is--home-default section:first-of-type {
-    background-image: url(../img/service-detail.jpg);
-    background-repeat: no-repeat;
-    background-position: calc(5vw - 121px) calc(59% + 132px)
-}
+
 
 .ptf-is--home-studio section:first-of-type {
     background-image: url(../img/root/home-studio-bubble-1.png);
@@ -1134,9 +1130,10 @@ h1 {
 
     .h1.large-heading,
     h1.large-heading {
-        font-size: 2rem;
+        font-size: 2.8rem;
         line-height: 1.1;
-        font-weight: 200px !important;
+        font-weight: 150px !important;
+        text-align: center;
     }
 }
 
@@ -2188,7 +2185,8 @@ p.form-submit {
     z-index: 50;
     -webkit-transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
-    will-change: background-color
+    will-change: background-color;
+    height: 108px;
 }
 
 .ptf-navbar .ptf-navbar-inner {
@@ -2200,7 +2198,7 @@ p.form-submit {
 }
 
 .ptf-navbar.ptf-navbar--fixed {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -2469,10 +2467,10 @@ p.form-submit {
     margin-left: 2.5rem
 }
 
-.ptf-header--style-3 .ptf-navbar-inner {
-    -webkit-box-shadow: inset 0 -2px var(--ptf-color-black);
-    box-shadow: inset 0 -2px var(--ptf-color-black)
-}
+    /* .ptf-header--style-3 .ptf-navbar-inner {
+        -webkit-box-shadow: inset 0 -2px var(--ptf-color-black);
+        box-shadow: inset 0 -2px var(--ptf-color-black)
+    } */
 
 .ptf-header--style-4 .ptf-nav {
     margin-right: 5rem;
@@ -3918,27 +3916,6 @@ p.form-submit {
     height: 100%
 }
 
-.ptf-work__media {
-    position: relative;
-    overflow: hidden
-}
-
-.ptf-work__media img {
-    width: 83%;
-    -webkit-transition: -webkit-transform calc(var(--ptf-transition-duration) * 3) var(--ptf-transition-easing), -webkit-filter var(--ptf-transition-duration) var(--ptf-transition-easing);
-    transition: -webkit-transform calc(var(--ptf-transition-duration) * 3) var(--ptf-transition-easing), -webkit-filter var(--ptf-transition-duration) var(--ptf-transition-easing);
-    transition: transform calc(var(--ptf-transition-duration) * 3) var(--ptf-transition-easing), filter var(--ptf-transition-duration) var(--ptf-transition-easing);
-    transition: transform calc(var(--ptf-transition-duration) * 3) var(--ptf-transition-easing), filter var(--ptf-transition-duration) var(--ptf-transition-easing), -webkit-transform calc(var(--ptf-transition-duration) * 3) var(--ptf-transition-easing), -webkit-filter var(--ptf-transition-duration) var(--ptf-transition-easing);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform
-}
-
-.ptf-work:hover .ptf-work__media img {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05)
-}
 
 .ptf-work--style-1 .ptf-work__meta,
 .ptf-work--style-2 .ptf-work__meta,
@@ -4263,11 +4240,30 @@ p.form-submit {
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    margin-top: 1.625rem;
+    margin-left: 2.5rem;
+    cursor: pointer;
+    -webkit-transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
+    transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
+
+}
+.new{
+    width: 167%;
+}
+
+.ptf-filters .itemboarder{
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     margin-top: .625rem;
     margin-left: 2.5rem;
     cursor: pointer;
     -webkit-transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
-    transition: all var(--ptf-transition-duration) var(--ptf-transition-easing)
+    transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
+    border: 2px solid;
+    padding: 5px;
+
 }
 
 .ptf-filters .filter-item .filter-counter {
@@ -4368,7 +4364,7 @@ p.form-submit {
 
 .ptf-single-post__wrapper {
     padding-top: 5.625rem;
-    padding-bottom: 10rem
+    padding-bottom: 2rem
 }
 
 @media only screen and (max-width:767px) {
@@ -4772,7 +4768,7 @@ p.form-submit {
 
 .ptf-mask-image img {
     display: block;
-    width: 100%;
+    width: 80%;
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
@@ -6835,10 +6831,13 @@ p.form-submit {
     text-decoration: none
 }
 
-.ptf-btn.ptf-btn--primary {
+/* .ptf-btn.ptf-btn--primary {
     color: var(--ptf-color-white);
-    background-color: var(--ptf-accent-1)
-}
+    background-color: var(--ptf-color-black);
+    font-size: 1.4rem;
+    padding: 1.07rem 9px;
+    border-radius: 9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+} */
 
 .ptf-btn.ptf-btn--primary:hover {
     color: var(--ptf-color-white);
@@ -7558,13 +7557,12 @@ p.form-submit {
 }
 
 .ptf-partner-box {
-    padding: 1.125rem .9375rem 1.125rem;
+    margin-top: 20px;
+    padding: 1.125rem 0.9375rem 1.125rem;
     -webkit-transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
     text-align: center;
-    border-bottom: 1px solid rgb(192, 192, 192);
-    border-right: 1px solid rgb(192, 192, 192);
-    /* background-color: var(--ptf-color-7) */
+    background-color: var(--ptf-color-7);
 }
 
 .ptf-partner-box__image {
@@ -7678,9 +7676,9 @@ p.form-submit {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
+    display: block;
     flex-direction: column;
-    padding: 2.8125rem 3.125rem 4rem;
+    padding: 2.8125rem 1.125rem 2rem 2.125rem;
     -webkit-transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
     background-color: var(--ptf-color-white);
@@ -7770,9 +7768,9 @@ p.form-submit {
     border-bottom: 1px solid var(--ptf-color-black)
 }
 
-.ptf-pricing-table__content {
+/* .ptf-pricing-table__content {
     margin-top: 2.8125rem
-}
+} */
 
 .ptf-pricing-table__content ul {
     margin: 0;
@@ -7780,23 +7778,7 @@ p.form-submit {
     list-style-type: none
 }
 
-.ptf-pricing-table__content ul li {
-    font-size: 1rem;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-    padding-bottom: .875rem;
-    -webkit-transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
-    transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
-    text-transform: uppercase;
-    color: var(--ptf-color-black);
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row
-}
+
 
 .ptf-pricing-table__content ul li:last-of-type {
     padding-bottom: 0
@@ -7819,7 +7801,7 @@ p.form-submit {
     align-items: flex-end;
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%
+    flex-basis: 50%
 }
 
 .ptf-pricing-table:hover {
@@ -7842,7 +7824,7 @@ p.form-submit {
 
 .ptf-pricing-table:hover .ptf-btn:not(:hover) {
     color: var(--ptf-color-black);
-    background-color: var(--ptf-color-white)
+    background-color: var(--ptf-color-black)
 }
 
 .ptf-process-steps {
@@ -8889,7 +8871,7 @@ p.form-submit {
 }
 
 .ptf-team-member .ptf-team-member__name {
-    font-size: 1.25rem
+    font-size: 0.25rem
 }
 
 .ptf-team-member .ptf-team-member__name a:hover {
@@ -8898,7 +8880,7 @@ p.form-submit {
 }
 
 .ptf-team-member .ptf-team-member__function {
-    font-size: .875rem;
+    font-size: 1.5rem;
     color: var(--ptf-color-2)
 }
 

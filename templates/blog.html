@@ -6,7 +6,7 @@
 <!--Main-->
 <main class="ptf-main">
 	<article class="ptf-page ptf-page--blog-grid">
-		<section>
+		<section class="has-accent-1-background banner other">
 			<!--Spacer-->
 			<div class="ptf-spacer" style=" --ptf-xxl: 16rem; --ptf-md: 12rem; --ptf-sm: 16rem;"></div>
 			<div class="container-xxl">
@@ -28,29 +28,36 @@
 		</section>
 		<section>
 			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 6.25rem; --ptf-md: 3.125rem;"></div>
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 			<div class="container-xxl">
 				<!--Animated Block-->
 				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 					<!--News Slider-->
 					<div class="ptf-news-slider swiper-container" data-navigation-anchor=".ptf-news-slider-anchor">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="ptf-news-slide">
-									<div class="ptf-news-slide__media"><img src=" {% static 'img/blog/slider/post-1.png' %} " alt="" loading="lazy"></div>
-									<div class="ptf-news-slide__content">
-										<div class="ptf-news-slide__meta"><span class="cat">Inspiration</span><span class="date">Dec 3, 2021</span>
-										</div>
-										<h3 class="ptf-news-slide__title"><a>How to build photoshoots scene for product impress more</a>
-										</h3>
-										<div class="ptf-news-slide__excerpt">
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
-											</p>
+
+							{% for blog_banner in blog_banner %}
+
+							<a href="{% url 'Blog Details' blog_banner.id %}">
+								<div class="swiper-slide">
+									<div class="ptf-news-slide">
+										<div class="ptf-news-slide__media"><img src="{{blog_banner.image.crop.1520x760}}" alt="" loading="lazy"></div>
+										<div class="ptf-news-slide__content">
+											<div class="ptf-news-slide__meta"><span class="cat">{{blog_banner.category}}</span><span class="date">{{blog_banner.date}}</span>
+											</div>
+											<h3 class="ptf-news-slide__title"><a>{{blog_banner.heading}}</a>
+											</h3>
+											<div class="ptf-news-slide__excerpt">
+												<p>{{blog_banner.short_heading}}
+												</p>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="swiper-slide">
+							</a>
+							
+							{% endfor %}
+							<!-- <div class="swiper-slide">
 								<div class="ptf-news-slide">
 									<div class="ptf-news-slide__media"><img src=" {% static 'img/blog/slider/post-2.png' %} " alt="" loading="lazy"></div>
 									<div class="ptf-news-slide__content">
@@ -79,7 +86,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 						<!--Slider Controls-->
 						<div class="ptf-slider-controls ptf-slider-controls--style-2 ptf-news-slider-anchor">
@@ -89,7 +96,7 @@
 				</div>
 			</div>
 			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 8.75rem; --ptf-md: 4.375rem;"></div>
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 		</section>
 		<section>
 			<div class="container-xxl">
@@ -99,214 +106,40 @@
 		</section>
 		<section>
 			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 8.75rem; --ptf-md: 4.375rem;"></div>
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm:2rem ;"></div>
 			<div class="container-xxl">
 				<!--Animated Block-->
 				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 					<div class="row">
+
+						{% for blog_list in blog_list %}
 						<div class="col-lg-4 col-md-4 col-sm-6 col-6">
 							<div class=" grid-item filter-1 filter-4">
 								<!--Blog Post-->
 								<article class="ptf-post ptf-post--style-1">
-									<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-1.png' %} " alt="" loading="lazy">
+									<div class="ptf-post__media"><a class="ptf-work__link" href="{% url 'Blog Details' blog_list.id %}"></a><img class="bannerimage" src=" {{blog_list.image.crop.440x370}} " alt="" loading="lazy">
 									</div>
 									<div class="ptf-post__content">
 										<header class="ptf-post__header">
-											<div class="ptf-post__meta"><span class="cat">Product</span><span class="date">Dec 15, 2021</span>
+											<div class="ptf-post__meta"><span class="cat">{{blog_list.category}}</span><span class="date">{{blog_list.date}}</span>
 											</div>
-											<h3 class="ptf-post__title"><a href="#" class="blogtitle">Review product BWIB</a>
+											<h3 class="ptf-post__title"><a href="{% url 'Blog Details' blog_list.id %}" class="blogtitle">{{blog_list.heading}}</a>
 											</h3>
 										</header>
 									</div>
 								</article>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-6">
-							<div class=" grid-item filter-2 filter-5">
-								<!--Blog Post-->
-								<article class="ptf-post ptf-post--style-1">
-									<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-2.png' %} " alt="" loading="lazy">
-									</div>
-									<div class="ptf-post__content">
-										<header class="ptf-post__header">
-											<div class="ptf-post__meta"><span class="cat">Inspiration</span><span class="date">Dec 7, 2021</span>
-											</div>
-											<h3 class="ptf-post__title"><a href="#" class="blogtitle" >Contrast in Brand Design</a>
-											</h3>
-										</header>
-									</div>
-								</article>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-6">
-							<div class=" grid-item filter-3 filter-6">
-								<!--Blog Post-->
-								<article class="ptf-post ptf-post--style-1">
-									<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-3.png' %} " alt="" loading="lazy">
-									</div>
-									<div class="ptf-post__content">
-										<header class="ptf-post__header">
-											<div class="ptf-post__meta"><span class="cat">Community</span><span class="date">Dec 7, 2021</span>
-											</div>
-											<h3 class="ptf-post__title"><a href="#" class="blogtitle">The evolution of Swiss style in Interaction Design</a>
-											</h3>
-										</header>
-									</div>
-								</article>
-							</div>
-						</div>
+						{% endfor %}
 					</div>
-					{% comment %}
-					<div class="ptf-isotope-grid" data-columns="2" data-layout="fitRows" data-x-gap="60" data-y-gap="70" data-controls="#ptf-filter-grid">
-						<div class="grid-sizer"></div>
-						<div class=" grid-item filter-1 filter-4">
-							<!--Blog Post-->
-							<article class="ptf-post ptf-post--style-1">
-								<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-1.png' %} " alt="" loading="lazy">
-								</div>
-								<div class="ptf-post__content">
-									<header class="ptf-post__header">
-										<div class="ptf-post__meta"><span class="cat">Product</span><span class="date">Dec 15, 2021</span>
-										</div>
-										<h3 class="ptf-post__title"><a href="#">Review product BWIB</a>
-										</h3>
-									</header>
-								</div>
-							</article>
-						</div>
-						<div class=" grid-item filter-2 filter-5">
-							<!--Blog Post-->
-							<article class="ptf-post ptf-post--style-1">
-								<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-2.png' %} " alt="" loading="lazy">
-								</div>
-								<div class="ptf-post__content">
-									<header class="ptf-post__header">
-										<div class="ptf-post__meta"><span class="cat">Inspiration</span><span class="date">Dec 7, 2021</span>
-										</div>
-										<h3 class="ptf-post__title"><a href="#">Contrast in Brand Design</a>
-										</h3>
-									</header>
-								</div>
-							</article>
-						</div>
-						<div class=" grid-item filter-3 filter-6">
-							<!--Blog Post-->
-							<article class="ptf-post ptf-post--style-1">
-								<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-3.png' %} " alt="" loading="lazy">
-								</div>
-								<div class="ptf-post__content">
-									<header class="ptf-post__header">
-										<div class="ptf-post__meta"><span class="cat">Community</span><span class="date">Dec 7, 2021</span>
-										</div>
-										<h3 class="ptf-post__title"><a href="#">The evolution of Swiss style in Interaction Design</a>
-										</h3>
-									</header>
-								</div>
-							</article>
-						</div>
-						<div class=" grid-item filter-1 filter-4">
-							<!--Blog Post-->
-							<article class="ptf-post ptf-post--style-1">
-								<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-4.png' %} " alt="" loading="lazy">
-								</div>
-								<div class="ptf-post__content">
-									<header class="ptf-post__header">
-										<div class="ptf-post__meta"><span class="cat">Inspiration</span><span class="date">Dec 15, 2021</span>
-										</div>
-										<h3 class="ptf-post__title"><a href="#">Site inspiration with Swiss style</a>
-										</h3>
-									</header>
-								</div>
-							</article>
-						</div>
-						<div class=" grid-item filter-2 filter-5">
-							<!--Blog Post-->
-							<article class="ptf-post ptf-post--style-1">
-								<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-5.png' %} " alt="" loading="lazy">
-								</div>
-								<div class="ptf-post__content">
-									<header class="ptf-post__header">
-										<div class="ptf-post__meta"><span class="cat">Inspiration</span><span class="date">Nov 7, 2021</span>
-										</div>
-										<h3 class="ptf-post__title"><a href="#">Minimalist Trends</a>
-										</h3>
-									</header>
-								</div>
-							</article>
-						</div>
-						<div class=" grid-item filter-3 filter-6">
-							<!--Blog Post-->
-							<article class="ptf-post ptf-post--style-1">
-								<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-6.png' %} " alt="" loading="lazy">
-								</div>
-								<div class="ptf-post__content">
-									<header class="ptf-post__header">
-										<div class="ptf-post__meta"><span class="cat">Inspiration</span><span class="date">Nov 1, 2021</span>
-										</div>
-										<h3 class="ptf-post__title"><a href="#">Design Trends - Stage 14</a>
-										</h3>
-									</header>
-								</div>
-							</article>
-						</div>
-						<div class=" grid-item filter-1 filter-4">
-							<!--Blog Post-->
-							<article class="ptf-post ptf-post--style-1">
-								<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-7.png' %} " alt="" loading="lazy">
-								</div>
-								<div class="ptf-post__content">
-									<header class="ptf-post__header">
-										<div class="ptf-post__meta"><span class="cat">Product</span><span class="date">Dec 15, 2021</span>
-										</div>
-										<h3 class="ptf-post__title"><a href="#">Business Card, small but the most important</a>
-										</h3>
-									</header>
-								</div>
-							</article>
-						</div>
-						<div class=" grid-item filter-2 filter-5">
-							<!--Blog Post-->
-							<article class="ptf-post ptf-post--style-1">
-								<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-8.png' %} " alt="" loading="lazy">
-								</div>
-								<div class="ptf-post__content">
-									<header class="ptf-post__header">
-										<div class="ptf-post__meta"><span class="cat">Inspiration</span><span class="date">Dec 7, 2021</span>
-										</div>
-										<h3 class="ptf-post__title"><a href="#">The role of leader in teamwork</a>
-										</h3>
-									</header>
-								</div>
-							</article>
-						</div>
-						<div class=" grid-item filter-3 filter-6">
-							<!--Blog Post-->
-							<article class="ptf-post ptf-post--style-1">
-								<div class="ptf-post__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/blog/grid/post-9.png' %} " alt="" loading="lazy">
-								</div>
-								<div class="ptf-post__content">
-									<header class="ptf-post__header">
-										<div class="ptf-post__meta"><span class="cat">Community</span><span class="date">Dec 7, 2021</span>
-										</div>
-										<h3 class="ptf-post__title"><a href="#">Simple Logos Collection</a>
-										</h3>
-									</header>
-								</div>
-							</article>
-						</div>
-					</div>
-					{% endcomment %}
+				
 				</div>
 				<!--Spacer-->
-				<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
-				<div class="text-center">
-					<!--Animated Block-->
-					<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0"><a class="ptf-load-more blogtitle load-more" href="">More</a>
-					</div>
-				</div>
+				<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
+				
 			</div>
 			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 		</section>
 		<section>
 			<div class="container-xxl">
@@ -314,39 +147,7 @@
 				<div class="ptf-divider" style="--ptf-height: 1px; --ptf-color: var(--ptf-color-14);"></div>
 			</div>
 		</section>
-		<section>
-			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 3.375rem; --ptf-md: 4.6875rem;"></div>
-			<div class="container-xxl">
-				<div class="row align-items-center">
-					<div class="col-lg-4">
-						<!--Animated Block-->
-						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-							<h1 class="large-heading">Newsletter</h1>
-							<!--Spacer-->
-							<div class="ptf-spacer" style=" --ptf-xxl: 1.25rem;"></div>
-							<p>Get the latest news & insight.</p>
-						</div>
-						<!--Spacer-->
-						<div class="ptf-spacer" style=" --ptf-lg: 3.75rem; --ptf-md: 1.875rem;"></div>
-					</div>
-					<div class="col-lg-6 offset-lg-2">
-						<!--Animated Block-->
-						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="100">
-							<!--Spacer-->
-							<form class="ptf-subscribe-form ptf-subscribe-form--large">
-								<div class="ptf-form-group"><i class="lnil lnil-envelope-alt"></i>
-									<input type="email" placeholder="Email Address">
-									<button>Subscribe</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 4rem; --ptf-md: 5rem;"></div>
-		</section>
+		
 	</article>
 </main>
 

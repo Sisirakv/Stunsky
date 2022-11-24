@@ -1,4 +1,3 @@
-
 {% load static %}
 
 <!DOCTYPE html>
@@ -32,11 +31,12 @@
     <link rel="stylesheet" href=" {% static 'css/ptf-main.min.css' %} ">
     <!--Custom-->
     <link rel="stylesheet" href=" {% static 'css/custom.css' %} ">
+
 </head>
 
 <body>
     <!--Site Wrapper-->
-    <div class="ptf-site-wrapper animsition">
+    <div class="ptf-site-wrapper">
 
         <div class="ptf-site-wrapper__inner">
             {% include 'partials/header.html' %}
@@ -46,14 +46,24 @@
             {% endblock %}
 
         </div>
-  
-    {% include 'partials/footer.html' %}
 
+        {% include 'partials/footer.html' %}
+
+        <!-- Phone button  -->
+        <a href="tel:9526850904" style="position:fixed; width:31px; height:34px; bottom:77px; right:21px; z-index:100;"> <img src=" {% static 'img/telephone-call.png' %} " class="img-fluid" alt=""></a>
+        
+        <!-- Whatsapp Button -->
+        <a href="https://api.whatsapp.com/send?phone=919526850904&text=Welcome to Stunsky" target="_blank" style="	position:fixed; width:36px; height:45px; bottom:18px; right:15px; z-index:100;"><img src=" {% static 'img/whatsapp (1).png' %} " class="img-fluid" alt=""></a>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </div>
-            <!--Libs-->
-            <script src=" {% static 'scripts/ptf-plugins.min.js' %} "></script>
-            <script src=" {% static 'scripts/ptf-helpers.js' %} "></script>
-            <script src=" {% static 'scripts/ptf-controllers.min.js' %} "></script>
+    <!--Libs-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src=" {% static 'scripts/ptf-plugins.min.js' %} "></script>
+    <script src=" {% static 'scripts/ptf-helpers.js' %} "></script>
+    <script src=" {% static 'scripts/ptf-controllers.min.js' %} "></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.3/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

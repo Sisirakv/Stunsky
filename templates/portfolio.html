@@ -8,7 +8,7 @@
 <!--Main-->
 <main class="ptf-main">
 <article class="ptf-page ptf-page--portfolio-grid">
-	<section>
+	<section class="has-accent-1-background banner other">
 		<!--Spacer-->
 		<div class="ptf-spacer" style=" --ptf-xxl: 16rem; --ptf-md: 12rem; --ptf-sm: 16rem;"></div>
 			<div class="container-xxl">
@@ -29,40 +29,41 @@
 		
 	</section>
 	<section>
-		<div class="ptf-spacer" style=" --ptf-xxl: 8.375rem; --ptf-sm: 3.375rem;"></div>
+		<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-sm: 2rem;"></div>
 		<div class="container-xxl">
 			<!--Animated Block-->
 			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 				<ul class="ptf-filters ptf-filters--style-1" id="ptf-filter-grid">
 					<li class="filter-item filter-item-active" data-filter="*">All</li>
-					<li class="filter-item" data-filter=".filter-1">Branding</li>
-					<li class="filter-item" data-filter=".filter-2">UI/UX</li>
-					<li class="filter-item" data-filter=".filter-3">Packaging</li>
-					<li class="filter-item" data-filter=".filter-4">Illustration</li>
-					<li class="filter-item" data-filter=".filter-5">Motion Video</li>
-					<li class="filter-item" data-filter=".filter-6">Product</li>
-					<li class="filter-item" data-filter=".filter-7">Animation</li>
+					{% for categories in category %}
+					
+					<li class="filter-item" data-filter=".{{categories.title|slugify}}">{{categories.title}}</li>
+
+					{% endfor %}
 				</ul>
 			</div>
 			<!--Spacer-->
 			<div class="ptf-spacer" style=" --ptf-xxl: 6.25rem; --ptf-md: 3.125rem;"></div>
 			<!--Animated Block-->
 			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-				<div class="ptf-isotope-grid" data-columns="3" data-layout="masonry" data-x-gap="0" data-y-gap="120" data-controls="#ptf-filter-grid">
+				<div class="ptf-isotope-grid" data-columns="3" data-layout="masonry" data-x-gap="0" data-y-gap="10" data-controls="#ptf-filter-grid">
 					<div class="grid-sizer"></div>
-					<div class=" grid-item filter-1 filter-4 filter-7">
+					{% for portfolios in portfolio %}
+					<div class=" grid-item filter-1 filter-4 filter-7 {{portfolios.category.title|slugify}}">
 						<!--Portfolio Item-->
 						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/grid/work-1.png' %} " alt="" loading="lazy">
+							<div class="ptf-work__media"><a class="ptf-work__link" href="{{portfolios.image.url}}"></a><img src=" {{portfolios.image.crop.675x675}} " alt="" loading="lazy">
 							</div>
 							<div class="ptf-work__meta">
-								<div class="ptf-work__category">UI/UX
+								<div class="ptf-work__category">{{portfolios.category}}
 								</div>
-								<h4 class="ptf-work__title"><a href="#">Supro Online Store</a>
+								<h4 class="ptf-work__title"><a href="#">{{portfolios.title}}</a>
 								</h4>
 							</div>
 						</article>
 					</div>
+					{% endfor %}
+					{% comment %}
 					<div class=" grid-item filter-2 filter-5">
 						<!--Portfolio Item-->
 						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
@@ -102,119 +103,14 @@
 							</div>
 						</article>
 					</div>
+					{% endcomment %}
 				</div>
 			</div>
 		</div>
 		<!--Spacer-->
-		<div class="ptf-spacer" style=" --ptf-xxl: 8.125rem; --ptf-md: 4.0625rem;"></div>
+		<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 	</section>
-	{% comment %}
-	<section>
-		<div class="container-xxl">
-			<!--Divider-->
-			<div class="ptf-divider" style="--ptf-height: 1px; --ptf-color: var(--ptf-color-14);"></div>
-		</div>
-	</section>
-	<section>
-		<!--Spacer-->
-		<div class="ptf-spacer" style=" --ptf-xxl: 8.75rem; --ptf-md: 4.0625rem;"></div>
-		<div class="container-xxl">
-			<!--Animated Block-->
-			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-				<div class="ptf-isotope-grid" data-columns="3" data-layout="masonry" data-x-gap="60" data-y-gap="90">
-					<div class="grid-sizer"></div>
-					<div class=" grid-item filter-1 filter-4 filter-7">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/work-1.png' %} " alt="" loading="lazy">
-							</div>
-							<div class="ptf-work__meta">
-								<div class="ptf-work__category">UI/UX
-								</div>
-								<h4 class="ptf-work__title"><a href="#">Taskly Dashboard</a>
-								</h4>
-							</div>
-						</article>
-					</div>
-					<div class=" grid-item filter-2 filter-5">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/work-2.png' %} " alt="" loading="lazy">
-							</div>
-							<div class="ptf-work__meta">
-								<div class="ptf-work__category">Product
-								</div>
-								<h4 class="ptf-work__title"><a href="#">Film &amp; Art Festival</a>
-								</h4>
-							</div>
-						</article>
-					</div>
-					<div class=" grid-item filter-3 filter-6">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/work-3.png' %} " alt="" loading="lazy">
-							</div>
-							<div class="ptf-work__meta">
-								<div class="ptf-work__category">Branding, Packaging
-								</div>
-								<h4 class="ptf-work__title"><a href="#">Dark Wishky Wine</a>
-								</h4>
-							</div>
-						</article>
-					</div>
-					<div class=" grid-item filter-1 filter-4 filter-7">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/work-4.png' %} " alt="" loading="lazy">
-							</div>
-							<div class="ptf-work__meta">
-								<div class="ptf-work__category">Illustration
-								</div>
-								<h4 class="ptf-work__title"><a href="#">Swiss Style Poster</a>
-								</h4>
-							</div>
-						</article>
-					</div>
-					<div class=" grid-item filter-2 filter-5">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/work-5.png' %} " alt="" loading="lazy">
-							</div>
-							<div class="ptf-work__meta">
-								<div class="ptf-work__category">UI/UX
-								</div>
-								<h4 class="ptf-work__title"><a href="#">Liarch Architecture Firm</a>
-								</h4>
-							</div>
-						</article>
-					</div>
-					<div class=" grid-item filter-3 filter-6">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/work-6.png' %} " alt="" loading="lazy">
-							</div>
-							<div class="ptf-work__meta">
-								<div class="ptf-work__category">Branding, Packaging, Motion Video
-								</div>
-								<h4 class="ptf-work__title"><a href="#">FG Print Brand</a>
-								</h4>
-							</div>
-						</article>
-					</div>
-				</div>
-			</div>
-			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
-			<div class="text-center">
-				<!--Animated Block-->
-				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0"><a class="ptf-load-more" href="#">More</a>
-				</div>
-			</div>
-		</div>
-		<!--Spacer-->
-		<div class="ptf-spacer" style=" --ptf-xxl: 10rem; --ptf-md: 5rem;"></div>
-	</section>
-	{% endcomment %}
+	
 </article>
 </main>
 

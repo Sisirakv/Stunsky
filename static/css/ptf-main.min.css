@@ -2334,15 +2334,15 @@ p.form-submit {
 }
 
 .ptf-navbar-search__wrapper input[type=text] {
-    font-size: .875rem;
-    line-height: 1;
+    font-size: 1rem;
+    line-height: 4;
     padding: .625rem 1rem;
     border: none;
-    background-color: var(--ptf-color-7)
+    background-color: hsl(25deg 100% 83%);
 }
 
 .ptf-navbar-search__toggle {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
     line-height: 1;
     cursor: pointer;
     -webkit-transition: none;
@@ -8871,7 +8871,7 @@ p.form-submit {
 }
 
 .ptf-team-member .ptf-team-member__name {
-    font-size: 0.25rem
+    font-size: 1rem
 }
 
 .ptf-team-member .ptf-team-member__name a:hover {

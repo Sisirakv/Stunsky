@@ -18,7 +18,7 @@ urlpatterns = [
         path('other offerings', views.other_offerings, name="other offerings"),
         path('portfolio', views.portfolio, name="portfolio"),
         path('careers', views.careers, name="careers"),
-        path('careers Details', views.careers_details, name="careers Details"),
+        path('careers Details/<int:id>', views.careers_details, name="careers Details"),
         path('design & digital media', views.design_digital_media, name="design & digital media"),
         path('image & data services', views.image_data_services, name="image & data services")
         

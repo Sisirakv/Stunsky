@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 from .forms import ContactForm
-from .models import Blog, Testimonial, Portfolio, Category, Client
+from .models import *
 
 import json
 from django.http import HttpResponse
@@ -37,8 +37,10 @@ def index(requset):
 
 def about_us(requset):
     client = Client.objects.all()[:12]
+    team = Team.objects.all()
     context = {
         "client":client,
+        "team":team,
     }
     return render(requset, 'about-us.html', context)
 
@@ -101,7 +103,7 @@ def blog_details(request, id):
     return render(request,"blog-single.html",context)
 
 
-def portfolio(requset):
+def portfolio(request):
     category = Category.objects.filter(is_active = True)
     portfolio = Portfolio.objects.all()
     context = {
@@ -110,15 +112,46 @@ def portfolio(requset):
         "portfolio" : portfolio,
     }
     
-    return render(requset, 'portfolio.html', context)
+    return render(request, 'portfolio.html', context)
 
 
-def careers(requset):
-    return render(requset, 'Careers.html')
+def careers(request):
+    jobs = JobDetails.objects.all().order_by()
+    search_term = ''
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        jobs = JobDetails.objects.all().filter(job_title__icontains=search_term)
+        context = {
+            "is_career": True,
+            "jobs": jobs,
+        }
+        return render(request, "Careers.html", context)
+    context = {
+        "jobs":jobs,
+    }
+    return render(request, 'Careers.html', context)
 
 
-def careers_details(requset):
-    return render(requset, 'Careers details.html')
+
+def careers_details(request, id):
+    job_details = JobDetails.objects.filter(id=id)
+    
+    # Apply for job
+    Jobdetails = JobDetails.objects.get(id=id)
+    if request.method == 'POST':
+        applicant_name = request.POST['name']
+        phone = request.POST['phone']
+        email = request.POST['email']
+        cv = request.FILES['cv']
+        job = Jobdetails
+        new_application = ApplyNow(applicant_name=applicant_name, phone=phone, email=email, cv=cv, job=job)
+        new_application.save()
+        
+    context = {
+        "job_details" :job_details,
+        "Jobdetails": Jobdetails,
+    }
+    return render(request, 'Careers details.html', context)
 
 
 def ui_ux(requset):

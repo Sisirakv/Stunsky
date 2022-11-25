@@ -114,27 +114,50 @@
 
 			<body>
 				<div id="page-wrapper">
+					{% for job_details in job_details %}
 					<div id="page1" class="page row">
+						<h1 class="fz-40 fz-40--md fw-extrabold lh-1p1 has-black-color text-center">{{job_details.job_title}}</h1>
+						<div class="ptf-spacer" style=" --ptf-xxl: 2rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 						<div class="col-md-4">
-							<h1>Page One</h1>
+							<h1 class="fz-21 text-right font-weight-bold">Job Description</h1>
 							
 						</div>
 						<div class="col-md-8 right">
-							<p class="fz-18">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
-								the blind texts.</p>
-							<p class="fz-18">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-							</p>
-							<p class="fz-18">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a
-								paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-							<p class="fz-18">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
-								life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the
-								far World of Grammar.</p>
+							<p class="fz-21">{{job_details.job_description|safe|title}}</p>
 						</div>
+						
+						<div class="ptf-spacer" style=" --ptf-xxl: 2rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
+						
+						<div class="col-md-4">
+							<h1 class="fz-21 text-right font-weight-bold" >Job Responsibilities</h1>
+							
+						</div>
+						<div class="col-md-8 right">
+							<p class="fz-21">{{job_details.job_responsibility|safe|title}}</p>
+						</div>
+
+						<div class="ptf-spacer" style=" --ptf-xxl: 2rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
+
+						<div class="col-md-4">
+							<h1 class="fz-21 text-right font-weight-bold">Educational Requirements</h1>
+							
+						</div>
+						<div class="col-md-8 right">
+							<p class="fz-21">{{job_details.educational_requirments|safe|title}}</p>
+						</div>
+						<div class="ptf-spacer" style=" --ptf-xxl: 4rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
+
+						<ul class="d-flex list-unstyled">
+							<li class="fz-18 "><img class="mt-0 ml-5 pl-5 pr-2" src="{% static 'img/location.svg' %}" alt="icon">Location: {{job_details.location}}</li>
+							<li class="fz-18 "><img class="mt-0 pl-5 pr-2" src="{% static 'img/vaccancy.svg' %}" alt="icon">Vaccancy: {{job_details.vaccancy}}</li>
+							<li class="fz-18 "><img class="mt-0 pl-5 pr-2" src="{% static 'img/experiance.svg' %}" alt="icon">Experience: {{job_details.experience}} years</li>
+							<li class="fz-18 "><img class="mt-0 pl-5 pr-2" src="{% static 'img/salary.svg' %}" alt="icon">Salary: {{job_details.salary}} Lakhs INR per Annum</li>
+						</ul>
 						<div class="ptf-spacer" style=" --ptf-xxl: 2rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 						
 					
 							<div class="pagenav">
-								<div class="btn ptf-btn ptf-btn--primary ptf-btn--inversed" onclick="nextpage(1);">Next</div>
+								<div class="btn ptf-btn ptf-btn--primary ptf-btn--inversed" onclick="nextpage(1);">Apply Now</div>
 							</div>
 						
 						
@@ -146,31 +169,27 @@
 							</h5>
 							<!--Spacer-->
 							<div class="ptf-spacer" style=" --ptf-xxl: 3.125rem;"></div>
-							<form>
+							<form method="POST" enctype="multipart/form-data"> {% csrf_token %}
 								<div class="ptf-form-group">
+									{{applicant_name}}
 									<label class="fz-21">What’s your name?</label>
-									<input class="is-large" type="text">
+									<input class="is-large" type="text" name='name'>
 								</div>
 								
 								<div class="ptf-form-group">
-									<label class="fz-21">What’s your email address?</label>
-									<input class="is-large" type="text">
+									<label class="fz-21">What’s your Phone?</label>
+									<input class="is-large" type="text" name='phone'>
 								</div>
 
 								<div class="ptf-form-group">
-									<label class="fz-21">Choose your job</label>
-
-									<select class="fz-18">
-										<option value="">UI/UX Designer</option>
-										<option value="100-200">Web Developer</option>
-										<option value="200-500">Graphic Designer</option>
-										<!-- <option value="500-1000"></option> -->
-									</select>
+									<label class="fz-21">What’s your Email?</label>
+									<input class="is-large" type="text" name='email'>
 								</div>
 
 								<div class="ptf-form-group">
 									<label class="fz-21">Upload Your Resume</label>
-									<input class="fz-18" type="file">
+									<input class="fz-18" type="file" name="cv">
+									<small>( File should be less than 1MB )</small>
 								</div>
 								
 								
@@ -183,11 +202,14 @@
 								
 								<div class="pagenav">
 									<div class="btn ptf-btn ptf-btn--primary ptf-btn--inversed" target="_self" onclick="prevpage(2)">Previous</div>
-									<div class="btn ptf-btn ptf-btn--primary ptf-btn--inversed" target="_self">Submit</div>
+									
+										<button type="submit" class="btn ptf-btn ptf-btn--primary ptf-btn--inversed">Submit</button>
+										
 								</div>
 							</form>
 						</div>
 					</div>
+					{% endfor %}
 				</div>
 			</body>
 	</div>

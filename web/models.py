@@ -2,6 +2,7 @@ from tabnanny import verbose
 from django.db import models
 from versatileimagefield.fields import VersatileImageField
 from django.utils.text import slugify
+from tinymce.models import HTMLField
 
 # Create your models here.
 
@@ -82,5 +83,41 @@ class Client(models.Model):
     def __str__(self):
         return self.name
     
-# class Service(models.Model):
+# career
+
+
+class JobDetails(models.Model):
+    job_title = models.CharField(max_length=50, null=True, blank=True)
+    location = models.CharField(max_length=50, null=True, blank=True)
+    salary = models.CharField(max_length=50, null=True, blank=True)
+    vaccancy = models.IntegerField(null=True, blank=True)
+    experience = models.IntegerField(null=True, blank=True)
+    job_description = HTMLField(null=True, blank=True)
+    job_responsibility = HTMLField(null=True, blank=True)
+    educational_requirments = HTMLField(null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = ("Jobs")
+
+    def __str__(self):
+        return str(self.job_title)
+    
+class ApplyNow(models.Model):
+    job = models.ForeignKey(JobDetails, on_delete=models.CASCADE, null=True, blank=True)
+    applicant_name = models.CharField(max_length=100, null=True, blank=True)
+    phone = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField()
+    cv = models.FileField(upload_to='cv', null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = ("Applications")
+
+    def __str__(self):
+        return str(self.applicant_name)
+    
+class Team(models.Model):
+    name = models.CharField(max_length=200)
+    designation = models.CharField(max_length=200)
+    image = VersatileImageField('Image',upload_to='images/team/')
+    
     

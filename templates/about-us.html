@@ -534,106 +534,25 @@
 			</div>
 			<div class="container">
 				<div class="ptf-team-member-grid ptf-team-member-grid--3-columns">
+
+					{% for team_members in team%}
 					<!--Animated Block-->
 					<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 						<!--Team Member-->
 						<div class="ptf-team-member ptf-team-member--has-effect">
 							<div class="ptf-team-member__avatar">
 								<div class="shadow-effect"></div><a href="#"><img
-										src=" {% static 'img/root/team/team-1.png' %} " alt="" loading="lazy"></a>
+										src=" {{team_members.image.crop.247x247}} " alt="" loading="lazy"></a>
 							</div>
 							<div class="ptf-team-member__content">
-								<h6 class="ptf-team-member__name"><a href="#">Stephan Bowie</a></h6>
-								<p class="ptf-team-member__function">CEO Founder
+								<h6 class="ptf-team-member__name">{{team_members.name}}</h6>
+								<p class="ptf-team-member__function">{{team_members.designation}}
 								</p>
 							</div>
 						</div>
 					</div>
-					<!--Animated Block-->
-					<div class="ptf-animated-block" data-aos="fade" data-aos-delay="100">
-						<!--Team Member-->
-						<div class="ptf-team-member ptf-team-member--has-effect">
-							<div class="ptf-team-member__avatar">
-								<div class="shadow-effect"></div><a href="#"><img
-										src=" {% static 'img/root/team/team-2.png' %} " alt="" loading="lazy"></a>
-							</div>
-							<div class="ptf-team-member__content">
-								<h6 class="ptf-team-member__name"><a href="#">Robert Downey Jr</a></h6>
-								<p class="ptf-team-member__function">CO Founder
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--Animated Block-->
-					<div class="ptf-animated-block" data-aos="fade" data-aos-delay="200">
-						<!--Team Member-->
-						<div class="ptf-team-member ptf-team-member--has-effect">
-							<div class="ptf-team-member__avatar">
-								<div class="shadow-effect"></div><a href="#"><img
-										src=" {% static 'img/root/team/team-3.png' %} " alt="" loading="lazy"></a>
-							</div>
-							<div class="ptf-team-member__content">
-								<h6 class="ptf-team-member__name"><a href="#">Laura Lorwence</a></h6>
-								<p class="ptf-team-member__function">Project Management
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--Animated Block-->
-					<div class="ptf-animated-block" data-aos="fade" data-aos-delay="300">
-						<!--Team Member-->
-						<div class="ptf-team-member ptf-team-member--has-effect">
-							<div class="ptf-team-member__avatar">
-								<div class="shadow-effect"></div><a href="#"><img
-										src=" {% static 'img/root/team/team-4.png' %} " alt="" loading="lazy"></a>
-							</div>
-							<div class="ptf-team-member__content">
-								<h6 class="ptf-team-member__name"><a href="#">David De Berg</a></h6>
-								<p class="ptf-team-member__function">Lead of Technical
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--Animated Block-->
-					<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-						<!--Team Member-->
-						<div class="ptf-team-member ptf-team-member--has-effect">
-							<div class="ptf-team-member__avatar">
-								<div class="shadow-effect"></div><a href="#"><img
-										src=" {% static 'img/root/team/team-5.png' %} " alt="" loading="lazy"></a>
-							</div>
-							<div class="ptf-team-member__content">
-								<h6 class="ptf-team-member__name"><a href="#">Elena Stephan</a></h6>
-								<p class="ptf-team-member__function">SEO/Marketing
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--Animated Block-->
-					<div class="ptf-animated-block" data-aos="fade" data-aos-delay="100">
-						<!--Team Member-->
-						<div class="ptf-team-member ptf-team-member--has-effect">
-							<div class="ptf-team-member__avatar">
-								<div class="shadow-effect"></div><a href="#"><img
-										src=" {% static 'img/root/team/team-6.png' %} " alt="" loading="lazy"></a>
-							</div>
-							<div class="ptf-team-member__content">
-								<h6 class="ptf-team-member__name"><a href="#">Andy Robertson</a></h6>
-								<p class="ptf-team-member__function">Content Writer
-								</p>
-							</div>
-						</div>
-					</div>
-					<!--Animated Block-->
-					<div class="ptf-animated-block" data-aos="fade" data-aos-delay="200">
-						<!--Team Member-->
-						<div class="ptf-team-member">
-							<div class="ptf-team-member__avatar">
-								<div class="shadow-effect"></div><a href="#"><img
-										src=" {% static 'img/root/team/new-member.png' %} " alt="" loading="lazy"></a>
-							</div>
-						</div>
-					</div>
+					{% endfor %}
+					
 				</div>
 			</div>
 			<!--Spacer-->

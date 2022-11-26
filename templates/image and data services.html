@@ -54,22 +54,24 @@
 				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 						<div class="grid-sizer"></div>
 						<div class="row">
+							{% for data in data_service %}
 							<div class="col-lg-6 col-md-6 col-sm-6 col-6">
 								<div class=" grid-item filter-1 filter-4 filter-7">
 									<!--Portfolio Item-->
 									<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
 										<div class="row">
 											<div class="col-lg-6">
-												<div class=""><img src=" {% static 'img/portfolio/grid/work-1.png' %} " alt="" loading="lazy" style="border: 2px solid;">
+												<div class=""><img src="{{data.image.url}}" alt="{{data.title}}" loading="lazy" style="border: 2px solid;">
 												</div>
 											</div>
-											<div class="col-lg-6">
+											<div class="col-lg-6 mb-5 pb-5">
 												<div class="ptf-work__meta pt-0">
 													<div class="fz-40">
-														<b>UI/UX</b>
+														<b>{{data.title}}</b>
 													</div>
-													<p class="fz-18" style="text-align:justify;">rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+													<p class="fz-18" style="text-align:justify;">{{data.details}}</p>
 												</div>
+												<br>
 												<div class="ptf-animated-block mt-2" data-aos="fade" data-aos-delay="0">
 													<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed rounded"
 														href="#" target="_self">REQUEST A QUOTE</a>
@@ -83,37 +85,8 @@
 									</article>
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-6">
-								<div class=" grid-item filter-2 filter-5">
-									<!--Portfolio Item-->
-									<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-										<div class="row">
-											<div class="col-lg-6">
-												<div class=""><img src=" {% static 'img/portfolio/grid/work-2.png' %} " alt="" loading="lazy" style="border: 2px solid;">
-												</div>
-											</div>
-											<div class="col-lg-6">
-												<div class="ptf-work__meta pt-0">
-													<div class="fz-40">
-														<b>Illustration</b>
-													</div> 
-													<p class="fz-18" style="text-align:justify;">rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-													</p>
-												</div>
-												<!-- <div class="ptf-spacer" style=" --ptf-xxl: 6.25rem; --ptf-md: 3.125rem;"></div> -->
-
-												<div class="ptf-animated-block mt-2" data-aos="fade" data-aos-delay="0">
-													<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed rounded"
-														href="#" target="_self">REQUEST A QUOTE</a>
-												
-												</div>
-											</div>
-										</div>
-										
-										
-									</article>
-								</div>
-							</div>
+							{% endfor %}
+							
 						</div>
 						
 					

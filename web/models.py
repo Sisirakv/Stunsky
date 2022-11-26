@@ -119,5 +119,35 @@ class Team(models.Model):
     name = models.CharField(max_length=200)
     designation = models.CharField(max_length=200)
     image = VersatileImageField('Image',upload_to='images/team/')
+   
+    
+class CategoryDigitalMedia(models.Model):
+    title = models.CharField(max_length=200)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        verbose_name_plural = ("Category Digital Media")
+
+    def __str__(self):
+        return str(self.title)
+
+
+class DesignDigitalMedia(models.Model):
+    media_category = models.ForeignKey(CategoryDigitalMedia, on_delete=models.CASCADE)
+    
+    title = models.CharField(max_length=200)
+    image = VersatileImageField('Image',upload_to='images/digitalmedia/')
+
+    class Meta:
+        verbose_name_plural = ("Digital Media")
+        
+    def __str__(self):
+        return self.title
+    
+    
+class ImgageDataService(models.Model):
+    image = VersatileImageField('Image',upload_to='images/imagedataservice/')
+    title = models.CharField(max_length=200)
+    details = models.TextField()
     
     

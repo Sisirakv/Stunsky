@@ -400,11 +400,9 @@
     color: var(--ptf-accent-1) !important
 }
 
-.has-accent-1-background {
-
-    background-image: linear-gradient(to right, #ff6b02, #ffa500 );
-    /* background-color: var(--ptf-accent-1) */
-}
+/* .has-accent-1-background {
+    background-color: var(--ptf-accent-1)
+} */
 
 .has-accent-2 {
     color: var(--ptf-accent-2)
@@ -2188,7 +2186,7 @@ p.form-submit {
     -webkit-transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
     will-change: background-color;
-    height: 92px;
+    height: 108px;
 }
 
 .ptf-navbar .ptf-navbar-inner {
@@ -2414,16 +2412,14 @@ p.form-submit {
     .ptf-header--style-1 .ptf-navbar-logo,
     .ptf-header--style-3 .ptf-navbar-logo,
     .ptf-header--style-4 .ptf-navbar-logo {
-        margin-right: auto;
-        padding-bottom: 40px;
+        margin-right: auto
     }
 }
 
 .ptf-header--style-1 .ptf-offcanvas-menu-icon,
 .ptf-header--style-3 .ptf-offcanvas-menu-icon,
 .ptf-header--style-4 .ptf-offcanvas-menu-icon {
-    margin-left: 2.5rem;
-    padding-bottom: 40px;
+    margin-left: 2.5rem
 }
 
 .ptf-header--style-2 .ptf-navbar {
@@ -2743,7 +2739,7 @@ p.form-submit {
     display: inline-flex;
     float: none;
     min-height: calc(100% - 1.5rem);
-    padding: 0 1.5625rem 40px 1.5625rem;
+    padding: 0 1.5625rem;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -6686,9 +6682,7 @@ p.form-submit {
 }
 
 .ptf-advantage-box {
-    --ptf-image-height: 102px;
-    flex-basis: auto;
-    object-fit: contain;
+    --ptf-image-height: 102px
 }
 
 .ptf-advantage-box {
@@ -6763,10 +6757,9 @@ p.form-submit {
 }
 
 .ptf-approach-box {
-    /* padding-top: 3.75rem; */
-    padding-bottom: 17px;
-    border-top: 1.5px solid var(--ptf-color-black);
-    border-bottom: 1.5px solid var(--ptf-color-black);
+    padding-top: 3.75rem;
+    border-top: 2px solid var(--ptf-color-black);
+    border-bottom: 2px solid var(--ptf-color-black);
 }
 
 .ptf-approach-box__subtitle {
@@ -6824,7 +6817,7 @@ p.form-submit {
 }
 
 .ptf-btn--block {
-    width:29%
+    width: 100%
 }
 
 .ptf-btn:focus {
@@ -6848,7 +6841,7 @@ p.form-submit {
 
 .ptf-btn.ptf-btn--primary:hover {
     color: var(--ptf-color-white);
-    background-color: var(--ptf-accent-1)
+    background-color: var(--ptf-accent-2)
 }
 
 .ptf-btn.ptf-btn--primary.ptf-btn--inversed {
@@ -7569,8 +7562,7 @@ p.form-submit {
     -webkit-transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
     text-align: center;
-
-    /* background-color: var(--ptf-color-7); */
+    background-color: var(--ptf-color-7);
 }
 
 .ptf-partner-box__image {
@@ -7589,8 +7581,6 @@ p.form-submit {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    flex-basis: 50%;
-    object-fit: contain;
     /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%) */
 }
@@ -7814,11 +7804,11 @@ p.form-submit {
     flex-basis: 50%
 }
 
-/* .ptf-pricing-table:hover {
+.ptf-pricing-table:hover {
     background-color: var(--ptf-accent-1);
     -webkit-box-shadow: inset 0 0 0 1px var(--ptf-accent-1);
     box-shadow: inset 0 0 0 1px var(--ptf-accent-1)
-} */
+}
 
 .ptf-pricing-table:hover .ptf-pricing-table__price,
 .ptf-pricing-table:hover .ptf-pricing-table__price .period,
@@ -7828,7 +7818,7 @@ p.form-submit {
 
 .ptf-pricing-table:hover .ptf-pricing-table__content ul li,
 .ptf-pricing-table:hover .ptf-pricing-table__description {
-    color: var(--ptf-color-black);
+    color: var(--ptf-color-white);
     border-color: var(--ptf-color-white)
 }
 
@@ -8010,7 +8000,7 @@ p.form-submit {
     padding: 1.125rem;
     -webkit-transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
-    border-top: 1.5px solid var(--ptf-accent-1);
+    border-top: 2px solid var(--ptf-color-black);
     grid-template-columns: 4.5rem 10.75rem 1fr 2.75rem;
 }
 
@@ -9229,8 +9219,3 @@ p.form-submit {
 a{
     color: white !important;
 }
-
-
-
-
-

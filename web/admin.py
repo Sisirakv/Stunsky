@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Blog, Testimonial, Category, Portfolio, Contact, Client, JobDetails, ApplyNow, Team
+from .models import *
 
 # Register your models here.
 
@@ -13,3 +13,6 @@ admin.site.register(Client)
 admin.site.register(JobDetails)
 admin.site.register(ApplyNow)
 admin.site.register(Team)
+admin.site.register(CategoryDigitalMedia)
+admin.site.register(DesignDigitalMedia)
+admin.site.register(ImgageDataService)

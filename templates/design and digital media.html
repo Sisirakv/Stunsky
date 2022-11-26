@@ -35,15 +35,17 @@
 			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 				<ul class="ptf-filters ptf-filters--style-1" id="ptf-filter-grid">
 					<li class="filter-item  filter-item itemboarder-active" data-filter="*">All Categories</li>
-					<li class="filter-item " data-filter=".filter-1">Icon Creation</li>
-					<li class="filter-item " data-filter=".filter-2">Infographics Design</li>
+					{% for categories in category_digital_media %}
+					<li class="filter-item " data-filter=".{{categories.title|slugify}}">{{categories.title}}</li>
+					{% endfor %}
+					<!-- <li class="filter-item " data-filter=".filter-2">Infographics Design</li>
 					<li class="filter-item " data-filter=".filter-3">Vector Illustrations</li>
 					<li class="filter-item " data-filter=".filter-4">Logo & Branding Design</li>
 					<li class="filter-item " data-filter=".filter-5">Corporate Identity</li>
 					<li class="filter-item " data-filter=".filter-6">Brochure Design Flyers</li>
 					<li class="filter-item " data-filter=".filter-7">Newsletters</li>
 					<li class="filter-item " data-filter=".filter-8">Social Media Customization</li>
-					<li class="filter-item " data-filter=".filter-9">E-Mailer</li>
+					<li class="filter-item " data-filter=".filter-9">E-Mailer</li> -->
 				</ul>
 			</div>
 			<!--Spacer-->
@@ -52,38 +54,18 @@
 			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 				<div class="ptf-isotope-grid" data-columns="4" data-layout="masonry" data-x-gap="0" data-y-gap="20" data-controls="#ptf-filter-grid">
 					<div class="grid-sizer"></div>
-					<div class=" grid-item filter-1 filter-4 filter-7">
+
+					{% for digital_medias in digital_media %}
+					<div class=" grid-item filter-1 filter-4 filter-7 {{digital_medias.media_category.title|slugify}}">
 						<!--Portfolio Item-->
 						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/grid/work-1.png' %} " alt="" loading="lazy">
+							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {{digital_medias.image.url}} " alt="{{digital_medias.title}}" loading="lazy">
 							</div>
 							
 						</article>
 					</div>
-					<div class=" grid-item filter-2 filter-5">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/grid/work-2.png' %} " alt="" loading="lazy">
-							</div>
-							
-						</article>
-					</div>
-					<div class=" grid-item filter-3 filter-6">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/grid/work-3.png' %} " alt="" loading="lazy">
-							</div>
-							
-						</article>
-					</div>
-					<div class=" grid-item filter-1 filter-4 filter-7">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/grid/work-4.png' %} " alt="" loading="lazy">
-							</div>
-							
-						</article>
-					</div>
+					{% endfor %}
+					
 				</div>
 			</div>
 		</div>

@@ -11,7 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 def index(requset):
     testimonials = Testimonial.objects.all()
-    client = Client.objects.all()[:12]
+    clients = Client.objects.all()[:12]
     
     ###Recent work###
     # category = Category.objects.filter(is_active = True)
@@ -23,12 +23,12 @@ def index(requset):
     print(ui_ux)
     context = {
         "testimonials":testimonials,
-        "client":client,
+        "clients":clients,
         "ui_ux":ui_ux,
         "graphics_design":graphics_design,
         "packaging":packaging,
         "web_development":web_development,
-        
+        "other_offerings":other_offerings,
         
         # "portfolio":portfolio
     }
@@ -194,8 +194,19 @@ def other_offerings(requset):
     return render(requset, 'other offerings.html')
 
 
-def design_digital_media(requset):
-    return render(requset, 'design and digital media.html')
+def design_digital_media(request):
+    category_digital_media = CategoryDigitalMedia.objects.filter(is_active = True)
+    digital_media = DesignDigitalMedia.objects.all()
+    context = {
+        "is_product" : True,
+        "category_digital_media" : category_digital_media,
+        "digital_media" : digital_media,
+    }
+    return render(request, 'design and digital media.html',context)
 
-def image_data_services(requset):
-    return render(requset, 'image and data services.html')
+def image_data_services(request):
+    data_service = ImgageDataService.objects.all()
+    context = {
+        "data_service":data_service
+    }
+    return render(request, 'image and data services.html', context)

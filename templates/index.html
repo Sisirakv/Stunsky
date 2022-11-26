@@ -103,8 +103,8 @@
 						</div>
 
 						<div class="row">
-							<div class="col-xl-8 col-sm-12 col-12 col-md-12">
-								<div style="max-width: 545px">
+							<div class="col-xl-8 col-md-12">
+								<!-- <div style="max-width: 545px"> -->
 									<!--Animated Block-->
 									<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 										<!--Divider-->
@@ -140,14 +140,14 @@
 											<b>info@stunsky.com </b>
 										</div>
 									</div>
-								</div>
+								<!-- </div> -->
 							</div>
 						</div>
 					</div>
 					<div class="col-xl-6 col-sm-6 col-md-7 col-6 text-center">
 						<div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
 							<div class="carousel-inner">
-								<div class="carousel-item active image-size">
+								<div class="carousel-item active image-size mx-auto">
 									<img src="../static/img/about-me-main-image.jpg" class="d-block w-100" alt="...">
 								</div>
 								<div class="carousel-item image-size">
@@ -171,8 +171,6 @@
 					</div>
 				</div>
 				<div class="ptf-spacer" style=" --ptf-xxl: 0.875rem; --ptf-md: 3.4375rem; --ptf-sm: 1rem;"></div>
-
-
 			</div>
 		</section>
 		<!-- banner section end -->
@@ -310,11 +308,11 @@
 								<article class="ptf-work ptf-work--style-3">
 									<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a>
 										<img style="border-radius: 9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
-											src=" {{ui_ux.image.url}} " alt="" loading="lazy">
-										<div class="text-block">
-											<h4>{{ui_ux.category.title}}</h4>
+											src="{% static 'img/portfolio/work-1.png' %}" alt="" loading="lazy">
+										<!-- <div class="text-block">
+											<h4>Web Development</h4>
 
-										</div>
+										</div> -->
 									</div>
 
 								</article>
@@ -326,12 +324,12 @@
 								<article class="ptf-work ptf-work--style-3">
 									<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img
 											style="border-radius: 9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
-											src=" {{graphics_design.image.url}} " alt="{{graphics_design.title}}"
+											src=" {% static 'img/portfolio/work-2.png' %} " alt=""
 											loading="lazy">
-										<div class="text-block">
-											<h4>{{graphics_design.category.title}}</h4>
+										<!-- <div class="text-block">
+											<h4>UI/UX Design</h4>
 
-										</div>
+										</div> -->
 									</div>
 
 								</article>
@@ -343,12 +341,12 @@
 								<article class="ptf-work ptf-work--style-3">
 									<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img
 											style="border-radius: 9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
-											src="{{packaging.image.url}} " alt="{{packaging.title}}" loading="lazy">
+											src="{% static 'img/portfolio/work-3.png' %}" alt="" loading="lazy">
 									</div>
-									<div class="text-block">
-										<h4>{{graphics_design.category.title}}</h4>
+									<!-- <div class="text-block">
+										<h4>Graphic Design</h4>
 
-									</div>
+									</div> -->
 
 								</article>
 							</div>
@@ -361,7 +359,10 @@
 											style="border-radius: 9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
 											src=" {% static 'img/portfolio/work-3.png' %} " alt="" loading="lazy">
 									</div>
+									<!-- <div class="text-block">
+										<h4>Packaging</h4>
 
+									</div> -->
 								</article>
 							</div>
 						</div>
@@ -373,7 +374,10 @@
 											style="border-radius: 9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
 											src=" {% static 'img/portfolio/work-4.png' %} " alt="" loading="lazy">
 									</div>
+									<!-- <div class="text-block">
+										<h4>Design and Degital Media</h4>
 
+									</div> -->
 								</article>
 							</div>
 						</div>
@@ -385,7 +389,10 @@
 											style="border-radius: 9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
 											src=" {% static 'img/portfolio/work-5.png' %} " alt="" loading="lazy">
 									</div>
+									<!-- <div class="text-block">
+										<h4>Image and Data Service</h4>
 
+									</div> -->
 								</article>
 							</div>
 						</div>
@@ -692,7 +699,7 @@
 				</div>
 				<div class="row" style="--bs-gutter-y: 0rem;">
 
-					{% for cilent in client %}
+					{% for cilent in clients %}
 					<div class="col-3 col-md-3 col-lg-2 col-sm-3">
 						<!--Animated Block-->
 						<div class="ptf-animated-block" data-aos-delay="0">

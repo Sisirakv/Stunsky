@@ -7591,6 +7591,9 @@ p.form-submit {
     justify-content: center;
     flex-basis: 50%;
     object-fit: contain;
+    box-shadow: #000;
+    width: 100%;
+    display: block;
     /* -webkit-filter: grayscale(100%);
     filter: grayscale(100%) */
 }

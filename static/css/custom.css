@@ -160,6 +160,9 @@
 
 /* min-width 768px */
 @media (min-width: 768px) {
+	.phone-email{
+		font-size: 18px;
+	}
 	.other{
 		height: 365px !important;
 	}
@@ -168,7 +171,7 @@
 	}
 	.bannericon{
 		padding-left:7px;
-		font-size: 10px;
+		font-size: 16px;
 		padding-right: 5px;
 		font-weight: 800;
 	}
@@ -183,7 +186,7 @@
 	.ptf-btn.ptf-btn--primary {
 		color: var(--ptf-color-white);
 		background-color: var(--ptf-color-black);
-		font-size: 1.4rem;
+		font-size: 1.5rem;
 		padding: 1.07rem 9px;
 		margin: 0px 0px 10px;
 		border-radius: 4.25px;
@@ -413,7 +416,7 @@
 
 	.ptf-nav--offcanvas .sf-menu ul.sub-menu a,
 	.ptf-nav--slide .sf-menu ul.sub-menu a {
-		color: var(--ptf-color-3) !important;
+		color: hsl(0deg 0% 10%) !important;
 	}
 
 	.ptf-offcanvas-menu__header .ptf-offcanvas-menu-icon {
@@ -907,7 +910,7 @@
 
 	.ptf-nav--offcanvas .sf-menu ul.sub-menu a,
 	.ptf-nav--slide .sf-menu ul.sub-menu a {
-		color: var(--ptf-color-3) !important;
+		color: hsl(0deg 0% 10%) !important;
 	}
 
 	.ptf-offcanvas-menu__header .ptf-offcanvas-menu-icon {

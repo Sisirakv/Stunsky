@@ -416,6 +416,12 @@
 		cursor: pointer;
 		overflow: hidden;
 	}
+	.h6inservice1{
+		padding: 127px 0px 0px 1px;
+		font-weight: 800;
+		width: 128px;
+		text-align: center;
+	}
 
 	.ptf-nav--offcanvas .sf-menu>li>a,
 	.ptf-nav--slide .sf-menu>li>a {
@@ -902,7 +908,7 @@
 		align-items: center;
 		color: #000000;
 		border: 1px solid #fe6b01;
-		border-radius: 13%;
+		border-radius: 50%;
 		cursor: pointer;
 		overflow: hidden;
 	}
@@ -1008,7 +1014,13 @@
 		transform: scale(1.05)
 	}
 	.h6inservice{
-		/* display: none; */
+		display: none;
+		/* padding: 18px 0px 1px 55px;
+		font-weight: 800;
+		width: 128px;
+		text-align: center; */
+	}
+	.h6inservice1{
 		padding: 18px 0px 1px 55px;
 		font-weight: 800;
 		width: 128px;

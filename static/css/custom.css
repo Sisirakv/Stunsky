@@ -160,6 +160,13 @@
 
 /* min-width 768px */
 @media (min-width: 768px) {
+
+	.h6inservice{
+		/* display: none; */
+		padding: 130px 41px 0px 0px;
+		font-weight: 800;
+		text-align: center;
+	}
 	.phone-email{
 		font-size: 18px;
 	}
@@ -234,15 +241,15 @@
 	} */
 
 	.parabox {
-		font-weight: 600;
-		font-size: 22px
+		font-weight: 800;
+		font-size: 20px
 		/* padding-right: 16px !important;
 		padding-left: 14px !important; */
 	}
 
 	.parabox {
-		font-weight: 600;
-		font-size: 22px
+		font-weight: 800;
+		font-size: 20px
 		/* padding-right: 16px !important;
 		padding-left: 14px !important; */
 	}
@@ -377,7 +384,8 @@
 	}
 
 	.icontop {
-		font-size: 68px !important;
+		font-size: 57px !important;
+		margin-bottom: 20px;
 
 	}
 
@@ -556,6 +564,10 @@
 		height: 440px;
 
 	}
+	.testimimage{
+		margin-left: 21px;
+		margin-top: 15px;
+	}
 
 }
 
@@ -683,6 +695,11 @@
 
 /* max-width 575px */
 @media (max-width: 575px) {
+	.testimimage{
+		margin-top: 21px;
+		width: 50px !important;
+    	height: 50px !important;
+	}
 	.other{
 		height: 291px !important;
 	}
@@ -791,8 +808,8 @@
 	}
 
 	.parabox {
-		font-weight: 600;
-		font-size: 15px
+		font-weight: 800;
+		font-size: 20px
 		/* padding-right: 16px !important;
 		padding-left: 14px !important; */
 	}
@@ -823,7 +840,7 @@
 	}
 
 	.carousel .testimonial {
-		padding: 0 1px 25px 0px !important;
+		padding: 0 1px 16px 0px !important;
 	}
 
 	.testip {
@@ -885,7 +902,7 @@
 		align-items: center;
 		color: #000000;
 		border: 1px solid #fe6b01;
-		border-radius: 50%;
+		border-radius: 13%;
 		cursor: pointer;
 		overflow: hidden;
 	}
@@ -936,7 +953,8 @@
 	.media {
 		border: 2px solid orange;
 		border-radius: 9px;
-		padding: 5px;
+		padding: 12px;
+    	padding-bottom: 0px;
 		margin-bottom: 20px;
 	}
 
@@ -990,7 +1008,11 @@
 		transform: scale(1.05)
 	}
 	.h6inservice{
-		display: none;
+		/* display: none; */
+		padding: 18px 0px 1px 55px;
+		font-weight: 800;
+		width: 128px;
+		text-align: center;
 	}
 
 	.yellowimg{
@@ -1007,6 +1029,9 @@
 	}
 	.slideblog{
 		display: none;
+	}
+	menu{
+		width: 68% !important;
 	}
 	
 	
@@ -1493,3 +1518,7 @@ menu button span:last-of-type {
 	background-image: linear-gradient(to right, #ffa500, #ff6b02);
 }
 
+
+.buttn{
+	border-radius: 13% !important;
+}

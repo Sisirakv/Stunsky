@@ -6765,8 +6765,8 @@ p.form-submit {
 .ptf-approach-box {
     /* padding-top: 3.75rem; */
     padding-bottom: 17px;
-    border-top: 1.5px solid var(--ptf-color-black);
-    border-bottom: 1.5px solid var(--ptf-color-black);
+    border-top: 1.5px solid hsl(0deg 0% 0% / 34%);
+    border-bottom: 1.5px solid hsl(0deg 0% 0% / 34%);
 }
 
 .ptf-approach-box__subtitle {

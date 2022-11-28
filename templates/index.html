@@ -381,7 +381,8 @@
 				<!--Animated Block-->
 				<div class="ptf-animated-block" data-aos-delay="0">
 
-					<h2 class="h1title h1 large-heading"><b>Rapidly increasing achievements through growth and
+					<h2 class="h1title h1 large-heading text-center"><b>Rapidly increasing achievements through growth
+							and
 							experience</b></h2>
 				</div>
 				<!--Spacer-->
@@ -434,7 +435,7 @@
 
 
 					<div class="">
-						<h1 class="large-heading">Do you have a project, maybe you are looking for
+						<h1 class="large-heading text-center">Do you have a project, maybe you are looking for
 							creative solutions for web and app development</h1>
 					</div>
 					<center>
@@ -473,20 +474,20 @@
 
 						<div id="myCarousel" class="carousel slide" data-ride="carousel">
 							<!-- Carousel indicators -->
-							<!-- <ol class="carousel-indicators">
+							<ol class="carousel-indicators">
 								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 								<li data-target="#myCarousel" data-slide-to="1"></li>
 								<li data-target="#myCarousel" data-slide-to="2"></li>
-							</ol> -->
+							</ol>
 							<!-- Wrapper for carousel items -->
 
-							<div class="carousel-inner testimonialcaurosal	">
+							<div class="carousel-inner testimonialcaurosal">
 
-								{% for testimonial in testimonials %}
+								
 								<div class="item active">
-									<div class="row">
-
-										<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+									
+										{% for testimonial in testimonials %}
+										<div class="col-lg-12 col-md-12">
 											<div class="media">
 												<div class="media-left d-flex center">
 													<a href="#">
@@ -502,118 +503,12 @@
 												</div>
 											</div>
 										</div>
-
-
-										<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-											<div class="media">
-												<div class="media-left d-flex mr-3">
-													<a href="#">
-														<img class="testimimage"
-															src="../static/img/root/team/team-10-m.png" alt="">
-													</a>
-												</div>
-												<div class="media-body">
-													<div class="testimonial">
-														<p class="testip">Vestibulum quis quam ut magna consequat
-															faucibus.
-															Pellentesque eget mi suscipit tincidunt. Utmtc tempus
-															dictum. Pellentesque virra.</p>
-														<p class="overview"><b>Antonio Mor</b>, Web Developer</p>
-													</div>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
+										{% endfor %}
+									
 								</div>
-								{% endfor %}
+								
 
-								<div class="item">
-									<div class="row">
-										<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-											<div class="media">
-												<div class="media-left d-flex mr-3">
-													<a href="#">
-														<img class="testimimage"
-															src="../static/img/root/team/team-11-m.png" alt="">
-													</a>
-												</div>
-												<div class="media-body">
-													<div class="testimonial">
-														<p class="testip">Lorem ipsum dolor sit amet, consec adipiscing
-															elit. Nam eusem
-															scelerisque tempor, varius quam luctus dui. Mauris magna
-															metus nec.</p>
-														<p class="overview"><b>Michael Holz</b>, Seo Analyst</p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-											<div class="media">
-												<div class="media-left d-flex mr-3">
-													<a href="#">
-														<img class="testimimage"
-															src="../static/img/root/team/team-12-m.png" alt="">
-													</a>
-												</div>
-												<div class="media-body">
-													<div class="testimonial">
-														<p class="testip">Vestibulum quis quam ut magna consequat
-															faucibus.
-															Pellentesque eget mi suscipit tincidunt. Utmtc tempus
-															dictum. Pellentesque virra.</p>
-														<p class="overview"><b>Mary Saveley</b>, Web Designer</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 
-								<div class="item">
-									<div class="row">
-										<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-											<div class="media">
-												<div class="media-left d-flex mr-3">
-													<a href="#">
-														<img class="testimimage"
-															src="../static/img/root/team/team-2-m.png" alt="">
-													</a>
-												</div>
-												<div class="media-body">
-													<div class="testimonial">
-														<p class="testip">Lorem ipsum dolor sit amet, consec adipiscing
-															elit. Nam eusem
-															scelerisque tempor, varius quam luctus dui. Mauris magna
-															metus nec.</p>
-														<p class="overview"><b>Martin Sommer</b>, UX Analyst</p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-											<div class="media">
-												<div class="media-left d-flex mr-3">
-													<a href="#">
-														<img class="testimimage"
-															src="../static/img/root/team/team-3-m.png" alt="">
-													</a>
-												</div>
-												<div class="media-body">
-													<div class="testimonial">
-														<p class="testip">Vestibulum quis quam ut magna consequat
-															faucibus.
-															Pellentesque eget mi suscipit tincidunt. Utmtc tempus
-															dictum. Pellentesque virra.</p>
-														<p class="overview"><b>John William</b>, Web Developer</p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
 
 							</div>
 
@@ -867,7 +762,7 @@
 					nav: false
 				},
 				1000: {
-					items: 2,
+					items: 1,
 					nav: true,
 					loop: false,
 					margin: 20

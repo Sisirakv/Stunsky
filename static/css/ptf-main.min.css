@@ -8014,7 +8014,7 @@ p.form-submit {
     -webkit-transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
     border-top: 1.5px solid var(--ptf-accent-1);
-    grid-template-columns: 4.5rem 10.75rem 1fr 2.75rem;
+    grid-template-columns: 5.5rem 12.75rem 1fr 2.75rem;
 }
 
 @media only screen and (max-width:1199px) {

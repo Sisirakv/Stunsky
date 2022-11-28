@@ -748,7 +748,7 @@
 		display: none !important;
 	}
 	.phone-email{
-		font-size: 15px;
+		font-size: 12.8px;
 	}
 	.bannerpara{
 		display: none;
@@ -764,9 +764,9 @@
 	.arrowabout{
 		display: none;
 	}
-	.bannericon{
+	/* .bannericon{
 		display: none;
-	}
+	} */
 	/* .banner {
 		background-image: url(../img/service-detail.jpg);
 		background-repeat: no-repeat;

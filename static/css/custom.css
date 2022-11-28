@@ -160,7 +160,9 @@
 
 /* min-width 768px */
 @media (min-width: 768px) {
-
+	.bannerbottom{
+		display: none !important;
+	}
 	.h6inservice{
 		/* display: none; */
 		padding: 130px 41px 0px 0px;
@@ -701,6 +703,21 @@
 
 /* max-width 575px */
 @media (max-width: 575px) {
+	.yellowconent{
+		margin-top: 0px;
+	}
+	.ptf-approach-box{
+		border-top:0px;
+	}
+	.bannerbottomlg{
+		display: none !important;
+	}
+	.phone-email{
+		font-size: 15px;
+	}
+	.bannerpara{
+		display: none;
+	}
 	.testimimage{
 		margin-top: 21px;
 		width: 50px !important;

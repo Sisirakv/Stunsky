@@ -61,7 +61,7 @@
 									<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
 										<div class="row">
 											<div class="col-lg-6">
-												<div class=""><img src="{{data.image.url}}" alt="{{data.title}}" loading="lazy" style="border: 2px solid;">
+												<div class=""><img src="{{data.image.crop.745x600}}" alt="{{data.title}}" loading="lazy" style="border: 2px solid;">
 												</div>
 											</div>
 											<div class="col-lg-6 mb-5 pb-5">
@@ -74,7 +74,7 @@
 												<br>
 												<div class="ptf-animated-block mt-2" data-aos="fade" data-aos-delay="0">
 													<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--inversed rounded"
-														href="#" target="_self">REQUEST A QUOTE</a>
+														href="{% url 'contact' %}" target="_self">REQUEST A QUOTE</a>
 												
 												</div>
 											</div>

@@ -14,7 +14,7 @@ def index(requset):
     clients = Client.objects.all()[:12]
     
     ###Recent work###
-    # category = Category.objects.filter(is_active = True)
+    portfolio = Portfolio.objects.all()[:8]
     ui_ux = Portfolio.objects.filter(category__title="UI/UX").last()
     graphics_design = Portfolio.objects.filter(category__title="Graphics Design").last()
     packaging = Portfolio.objects.filter(category__title="Packaging").last()
@@ -30,7 +30,7 @@ def index(requset):
         "web_development":web_development,
         "other_offerings":other_offerings,
         
-        # "portfolio":portfolio
+        "portfolio":portfolio
     }
     return render(requset, 'index.html', context)
 

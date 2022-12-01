@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
 {% comment %}
 <style>
@@ -56,6 +56,7 @@
 	.btnpadding {
 		padding-left: 38px;
 	}
+
 </style>
 <!--Main-->
 <main class="ptf-main">
@@ -359,7 +360,8 @@
 		font-weight: 700;
 		margin: 20px 0 30px;
 	}
-	.categoryvacc{
+
+	.categoryvacc {
 		font-size: 15px;
 		color: #222;
 		font-weight: 200;
@@ -505,6 +507,7 @@
 			box-shadow: 0 10px 40px 0 rgb(0 0 0 / 20%);
 		}
 	}
+
 </style>
 <main class="ptf-main">
 	<article class="ptf-page ptf-page--portfolio-listing">
@@ -543,21 +546,22 @@
 			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
 			<div class="container-xxl">
 				<h1 class="fz-40 fz-40--md fw-extrabold lh-1p1 has-black-color text-center">Open Position</h1>
-				
+
 
 				<div class="ptf-navbar-search" style="margin-left: 1054px;font-size: 1rem;">
 					<div class="ptf-navbar-search__wrapper">
-						<form  action="" method="GET">
+						<form action="" method="GET">
 							<input type="text" placeholder="Type and hit enter to search..." name="search">
 							<!-- <button class="btn btn-primary">Search</button> -->
-							
+
 						</form>
 					</div>
 					<a class="ptf-navbar-search__toggle" style="color: black;" href="#">
 						<i class="lnir lnir-search-alt" style="color: black;font-size: large;font-weight: 700;"></i>
-						
-							<i class="lnir lnir-close" style="color: black;font-size: large;font-weight: 700;margin-left: 20px;"></i>
-						</a>
+
+						<i class="lnir lnir-close"
+							style="color: black;font-size: large;font-weight: 700;margin-left: 20px;"></i>
+					</a>
 				</div>
 				<br><br>
 
@@ -582,9 +586,13 @@
 									<p class="category mb-2">{{job.job_title}}</p>
 									<br>
 									<ul class="d-flex" style="list-style-type: none">
-										<li class="categoryvacc mt-0 text-left"><img class="mt-0 pl-3 pr-2" src="{% static 'img/vaccancy.svg' %}" alt="icon">Vaccancy: {{job.vaccancy}}</li>
-										<li class="categoryvacc mt-0 text-right pl-5"><img class="mt-0 pl-3 pr-2" src="{% static 'img/experiance.svg' %}" alt="icon">Experiance: {{job.experience}} Year</li>
-									
+										<li class="categoryvacc mt-0 text-left"><img class="mt-0 pl-3 pr-2"
+												src="{% static 'img/vaccancy.svg' %}" alt="icon">Vaccancy:
+											{{job.vaccancy}}</li>
+										<li class="categoryvacc mt-0 text-right pl-5"><img class="mt-0 pl-3 pr-2"
+												src="{% static 'img/experiance.svg' %}" alt="icon">Experiance:
+											{{job.experience}} Year</li>
+
 									</ul>
 									<p><span class="CTA">Read More</span></p>
 
@@ -592,7 +600,7 @@
 							</div>
 						</div>
 						{% endfor %}
-						
+
 					</div>
 				</div>
 

@@ -120,7 +120,7 @@ def careers_details(request, id):
         new_application.save()
 
     context = {"job_details": job_details, "Jobdetails": Jobdetails}
-    return render(request, "Careers details.html", context)
+    return render(request, "careers_details.html", context)
 
 
 def ui_ux(requset):

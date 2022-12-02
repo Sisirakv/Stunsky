@@ -160,7 +160,9 @@
 
 /* min-width 768px */
 @media (min-width: 768px) {
-	
+	.titlecareer{
+		text-align: right !important;
+	}
 	.partnerscet{
 		--ptf-image-height: 40px;
 	}
@@ -188,13 +190,6 @@
 		padding-right: 5px;
 		font-weight: 800;
 	}
-
-	/* .banner {
-		background-image: url(../img/service-detail.jpg);
-		background-repeat: no-repeat;
-		background-position: calc(5vw - 121px) calc(59% + 132px);
-		height: 622px;
-	} */
 
 	.ptf-btn.ptf-btn--primary {
 		color: var(--ptf-color-white);
@@ -581,6 +576,10 @@
 		margin-left: 21px;
 		margin-top: 15px;
 	}
+	.portfoliocil{
+		margin-right: 10px !important;
+		margin-top: 0px !important;
+	}
 
 }
 
@@ -708,6 +707,19 @@
 
 /* max-width 575px */
 @media (max-width: 575px) {
+	#page-wrapper {
+		padding: 0% !important;
+	}
+	.jobtitle{
+		font-size: 2rem !important;
+	}
+	.titlecareer{
+		text-align: left !important;
+		margin-bottom: 8px;
+	}
+	.right {
+		border-left: 0px solid black !important;
+	}
 	.ptf-partner-box__image{
 		display: -webkit-box;
 		display: -webkit-flex;
@@ -764,6 +776,10 @@
 	}
 	.arrowabout{
 		display: none;
+	}
+	.portfoliocil{
+		margin-right: 30px !important;
+		margin-top: 30px !important;
 	}
 	/* .bannericon{
 		display: none;
@@ -910,9 +926,14 @@
 		margin-bottom: 0.5rem;
 	}
 
+
 	.footerh3 {
 		color: white !important;
-		font-size: 1.75rem !important;
+		font-size: 1.5rem !important;
+		margin-top: 0px !important;
+	}
+	.footer-logo{
+		margin-bottom: 11px !important;
 	}
 
 	.footer-text p {
@@ -928,7 +949,7 @@
 		font-weight: 700;
 		font-family: 'Poppins', sans-serif;
 		margin-bottom: 6px;
-		margin-top: 6px;
+		margin-top: 8px !important;
 
 	}
 

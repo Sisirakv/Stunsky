@@ -46,20 +46,20 @@
 			<div class="ptf-spacer" style=" --ptf-xxl: 6.25rem; --ptf-md: 3.125rem;"></div>
 			<!--Animated Block-->
 			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-				<div class="ptf-isotope-grid" data-columns="3" data-layout="masonry" data-x-gap="0" data-y-gap="10" data-controls="#ptf-filter-grid">
+				<div class="ptf-isotope-grid" data-columns="3" data-layout="masonry" data-x-gap="30" data-y-gap="30" data-controls="#ptf-filter-grid">
 					<div class="grid-sizer"></div>
 					{% for portfolios in portfolio %}
-					<div class=" grid-item filter-1 filter-4 filter-7 {{portfolios.category.title|slugify}}">
+					<div class="grid-item {{portfolios.category.title|slugify}}">
 						<!--Portfolio Item-->
 						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="{{portfolios.image.url}}"></a><img src=" {{portfolios.image.crop.675x675}} " alt="" loading="lazy">
+							<div class=""><a class="ptf-work__link" href="{{portfolios.image.url}}"></a><img src=" {{portfolios.image.crop.675x675}} " alt="" loading="lazy">
 							</div>
-							<div class="ptf-work__meta">
+							<!-- <div class="ptf-work__meta">
 								<div class="ptf-work__category">{{portfolios.category}}
 								</div>
 								<h4 class="ptf-work__title"><a href="#">{{portfolios.title}}</a>
 								</h4>
-							</div>
+							</div> -->
 						</article>
 					</div>
 					{% endfor %}

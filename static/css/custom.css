@@ -407,7 +407,7 @@
 		height: 110px;
 		position: absolute;
 		top: 0;
-		left: 50%;
+		left: 66%;
 		transform: translateX(-50%);
 		display: flex;
 		justify-content: center;
@@ -707,6 +707,9 @@
 
 /* max-width 575px */
 @media (max-width: 575px) {
+	.detailcareer{
+		text-align: left;
+	}
 	#page-wrapper {
 		padding: 0% !important;
 	}

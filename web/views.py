@@ -100,9 +100,9 @@ def careers(request):
         search_term = request.GET["search"]
         jobs = JobDetails.objects.all().filter(job_title__icontains=search_term)
         context = {"is_career": True, "jobs": jobs}
-        return render(request, "Careers.html", context)
+        return render(request, "careers.html", context)
     context = {"jobs": jobs}
-    return render(request, "Careers.html", context)
+    return render(request, "careers.html", context)
 
 
 def careers_details(request, id):
@@ -120,7 +120,7 @@ def careers_details(request, id):
         new_application.save()
 
     context = {"job_details": job_details, "Jobdetails": Jobdetails}
-    return render(request, "careers_details.html", context)
+    return render(request, "careers-details.html", context)
 
 
 def ui_ux(requset):
@@ -139,7 +139,7 @@ def graphic_design(requset):
         # "category":category,
         "portfolio": portfolio
     }
-    return render(requset, "graphic design.html", context)
+    return render(requset, "graphic-design.html", context)
 
 
 def packaging(requset):
@@ -151,21 +151,21 @@ def packaging(requset):
 def web_development(requset):
     portfolio = Portfolio.objects.filter(category__title="Web Development")
     context = {"portfolio": portfolio}
-    return render(requset, "web development.html", context)
+    return render(requset, "web-development.html", context)
 
 
 def other_offerings(requset):
-    return render(requset, "other offerings.html")
+    return render(requset, "other-offerings.html")
 
 
 def design_digital_media(request):
     category_digital_media = CategoryDigitalMedia.objects.filter(is_active=True)
     digital_media = DesignDigitalMedia.objects.all()
     context = {"is_product": True, "category_digital_media": category_digital_media, "digital_media": digital_media}
-    return render(request, "design and digital media.html", context)
+    return render(request, "design-digital-media.html", context)
 
 
 def image_data_services(request):
     data_service = ImgageDataService.objects.all()
     context = {"data_service": data_service}
-    return render(request, "image and data services.html", context)
+    return render(request, "image-data-services.html", context)

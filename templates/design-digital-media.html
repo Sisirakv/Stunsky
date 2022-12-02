@@ -3,14 +3,14 @@
 {% block content %}
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
 <!--Main-->
 <main class="ptf-main">
-<article class="ptf-page ptf-page--portfolio-grid">
-	<section class="has-accent-1-background banner other">
-		<!--Spacer-->
-		<div class="ptf-spacer" style=" --ptf-xxl: 16rem; --ptf-md: 12rem; --ptf-sm: 16rem;"></div>
+	<article class="ptf-page ptf-page--portfolio-grid">
+		<section class="has-accent-1-background banner other">
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 16rem; --ptf-md: 12rem; --ptf-sm: 16rem;"></div>
 			<div class="container-xxl">
 				<div class="row">
 					<div class="col-xl-10">
@@ -18,27 +18,28 @@
 						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 							<h1 class="fz-70 fz-40--md fw-extrabold lh-1p1 has-white-color">Design & Digital Media</h1>
 							<div class="ptf-spacer" style=" --ptf-xxl: 1rem;"></div>
-							<p class="fz-18">We wish to produce our thoughts, latest news, events and updates through our creative and engaging blogs to keep the users entertained and educated.</p>
-							
+							<p class="fz-18">We wish to produce our thoughts, latest news, events and updates through
+								our creative and engaging blogs to keep the users entertained and educated.</p>
+
 						</div>
 					</div>
 				</div>
 				<!--Spacer-->
 				<div class="ptf-spacer" style=" --ptf-xxl: 4.375rem; --ptf-sm: 3.375rem;"></div>
 			</div>
-		
-	</section>
-	<section>
-		<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-sm: 2rem;"></div>
-		<div class="container-xxl">
-			<!--Animated Block-->
-			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-				<ul class="ptf-filters ptf-filters--style-1" id="ptf-filter-grid">
-					<li class="filter-item  filter-item itemboarder-active" data-filter="*">All Categories</li>
-					{% for categories in category_digital_media %}
-					<li class="filter-item " data-filter=".{{categories.title|slugify}}">{{categories.title}}</li>
-					{% endfor %}
-					<!-- <li class="filter-item " data-filter=".filter-2">Infographics Design</li>
+
+		</section>
+		<section>
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-sm: 2rem;"></div>
+			<div class="container-xxl">
+				<!--Animated Block-->
+				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+					<ul class="ptf-filters ptf-filters--style-1" id="ptf-filter-grid">
+						<li class="filter-item  filter-item itemboarder-active" data-filter="*">All Categories</li>
+						{% for categories in category_digital_media %}
+						<li class="filter-item " data-filter=".{{categories.title|slugify}}">{{categories.title}}</li>
+						{% endfor %}
+						<!-- <li class="filter-item " data-filter=".filter-2">Infographics Design</li>
 					<li class="filter-item " data-filter=".filter-3">Vector Illustrations</li>
 					<li class="filter-item " data-filter=".filter-4">Logo & Branding Design</li>
 					<li class="filter-item " data-filter=".filter-5">Corporate Identity</li>
@@ -46,34 +47,38 @@
 					<li class="filter-item " data-filter=".filter-7">Newsletters</li>
 					<li class="filter-item " data-filter=".filter-8">Social Media Customization</li>
 					<li class="filter-item " data-filter=".filter-9">E-Mailer</li> -->
-				</ul>
-			</div>
-			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 6.25rem; --ptf-md: 3.125rem;"></div>
-			<!--Animated Block-->
-			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-				<div class="ptf-isotope-grid" data-columns="4" data-layout="masonry" data-x-gap="0" data-y-gap="20" data-controls="#ptf-filter-grid">
-					<div class="grid-sizer"></div>
+					</ul>
+				</div>
+				<!--Spacer-->
+				<div class="ptf-spacer" style=" --ptf-xxl: 6.25rem; --ptf-md: 3.125rem;"></div>
+				<!--Animated Block-->
+				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+					<div class="ptf-isotope-grid" data-columns="4" data-layout="masonry" data-x-gap="0" data-y-gap="20"
+						data-controls="#ptf-filter-grid">
+						<div class="grid-sizer"></div>
 
-					{% for digital_medias in digital_media %}
-					<div class=" grid-item filter-1 filter-4 filter-7 {{digital_medias.media_category.title|slugify}}">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {{digital_medias.image.url}} " alt="{{digital_medias.title}}" loading="lazy">
-							</div>
-							
-						</article>
+						{% for digital_medias in digital_media %}
+						<div
+							class=" grid-item filter-1 filter-4 filter-7 {{digital_medias.media_category.title|slugify}}">
+							<!--Portfolio Item-->
+							<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
+								<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img
+										src=" {{digital_medias.image.url}} " alt="{{digital_medias.title}}"
+										loading="lazy">
+								</div>
+
+							</article>
+						</div>
+						{% endfor %}
+
 					</div>
-					{% endfor %}
-					
 				</div>
 			</div>
-		</div>
-		<!--Spacer-->
-		<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-sm: 2rem;"></div>
-	</section>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-sm: 2rem;"></div>
+		</section>
 
-</article>
+	</article>
 </main>
 
-{% endblock %}	
+{% endblock %}

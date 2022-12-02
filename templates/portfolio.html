@@ -3,14 +3,14 @@
 {% block content %}
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
 <!--Main-->
 <main class="ptf-main">
-<article class="ptf-page ptf-page--portfolio-grid">
-	<section class="has-accent-1-background banner other">
-		<!--Spacer-->
-		<div class="ptf-spacer" style=" --ptf-xxl: 16rem; --ptf-md: 12rem; --ptf-sm: 16rem;"></div>
+	<article class="ptf-page ptf-page--portfolio-grid">
+		<section class="has-accent-1-background banner other">
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 16rem; --ptf-md: 12rem; --ptf-sm: 16rem;"></div>
 			<div class="container-xxl">
 				<div class="row">
 					<div class="col-xl-10">
@@ -18,100 +18,107 @@
 						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 							<h1 class="fz-70 fz-40--md fw-extrabold lh-1p1 has-white-color">Portfolio</h1>
 							<div class="ptf-spacer" style=" --ptf-xxl:1rem;"></div>
-							<p class="fz-18">We wish to produce our thoughts, latest news, events and updates through our creative and engaging blogs to keep the users entertained and educated.</p>
-							
+							<p class="fz-18">We wish to produce our thoughts, latest news, events and updates through
+								our creative and engaging blogs to keep the users entertained and educated.</p>
+
 						</div>
 					</div>
 				</div>
 				<!--Spacer-->
 				<div class="ptf-spacer" style=" --ptf-xxl: 4.375rem; --ptf-sm: 3.375rem;"></div>
 			</div>
-		
-	</section>
-	<section>
-		<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-sm: 2rem;"></div>
-		<div class="container-xxl">
-			<!--Animated Block-->
-			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-				<ul class="ptf-filters ptf-filters--style-1" id="ptf-filter-grid">
-					<li class="filter-item filter-item-active" data-filter="*">All</li>
-					{% for categories in category %}
-					
-					<li class="filter-item" data-filter=".{{categories.title|slugify}}">{{categories.title}}</li>
 
-					{% endfor %}
-				</ul>
-			</div>
-			<!--Spacer-->
-			<div class="ptf-spacer" style=" --ptf-xxl: 6.25rem; --ptf-md: 3.125rem;"></div>
-			<!--Animated Block-->
-			<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-				<div class="ptf-isotope-grid" data-columns="3" data-layout="masonry" data-x-gap="30" data-y-gap="30" data-controls="#ptf-filter-grid">
-					<div class="grid-sizer"></div>
-					{% for portfolios in portfolio %}
-					<div class="grid-item {{portfolios.category.title|slugify}}">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class=""><a class="ptf-work__link" href="{{portfolios.image.url}}"></a><img src=" {{portfolios.image.crop.675x675}} " alt="" loading="lazy">
-							</div>
-							<!-- <div class="ptf-work__meta">
-								<div class="ptf-work__category">{{portfolios.category}}
+		</section>
+		<section>
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-sm: 2rem;"></div>
+			<div class="container-xxl">
+				<!--Animated Block-->
+				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+					<ul class="ptf-filters ptf-filters--style-1" id="ptf-filter-grid">
+						<li class="filter-item filter-item-active" data-filter="*">All</li>
+						{% for categories in category %}
+
+						<li class="filter-item" data-filter=".{{categories.title|slugify}}">{{categories.title}}</li>
+
+						{% endfor %}
+					</ul>
+				</div>
+				<!--Spacer-->
+				<div class="ptf-spacer" style=" --ptf-xxl: 6.25rem; --ptf-md: 3.125rem;"></div>
+				<!--Animated Block-->
+				<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+					<div class="ptf-isotope-grid" data-columns="3" data-layout="masonry" data-x-gap="0" data-y-gap="10"
+						data-controls="#ptf-filter-grid">
+						<div class="grid-sizer"></div>
+						{% for portfolios in portfolio %}
+						<div class=" grid-item filter-1 filter-4 filter-7 {{portfolios.category.title|slugify}}">
+							<!--Portfolio Item-->
+							<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
+								<div class="ptf-work__media"><a class="ptf-work__link"
+										href="{{portfolios.image.url}}"></a><img
+										src=" {{portfolios.image.crop.675x675}} " alt="" loading="lazy">
 								</div>
-								<h4 class="ptf-work__title"><a href="#">{{portfolios.title}}</a>
-								</h4>
-							</div> -->
-						</article>
-					</div>
-					{% endfor %}
-					{% comment %}
-					<div class=" grid-item filter-2 filter-5">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/grid/work-2.png' %} " alt="" loading="lazy">
-							</div>
-							<div class="ptf-work__meta">
-								<div class="ptf-work__category">Illustration
+								<div class="ptf-work__meta">
+									<div class="ptf-work__category">{{portfolios.category}}
+									</div>
+									<h4 class="ptf-work__title"><a href="#">{{portfolios.title}}</a>
+									</h4>
 								</div>
-								<h4 class="ptf-work__title"><a href="#">LW Poster</a>
-								</h4>
-							</div>
-						</article>
-					</div>
-					<div class=" grid-item filter-3 filter-6">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/grid/work-3.png' %} " alt="" loading="lazy">
-							</div>
-							<div class="ptf-work__meta">
-								<div class="ptf-work__category">UI/UX
+							</article>
+						</div>
+						{% endfor %}
+						{% comment %}
+						<div class=" grid-item filter-2 filter-5">
+							<!--Portfolio Item-->
+							<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
+								<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img
+										src=" {% static 'img/portfolio/grid/work-2.png' %} " alt="" loading="lazy">
 								</div>
-								<h4 class="ptf-work__title"><a href="#">Lewis Studio Website</a>
-								</h4>
-							</div>
-						</article>
-					</div>
-					<div class=" grid-item filter-1 filter-4 filter-7">
-						<!--Portfolio Item-->
-						<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
-							<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img src=" {% static 'img/portfolio/grid/work-4.png' %} " alt="" loading="lazy">
-							</div>
-							<div class="ptf-work__meta">
-								<div class="ptf-work__category">Branding, Packaging, Motion Video
+								<div class="ptf-work__meta">
+									<div class="ptf-work__category">Illustration
+									</div>
+									<h4 class="ptf-work__title"><a href="#">LW Poster</a>
+									</h4>
 								</div>
-								<h4 class="ptf-work__title"><a href="#">SPA Brand</a>
-								</h4>
-							</div>
-						</article>
+							</article>
+						</div>
+						<div class=" grid-item filter-3 filter-6">
+							<!--Portfolio Item-->
+							<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
+								<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img
+										src=" {% static 'img/portfolio/grid/work-3.png' %} " alt="" loading="lazy">
+								</div>
+								<div class="ptf-work__meta">
+									<div class="ptf-work__category">UI/UX
+									</div>
+									<h4 class="ptf-work__title"><a href="#">Lewis Studio Website</a>
+									</h4>
+								</div>
+							</article>
+						</div>
+						<div class=" grid-item filter-1 filter-4 filter-7">
+							<!--Portfolio Item-->
+							<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
+								<div class="ptf-work__media"><a class="ptf-work__link" href="#"></a><img
+										src=" {% static 'img/portfolio/grid/work-4.png' %} " alt="" loading="lazy">
+								</div>
+								<div class="ptf-work__meta">
+									<div class="ptf-work__category">Branding, Packaging, Motion Video
+									</div>
+									<h4 class="ptf-work__title"><a href="#">SPA Brand</a>
+									</h4>
+								</div>
+							</article>
+						</div>
+						{% endcomment %}
 					</div>
-					{% endcomment %}
 				</div>
 			</div>
-		</div>
-		<!--Spacer-->
-		<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
-	</section>
-	
-</article>
+			<!--Spacer-->
+			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
+		</section>
+
+	</article>
 </main>
 
-{% endblock %}	
+{% endblock %}

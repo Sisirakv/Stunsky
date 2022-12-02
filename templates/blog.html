@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <!--Main-->
 <main class="ptf-main">
 	<article class="ptf-page ptf-page--blog-grid">
@@ -16,8 +16,9 @@
 						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 							<h1 class="fz-70 fz-40--md fw-extrabold lh-1p1 has-white-color">Blog</h1>
 							<div class="ptf-spacer" style=" --ptf-xxl: 1rem;"></div>
-							<p class="fz-18">We wish to produce our thoughts, latest news, events and updates through our creative and engaging blogs to keep the users entertained and educated.</p>
-							
+							<p class="fz-18">We wish to produce our thoughts, latest news, events and updates through
+								our creative and engaging blogs to keep the users entertained and educated.</p>
+
 						</div>
 					</div>
 				</div>
@@ -41,9 +42,12 @@
 							<a href="{% url 'Blog Details' blog_banner.id %}">
 								<div class="swiper-slide">
 									<div class="ptf-news-slide">
-										<div class="ptf-news-slide__media"><img src="{{blog_banner.image.crop.1520x760}}" alt="" loading="lazy"></div>
+										<div class="ptf-news-slide__media"><img
+												src="{{blog_banner.image.crop.1520x760}}" alt="" loading="lazy"></div>
 										<div class="ptf-news-slide__content">
-											<div class="ptf-news-slide__meta"><span class="cat">{{blog_banner.category}}</span><span class="date">{{blog_banner.date}}</span>
+											<div class="ptf-news-slide__meta"><span
+													class="cat">{{blog_banner.category}}</span><span
+													class="date">{{blog_banner.date}}</span>
 											</div>
 											<h3 class="ptf-news-slide__title"><a>{{blog_banner.heading}}</a>
 											</h3>
@@ -55,7 +59,7 @@
 									</div>
 								</div>
 							</a>
-							
+
 							{% endfor %}
 							<!-- <div class="swiper-slide">
 								<div class="ptf-news-slide">
@@ -117,13 +121,18 @@
 							<div class=" grid-item filter-1 filter-4">
 								<!--Blog Post-->
 								<article class="ptf-post ptf-post--style-1">
-									<div class="ptf-post__media"><a class="ptf-work__link" href="{% url 'Blog Details' blog_list.id %}"></a><img class="bannerimage" src=" {{blog_list.image.crop.440x370}} " alt="" loading="lazy">
+									<div class="ptf-post__media"><a class="ptf-work__link"
+											href="{% url 'Blog Details' blog_list.id %}"></a><img class="bannerimage"
+											src=" {{blog_list.image.crop.440x370}} " alt="" loading="lazy">
 									</div>
 									<div class="ptf-post__content">
 										<header class="ptf-post__header">
-											<div class="ptf-post__meta"><span class="cat">{{blog_list.category}}</span><span class="date">{{blog_list.date}}</span>
+											<div class="ptf-post__meta"><span
+													class="cat">{{blog_list.category}}</span><span
+													class="date">{{blog_list.date}}</span>
 											</div>
-											<h3 class="ptf-post__title"><a href="{% url 'Blog Details' blog_list.id %}" class="blogtitle">{{blog_list.heading}}</a>
+											<h3 class="ptf-post__title"><a href="{% url 'Blog Details' blog_list.id %}"
+													class="blogtitle">{{blog_list.heading}}</a>
 											</h3>
 										</header>
 									</div>
@@ -132,11 +141,11 @@
 						</div>
 						{% endfor %}
 					</div>
-				
+
 				</div>
 				<!--Spacer-->
 				<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
-				
+
 			</div>
 			<!--Spacer-->
 			<div class="ptf-spacer" style=" --ptf-xxl: 5rem; --ptf-md: 5rem; --ptf-sm: 2rem;"></div>
@@ -147,7 +156,7 @@
 				<div class="ptf-divider" style="--ptf-height: 1px; --ptf-color: var(--ptf-color-14);"></div>
 			</div>
 		</section>
-		
+
 	</article>
 </main>
 

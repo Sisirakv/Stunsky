@@ -2,7 +2,6 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <main class="ptf-main">
 	<article class="ptf-page ptf-page--about-us ptf-page--home-modern">
@@ -73,8 +72,11 @@
 							<div class="text-center">
 								<!--Mask Image-->
 								<div class="ptf-mask-image ">
-									<img src=" {% static 'img/about-us-main-image.jpg' %} " alt="" loading="lazy" style="--ptf-mask-image: url({% static 'img/about-us-main-image.jpg' %});">
-									<img class="aboutimg" src=" {% static 'img/root/about-us/about-us-main-image-layer-1.png' %} " alt="" loading="lazy">
+									<img src=" {% static 'img/about-us-main-image.jpg' %} " alt="" loading="lazy"
+										style="--ptf-mask-image: url({% static 'img/about-us-main-image.jpg' %});">
+									<img class="aboutimg"
+										src=" {% static 'img/root/about-us/about-us-main-image-layer-1.png' %} " alt=""
+										loading="lazy">
 								</div>
 							</div>
 						</div>
@@ -281,7 +283,8 @@
 						<!--Animated Block-->
 						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 							<!--Services Box-->
-							<div class="ptf-service-box "><a class="ptf-service-box__link" href="{% url 'other offerings' %}"></a>
+							<div class="ptf-service-box "><a class="ptf-service-box__link"
+									href="{% url 'other offerings' %}"></a>
 								<div class="ptf-service-box__icon">
 									<i class="lnil lnil-video-camera-alt-1"></i>
 								</div>
@@ -329,7 +332,8 @@
 						<!--Animated Block-->
 						<div class="ptf-animated-block" data-aos-delay="0">
 							<!--Partner Box-->
-							<div class="ptf-partner-box" style="--ptf-hover-background: #fcf8f4; --ptf-image-height: 40px;">
+							<div class="ptf-partner-box"
+								style="--ptf-hover-background: #fcf8f4; --ptf-image-height: 40px;">
 								<div class="ptf-partner-box__image">
 									<img src=" {{cilent.image.url}} " alt="{{cilent.name}}" loading="lazy">
 								</div>
@@ -346,7 +350,8 @@
 			</div>
 		</section>
 		<!-- Partner logo section end -->
-		<section class="jarallax"><img class="jarallax-img" src=" {% static 'img/about-us-testimonial-background.png' %}" alt="" loading="lazy">
+		<section class="jarallax"><img class="jarallax-img"
+				src=" {% static 'img/about-us-testimonial-background.png' %}" alt="" loading="lazy">
 			<!--Spacer-->
 			<div class="ptf-spacer" style=" --ptf-xxl: 12.5rem; --ptf-md: 6.25rem;">
 			</div>

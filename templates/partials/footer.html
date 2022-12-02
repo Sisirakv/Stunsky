@@ -93,26 +93,37 @@
 		</footer>
 	{% endcomment %}
 
-	<footer class="footer-section">
-        <div class="container">
-            <div class="footer-cta pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12 col-12 mb-30">
-                        <div class="single-cta">
-                            <i class="lnil lnil-map-marker  "></i>
-                            <div class="cta-text">
-                                <h4>Find us</h4>
-                                <span>1010 Avenue, sw 54321, chandigarh</span>
-                            </div>
+<!--Footer-->
+{% comment %}
+<footer class="ptf-footer ptf-footer--style-1">
+    <div class="container-xxl">
+        <div class="ptf-footer__top">
+            <div class="row">
+                <div class="col-12 col-xl-3">
+                    <!--Animated Block-->
+                    <div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
+                        <div class="ptf-footer-heading has-black-color" style="max-width: 37.5rem;color:white;">About Us
                         </div>
+                        <p style="font-size: 20px;text-align: justify;color:white;">Quis autem vel eum iure reprehend
+                            erit quiin voluptate velit esse quam
+                            nihil molestiae consequatur velllu m
+                            qui dolorem eum fugiat quo</p>
+                        <!-- <div class="ptf-footer-heading has-black-color">Start by <a class="has-accent-1 text-decoration-underline" href="contact.html">Saying Hi!</a></div> -->
                     </div>
-                    <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12 col-12 mb-30">
-                        <div class="single-cta">
-                            <i class="lnil lnil-phone-ring"></i>
-                            <div class="cta-text">
-                                <h4>Call us</h4>
-                                <span>+91 9526850904</span>
-                            </div>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3 ml-5">
+                    <!--Animated Block-->
+                    <div class="ptf-animated-block" data-aos="fade" data-aos-delay="100">
+                        <div class="ptf-widget ptf-widget-links has-black-color">
+                            <h1 class="ptf-widget-title" style="color:white;"><b>Quick Links</b> </h1>
+                            <ul>
+                                <li><a href="#">Faqs</a></li>
+                                <li><a href="#">Term & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Affiliate</a></li>
+                                <li><a href="#">Services</a></li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-xl-4 col-md-4 col-lg-4 col-sm-12 col-12 mb-30">
@@ -199,33 +210,41 @@
                                     </div>
 								</div>
                             </div>
-                            
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-center text-lg-left">
-                        <div class="copyright-text">
-                            <p>© 2022 Stunsky Design and Technologies. All rights reserved.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-none d-lg-block text-right">
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">|</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-  
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p>© 2022 Stunsky Design and Technologies. All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 d-none d-lg-block text-right">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">|</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Phone button  -->
+<a href="tel:9526850904" style="position:fixed; width:34px; height:34px; bottom:77px; right:21px; z-index:100;">
+    <img src=" {% static 'img/viber.png' %} " class="img-fluid" alt=""></a>
+
+<!-- Whatsapp Button -->
+<a href="https://api.whatsapp.com/send?phone=919526850904&text=Welcome to Stunsky" target="_blank"
+    style="	position:fixed; width:34px; height:45px; bottom:18px; right:21px; z-index:100;"><img
+        src=" {% static 'img/whatsapp (2).png' %} " class="img-fluid" alt=""></a>

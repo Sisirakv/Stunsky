@@ -160,6 +160,15 @@
 
 /* min-width 768px */
 @media (min-width: 768px) {
+	.banner {
+		background-image: url(../img/bannerimage.jpg);
+		background-repeat: no-repeat;
+		background-position: bottom right;
+		/* background-position: calc(5vw - 121px) calc(59% + 132px); */
+		background-size: cover;
+		/* width: 100%; */
+		height: 622px;
+	}
 	.moblieview{
 		display: none;
 	}
@@ -796,12 +805,12 @@
 	/* .bannericon{
 		display: none;
 	} */
-	/* .banner {
-		background-image: url(../img/service-detail.jpg);
+	.banner {
+		background-image: url(../img/bannerimage.jpg);
 		background-repeat: no-repeat;
 		background-position: calc(5vw - 121px) calc(59% + 132px);
-		height: 531px;
-	} */
+		/* height: 531px; */
+	}
 	.ptf-custom-9182 {
 		font-size: 38px;
 		line-height: 50px;

@@ -160,6 +160,9 @@
 
 /* min-width 768px */
 @media (min-width: 768px) {
+	.moblieview{
+		display: none;
+	}
 	.titlecareer{
 		text-align: right !important;
 	}
@@ -322,7 +325,7 @@
 
 	.ptf-navbar-logo {
 		width: 549px;
-		padding-bottom: 32px;
+		padding-bottom: 57px;
 	}
 
 	.blogtitle {
@@ -586,7 +589,7 @@
 
 @media (max-width: 1024px) {
 	.black {
-		width: 260%;
+		width: 54%;
 	}
 	.icontop1 {
 		font-size: 58px !important;
@@ -707,6 +710,12 @@
 
 /* max-width 575px */
 @media (max-width: 575px) {
+	.largescreenview{
+		display: none;
+	}
+	.yellowphone{
+		font-size: 20px
+	}
 	.detailcareer{
 		text-align: left;
 	}
@@ -728,7 +737,7 @@
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
-		height: 5.3125rem;
+		height: 3.3125rem;
 		-webkit-transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
 		transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
 		-webkit-box-align: center;
@@ -751,7 +760,7 @@
 	}
 	.ptf-partner-box{
 		--ptf-hover-background: var(--ptf-color-7);
-		--ptf-image-height: 30px;
+		--ptf-image-height: 24px;
 		margin-top: 0px;
 	}
 	.yellowconent{
@@ -817,7 +826,11 @@
 	}
 
 	.carousel {
-		margin: 11px auto !important;
+		margin: -19px auto !important;
+		padding: 0 0px !important;
+	}
+	.testimonial {
+		margin: 25px auto !important;
 		padding: 0 0px !important;
 	}
 
@@ -887,12 +900,12 @@
 
 	.parabox {
 		font-weight: 800;
-		font-size: 20px
+		font-size: 26px
 		/* padding-right: 16px !important;
 		padding-left: 14px !important; */
 	}
 	.black {
-		width: 38%;
+		width: 46%;
 	}
 
 	.bannersub {
@@ -1205,7 +1218,7 @@
 }
 
 .container-xxl {
-	width: 81%;
+	width: 90%;
 }
 
 
@@ -1430,7 +1443,7 @@ ul {
 .footer-social-icon i {
 	height: 40px;
 	width: 40px;
-	text-align: center;
+	/* text-align: center; */
 	line-height: 38px;
 	border-radius: 50%;
 }
@@ -1615,3 +1628,5 @@ menu button span:last-of-type {
 .buttn{
 	border-radius: 13% !important;
 }
+
+

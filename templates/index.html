@@ -22,7 +22,7 @@
 						<div class="ptf-spacer" style=" --ptf-xxl: 0.625rem;">
 						</div>
 						<!--Spacer -->
-						<div class="ptf-spacer" style=" --ptf-xxl: 10.125rem; --ptf-md: 8.0625rem;">
+						<div class="ptf-spacer" style=" --ptf-xxl: 10.125rem; --ptf-md: 5.0625rem;">
 						</div>
 						<!--Animated Block-->
 						<div class="ptf-animated-block bannerdigital" data-aos="fade" data-aos-delay="200">
@@ -342,7 +342,7 @@
 								<div class="ptf-approach-box__content text-center">
 									<p class="parabox "><img src="{% static 'img/phoneicon.png' %} " alt="phone icon"
 											style="width: 8%;"> CALL US DIRECTLY</p>
-									<p>+91 9526 850 904</p>
+									<p class="yellowphone"><a href="tel:9526850904" class="atag">+91 9526 850 904</a></p>
 								</div>
 							</div>
 						</div>
@@ -356,7 +356,7 @@
 
 								<div class="ptf-approach-box__content text-center">
 									<p class="parabox">1000+</p>
-									<p>HAPPY CLIENTS
+									<p class="yellowphone">HAPPY CLIENTS
 										IN 10 YEARS</p>
 								</div>
 							</div>
@@ -371,7 +371,7 @@
 
 								<div class="ptf-approach-box__content text-center">
 									<p class="parabox">10000+</p>
-									<p>PROJECTS COMPLETED</p>
+									<p class="yellowphone">PROJECTS COMPLETED</p>
 								</div>
 							</div>
 						</div>
@@ -411,7 +411,7 @@
 							<h1 class="h1title"><b> People Say About Our Works And
 									Say Our Agency</b></h1>
 						</center>
-						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<div id="myCarousel" class="carousel slide testimonial" data-ride="carousel">
 							<!-- Carousel indicators -->
 							<!-- <ol class="carousel-indicators">
 								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -421,11 +421,8 @@
 							<!-- Wrapper for carousel items -->
 
 							<div class="carousel-inner testimonialcaurosal">
-
-
+								{% for testimonial in testimonials %}
 								<div class="item active">
-
-									{% for testimonial in testimonials %}
 									<div class="col-lg-12 col-md-12">
 										<div class="media">
 											<div class="media-left d-flex center">
@@ -442,13 +439,8 @@
 											</div>
 										</div>
 									</div>
-									{% endfor %}
-
 								</div>
-
-
-
-
+								{% endfor %}
 							</div>
 
 						</div>

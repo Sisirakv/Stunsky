@@ -21,23 +21,22 @@ from django.views.decorators.csrf import csrf_exempt
 def index(requset):
     testimonials = Testimonial.objects.all()
     clients = Client.objects.all()[:12]
-
     # Recent work
     portfolio = Portfolio.objects.all()[:8]
-    ui_ux = Portfolio.objects.filter(category__title="UI/UX").last()
-    graphics_design = Portfolio.objects.filter(category__title="Graphics Design").last()
-    packaging = Portfolio.objects.filter(category__title="Packaging").last()
-    web_development = Portfolio.objects.filter(category__title="Web Development").last()
-    other_offerings = Portfolio.objects.filter(category__title="Other offerings").last()
-    print(ui_ux)
+    # ui_ux = Portfolio.objects.filter(category__title="UI/UX").last()
+    # graphics_design = Portfolio.objects.filter(category__title="Graphics Design").last()
+    # packaging = Portfolio.objects.filter(category__title="Packaging").last()
+    # web_development = Portfolio.objects.filter(category__title="Web Development").last()
+    # other_offerings = Portfolio.objects.filter(category__title="Other offerings").last()
+
     context = {
         "testimonials": testimonials,
         "clients": clients,
-        "ui_ux": ui_ux,
-        "graphics_design": graphics_design,
-        "packaging": packaging,
-        "web_development": web_development,
-        "other_offerings": other_offerings,
+        # "ui_ux": ui_ux,
+        # "graphics_design": graphics_design,
+        # "packaging": packaging,
+        # "web_development": web_development,
+        # "other_offerings": other_offerings,
         "portfolio": portfolio,
     }
     return render(requset, "index.html", context)

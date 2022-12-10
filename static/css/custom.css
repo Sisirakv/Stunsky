@@ -164,9 +164,9 @@
 		grid-template-columns: 4.5rem 12.75rem 1fr 0.75rem !important;
 	}
 	.banner {
-		background-image: url(../img/bannerimg2.jpg);
+		background-image: url(../img/bannerimg3.png);
 		background-repeat: no-repeat;
-		background-position: bottom right;
+		background-position: bottom center;
 		background-size: cover;
 		min-height: 100vh;
 		margin-top: 80px;
@@ -811,9 +811,9 @@
 		display: none;
 	} */
 	.banner {
-		background-image: url(../img/bannerimg2.jpg);
+		background-image: url(../img/bannerimg3.png);
 		background-repeat: no-repeat;
-		background-position: bottom right;
+		background-position: bottom center;
 		background-size: cover;
 		min-height: 100vh;
     	margin-top: 80px;

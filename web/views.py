@@ -12,6 +12,7 @@ from .models import JobDetails
 from .models import Portfolio
 from .models import Team
 from .models import Testimonial
+from .models import DataProcessingService
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
@@ -168,3 +169,8 @@ def image_data_services(request):
     data_service = ImgageDataService.objects.all()
     context = {"data_service": data_service}
     return render(request, "image-data-services.html", context)
+
+def data_processing_service(request):
+    data_service = DataProcessingService.objects.all()
+    context = {"data_service": data_service}
+    return render(request, "data-processing-services.html", context)

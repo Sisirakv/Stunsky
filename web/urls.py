@@ -18,4 +18,5 @@ urlpatterns = [
     path("careers_details/<int:id>", views.careers_details, name="careers_details"),
     path("design & digital media", views.design_digital_media, name="design & digital media"),
     path("image & data services", views.image_data_services, name="image & data services"),
+    path("data-processing-services", views.data_processing_service, name="data-processing-services"),
 ]

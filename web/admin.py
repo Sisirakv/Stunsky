@@ -10,6 +10,7 @@ from .models import JobDetails
 from .models import Portfolio
 from .models import Team
 from .models import Testimonial
+from .models import DataProcessingService
 from django.contrib import admin
 
 
@@ -26,3 +27,4 @@ admin.site.register(Team)
 admin.site.register(CategoryDigitalMedia)
 admin.site.register(DesignDigitalMedia)
 admin.site.register(ImgageDataService)
+admin.site.register(DataProcessingService)

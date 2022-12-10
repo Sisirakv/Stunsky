@@ -148,3 +148,11 @@ class ImgageDataService(models.Model):
 
     def __str__(self):
         return self.title
+    
+class DataProcessingService(models.Model):
+    image = VersatileImageField("Image", upload_to="images/dataprocessingservice/")
+    title = models.CharField(max_length=200)
+    details = models.TextField()
+
+    def __str__(self):
+        return self.title

@@ -400,11 +400,11 @@
     color: var(--ptf-accent-1) !important
 }
 
-/* .has-accent-1-background {
+.has-accent-1-background {
 
     background-image: linear-gradient(to right, #ff6b02, #ffa500 );
-    /* background-color: var(--ptf-accent-1) 
-} */
+    
+}
 
 .has-accent-2 {
     color: var(--ptf-accent-2)

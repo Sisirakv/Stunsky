@@ -2,15 +2,10 @@
 {% load static %}
 {% block content %}
 
-
-
-
 <!--Main-->
 <main class="ptf-main">
 	<!--Single Post-->
 	<article class="ptf-single-post">
-
-
 		<!--Post Header-->
 		<header class="ptf-single-post__header ptf-single-post__header--style-1">
 			<div class="ptf-spacer" style=" --ptf-xxl: 7rem;"></div>
@@ -22,16 +17,14 @@
 		</header>
 		<!--Post Media-->
 		<div class="ptf-single-post__media">
-			<div class="container-xxl"><img src=" {{blog.image.crop.1520x760}} " alt="" loading="lazy"></div>
+			<div class="container-xxl"><img src=" {{blog.image.crop.1520x760}} " alt=""
+					loading="lazy"></div>
 		</div>
 		<!--Post Wrapper-->
 		<div class="ptf-single-post__wrapper">
 			<div class="container-xxl">
 				<div class="row">
 					<div class="col-xl-12">
-						<!--Post Info-->
-						<!-- <div class="ptf-single-post__info"><a class="author" href="#"><i class="lnil lnil-user"></i>by <span>Admin</span></a><a class="view" href="#"><i class="lnil lnil-eye"></i>5,6k Views</a><a class="comments" href="#"><i class="lnil lnil-comments"></i>3 Comments</a><a class="report" href="#"><i class="lnil lnil-warning"></i>Report</a></div> -->
-						<!--Post Excerpt-->
 						<div class="ptf-single-post__excerpt">{{blog.short_heading}}</div>
 						<!--Post Content-->
 						<div class="ptf-single-post__content">

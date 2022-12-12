@@ -2,9 +2,6 @@
 {% load static %}
 {% block content %}
 
-
-
-
 <!--Main-->
 <main class="ptf-main">
 	<article class="ptf-page ptf-page--portfolio-grid">
@@ -18,7 +15,8 @@
 						<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
 							<h1 class="fz-70 fz-40--md fw-extrabold lh-1p1 has-white-color">Design & Digital Media</h1>
 							<div class="ptf-spacer" style=" --ptf-xxl: 1rem;"></div>
-							<p class="fz-18">Our team of designers and digital media specialists delivers the most effective solutions.</p>
+							<p class="fz-18">Our team of designers and digital media specialists delivers the most
+								effective solutions.</p>
 
 						</div>
 					</div>
@@ -38,14 +36,6 @@
 						{% for categories in category_digital_media %}
 						<li class="filter-item " data-filter=".{{categories.title|slugify}}">{{categories.title}}</li>
 						{% endfor %}
-						<!-- <li class="filter-item " data-filter=".filter-2">Infographics Design</li>
-					<li class="filter-item " data-filter=".filter-3">Vector Illustrations</li>
-					<li class="filter-item " data-filter=".filter-4">Logo & Branding Design</li>
-					<li class="filter-item " data-filter=".filter-5">Corporate Identity</li>
-					<li class="filter-item " data-filter=".filter-6">Brochure Design Flyers</li>
-					<li class="filter-item " data-filter=".filter-7">Newsletters</li>
-					<li class="filter-item " data-filter=".filter-8">Social Media Customization</li>
-					<li class="filter-item " data-filter=".filter-9">E-Mailer</li> -->
 					</ul>
 				</div>
 				<!--Spacer-->
@@ -57,8 +47,7 @@
 						<div class="grid-sizer"></div>
 
 						{% for digital_medias in digital_media %}
-						<div
-							class=" grid-item {{digital_medias.media_category.title|slugify}}">
+						<div class=" grid-item {{digital_medias.media_category.title|slugify}}">
 							<!--Portfolio Item-->
 							<article class="ptf-work ptf-work--style-1 ptf-work--large-title">
 								<div class=""><a class="ptf-work__link" href="{{digital_medias.image.url}}"></a><img

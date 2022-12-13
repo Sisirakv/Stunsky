@@ -1,8 +1,11 @@
 .banner {
     background-image: url(../img/banner.jpg);
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: top center;
     background-size: cover;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
 }
 .ptf-btn.ptf-btn--primary {
     color: var(--ptf-color-white);
@@ -15,7 +18,9 @@
     background-image: linear-gradient(to right, #ff6b02, #ffa500);
 }
 .h-100vh {
-    height: 100vh;
+    height: calc(100vh - 100px);
+    box-sizing: border-box;
+    min-height: 500px;
 }
 p {
     font-size: 17px;
@@ -715,14 +720,6 @@ p {
     .bannerbottomlg {
         display: none !important;
     }
-
-    .phone-email {
-    }
-
-    .bannerpara {
-        display: none;
-    }
-
     .testimimage {
         margin-top: 46px;
         width: 50px !important;
@@ -741,19 +738,6 @@ p {
         margin-right: 30px !important;
         margin-top: 30px !important;
     }
-
-    /* .bannericon{
-		display: none;
-	} */
-    .banner {
-        background-image: url(../img/banner.jpg);
-        background-repeat: no-repeat;
-        background-position: bottom center;
-        background-size: cover;
-        min-height: 100vh;
-        margin-top: 130px;
-    }
-
     .ptf-custom-9182 {
         line-height: 50px;
     }

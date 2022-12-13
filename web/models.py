@@ -3,8 +3,6 @@ from tinymce.models import HTMLField
 from versatileimagefield.fields import VersatileImageField
 
 
-
-
 class Blog(models.Model):
     image = VersatileImageField("Image", upload_to="images/blog/")
     heading = models.TextField()
@@ -148,7 +146,8 @@ class ImgageDataService(models.Model):
 
     def __str__(self):
         return self.title
-    
+
+
 class DataProcessingService(models.Model):
     image = VersatileImageField("Image", upload_to="images/dataprocessingservice/")
     title = models.CharField(max_length=200)

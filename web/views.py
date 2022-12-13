@@ -6,17 +6,16 @@ from .models import Blog
 from .models import Category
 from .models import CategoryDigitalMedia
 from .models import Client
+from .models import DataProcessingService
 from .models import DesignDigitalMedia
 from .models import ImgageDataService
 from .models import JobDetails
 from .models import Portfolio
 from .models import Team
 from .models import Testimonial
-from .models import DataProcessingService
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-
 
 
 def index(requset):
@@ -169,6 +168,7 @@ def image_data_services(request):
     data_service = ImgageDataService.objects.all()
     context = {"data_service": data_service}
     return render(request, "image-data-services.html", context)
+
 
 def data_processing_service(request):
     data_service = DataProcessingService.objects.all()

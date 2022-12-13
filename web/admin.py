@@ -4,15 +4,14 @@ from .models import Category
 from .models import CategoryDigitalMedia
 from .models import Client
 from .models import Contact
+from .models import DataProcessingService
 from .models import DesignDigitalMedia
 from .models import ImgageDataService
 from .models import JobDetails
 from .models import Portfolio
 from .models import Team
 from .models import Testimonial
-from .models import DataProcessingService
 from django.contrib import admin
-
 
 
 admin.site.register(Blog)

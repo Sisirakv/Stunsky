@@ -1,14 +1,9 @@
-{% extends 'partials/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
-
 {% block css_plugin %}
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
-
 {% endblock %}
 
 {% block content %}
@@ -18,78 +13,54 @@
 	<article class="ptf-page ptf-page--home-default">
 		<!-- Banner section -->
 		<section class="has-accent-1-background banner">
-			<div class="ptf-spacer" style=" --ptf-xxl: 7rem;">
-			</div>
 			<div class="container-xxl">
-				<div class="row">
-					<div class="col-xl-6 col-sm-10 col-md-5 col-10">
-						<div class="ptf-spacer" style=" --ptf-xxl: 0.625rem;">
-						</div>
-						<!--Spacer -->
-						<div class="ptf-spacer" style=" --ptf-xxl: 10.125rem; --ptf-md: 5.0625rem;">
-						</div>
-						<!--Animated Block-->
+
+				<div class="row align-items-center h-100vh">
+					<div class="col-xl-7 col-md-8 col-sm-10 col-12">
+
 						<div class="ptf-animated-block bannerdigital" data-aos="fade" data-aos-delay="200">
-							<h3 class="text-white">
-								<img src=" {% static 'img/white_line.png' %} " alt="" class="bannersubline">
+							<div class="subcontainer">
 								<b>Stunksy</b>
-							</h3>
-							<p class="fz-70 fz-40--md fw-extrabold lh-1p1 has-white-color">
+								<span class="bannersubline"></span>
+							</div>
+							<h1 class="fz-60 fz-40--md fw-extrabold lh-1p1 has-white-color">
 								Digital Solutions At It’s Best
-							</p>
+							</h1>
 						</div>
+
 						<div class="row">
 							<div class="col-xl-8 col-md-12">
-								<!--Animated Block-->
-								<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-									<!--Spacer-->
-									<div class="ptf-spacer" style=" --ptf-xxl: 2.375rem; --ptf-md: 0.1875rem;">
-									</div>
-									<p class="fz-24 has-white-color bannerpara">
-										Stunsky is the best digital solution provider in Kerala, India. Get your
-										business boosted with the experts of stunsky Design & Technologies.
-									</p>
-								</div>
-								<!--Spacer-->
-								<div class="ptf-spacer" style=" --ptf-xxl: 4.875rem; --ptf-md: 1.4375rem;">
-								</div>
-								<!--Animated Block-->
-								<div class="ptf-animated-block" data-aos="fade" data-aos-delay="0">
-									<!--Button--><a class="ptf-btn ptf-btn--primary ptf-btn--instyle=" border-radius:
+
+								<p class="has-white-color bannerpara">
+									Stunsky is the best digital solution provider in Kerala, India. Get your
+									business boosted with the experts of stunsky Design & Technologies.
+								</p>
+					
+								<div class="ptf-animated-block mt-3" data-aos="fade" data-aos-delay="0">
+									<a class="ptf-btn ptf-btn--primary ptf-btn--instyle=" border-radius:
 										9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
 										href="{% url 'about us' %}" target="_self">Learn More</a>
 									<a class="ptf-btn ptf-btn--primary ptf-btn--instyle=" border-radius:
 										9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
 										href="{% url 'contact' %}" target="_self">Get A Quote</a>
 								</div>
-								<div class="ptf-spacer" style=" --ptf-xxl: 1.875rem; --ptf-md: 17.4375rem;"></div>
-								<div class="row ptf-animated-block bannerbottomlg">
-									<div class="col-lg-6 col-md-6 col-sm-6 col-6 px-0">
+
+								<div class="ptf-animated-block bannerbottomlg mt-3 d-flex">
+									<div class="item p-1">
 										<i class="lnil lnil-phone bannericon text-white"></i>
 										<b class="phone-email text-white">+91 9526 850 904 </b>
 									</div>
-									<div class="col-lg-6 col-md-6 col-sm-6 col-6 px-0">
+									<div class="item p-1">
 										<i class="lnil lnil-envelope-alt bannericon text-white"></i>
 										<b class="phone-email text-white">info@stunsky.com </b>
 									</div>
 								</div>
-								<!-- </div> -->
+
 							</div>
 						</div>
 					</div>
-					<div class="row ptf-animated-block bannerbottom">
-						<div class="col-lg-6 col-md-6 col-sm-6 col-6">
-							<i class="lnil lnil-phone bannericon text-white"></i>
-							<b class="phone-email text-white">+91 9526 850 904 </b>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 col-6">
-							<i class="lnil lnil-envelope-alt bannericon text-white"></i>
-							<b class="phone-email text-white">info@stunsky.com </b>
-						</div>
-					</div>
 				</div>
-				<div class="ptf-spacer" style=" --ptf-xxl: 0.875rem; --ptf-md: 3.4375rem; --ptf-sm: 1rem;">
-				</div>
+				
 			</div>
 		</section>
 		<!-- banner section end -->
@@ -298,7 +269,7 @@
 		</section>
 		<!-- Latest work section end -->
 		<!-- Our Apporch section -->
-		<section class="has-accent-1-background">
+		<section class="gradient-bg">
 			<!--Spacer-->
 			<div class="ptf-spacer" style=" --ptf-xxl: 3rem; --ptf-md: 5rem; --ptf-sm: 2rem;">
 			</div>

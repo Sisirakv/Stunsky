@@ -15,14 +15,14 @@
                 <nav class="ptf-nav ptf-nav--default">
                     <!--Menu-->
                     <ul class="sf-menu">
-                        <li class="menu-item-has-children two-columns"><a href="{% url 'index' %}"><span>Home</span></a>
+                        <li class="hide_on_mobile menu-item-has-children two-columns"><a href="{% url 'index' %}"><span>Home</span></a>
 
                         </li>
-                        <li class="menu-item-has-children two-columns"><a
+                        <li class="hide_on_mobile menu-item-has-children two-columns"><a
                                 href="{% url 'about us' %}"><span>About</span></a>
 
                         </li>
-                        <li class="menu-item-has-children"><a href="#"><span>Services</span></a>
+                        <li class="hide_on_mobile menu-item-has-children"><a href="#"><span>Services</span></a>
 
                             <ul class="sub-menu">
                                 <li><a href="{% url 'Graphic Design' %}" class="atag"><span>Graphics Design</span></a>
@@ -39,18 +39,20 @@
 
                         </li>
 
-                        <li class="menu-item-has-children"><a href="{% url 'portfolio' %}"><span>Portfolio</span></a>
+                        <li class="hide_on_mobile menu-item-has-children"><a href="{% url 'portfolio' %}"><span>Portfolio</span></a>
 
                         </li>
-                        <li class="menu-item-has-children two-columns"><a
+                        <li class="hide_on_mobile menu-item-has-children two-columns"><a
                                 href="{% url 'contact' %}"><span>Contact</span></a>
 
+                        </li>
+                        <li>
+                            <a class="ptf-offcanvas-menu-icon js-offcanvas-menu-toggle" href="#"><i class="lnir lnir-menu-alt-5"></i></a>
                         </li>
                     </ul>
                 </nav>
 
-                <!--Offcanvas Menu Toggle--><a class="ptf-offcanvas-menu-icon js-offcanvas-menu-toggle" href="#"><i
-                        class="lnir lnir-menu-alt-5"></i></a>
+                
             </div>
         </div>
     </div>

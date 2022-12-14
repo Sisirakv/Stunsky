@@ -596,7 +596,7 @@
 }
 
 .fz-60 {
-    font-size: 3.75rem
+    font-size: 5.75rem
 }
 
 @media only screen and (max-width:767px) {
@@ -648,7 +648,7 @@
 }
 
 .fz-18 {
-    font-size: 1.125rem
+    font-size: 1.5rem
 }
 
 .fz-16 {
@@ -1122,6 +1122,9 @@ h1 {
     font-weight: 800;
     line-height: 1.2
 }
+span{
+    font-size: 1.5rem;
+}
 
 @media only screen and (min-width:1200px) {
 
@@ -1548,7 +1551,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 
 .ptf-checkbox {
-    font-size: .875rem;
+    font-size: 1.19rem;
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2724,7 +2727,7 @@ p.form-submit {
 }
 
 .ptf-nav--default .sf-menu>li>a {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
@@ -3579,7 +3582,8 @@ p.form-submit {
 }
 
 .ptf-post--style-1 .ptf-post__meta span.cat {
-    font-weight: 700
+    font-weight: 700;
+
 }
 
 .ptf-post--style-1 .ptf-post__title {
@@ -4247,7 +4251,7 @@ p.form-submit {
 }
 
 .ptf-filters--style-1 {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     color: var(--ptf-color-black)
 }
 
@@ -6759,7 +6763,7 @@ p.form-submit {
 }
 
 .ptf-btn {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     line-height: 1;
     z-index: 1;
     display: -webkit-inline-box;
@@ -7984,13 +7988,14 @@ p.form-submit {
     -webkit-transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: background-color var(--ptf-transition-duration) var(--ptf-transition-easing);
     border-top: 1.5px solid var(--ptf-accent-1);
-    grid-template-columns: 5.5rem 12.75rem 1fr 2.75rem;
+    grid-template-columns: 5.5rem 10.75rem 1fr 2.75rem;
     align-items: center;
 }
 
 @media only screen and (max-width:1199px) {
     .ptf-service-box {
-        grid-template-columns: 7.5rem 1fr 1fr
+        grid-template-columns: 4.5rem 1.5fr 2fr;
+        padding: 1rem;
     }
 }
 
@@ -8920,9 +8925,9 @@ p.form-submit {
     text-align: var(--ptf-text-align)
 }
 
-.ptf-testimonial__content {
+.ptf-testimonial__content p{
     font-family: var(--ptf-secondary-font);
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1.375;
     color: var(--ptf-content-color)
 }
@@ -9270,6 +9275,12 @@ a{
     background: #ffffff !important;
     border: 5px double;
 
+}
+
+.has-accent-1-background {
+
+    background-image: linear-gradient(to right, #ff6b02, #ffa500 );
+    
 }
 
 

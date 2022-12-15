@@ -63,8 +63,8 @@
 						{% for job in jobs %}
 						<div class="col-lg-4 col-md-4 col-sm-12 col-12">
 							<div class="wrapper">
-								<div class="orange-top orange-border"></div>
-								<div class="orange-left orange-border"></div>
+								<!-- <div class="orange-top orange-border"></div>
+								<div class="orange-left orange-border"></div> -->
 								<a class="white-card" href="{% url 'careers_details' job.id %}">
 									<p class="category" style="color:#fd7e14 ;">New</p>
 									<p class="category mb-2">{{job.job_title}}</p>
@@ -78,7 +78,7 @@
 											{{job.experience}} Year</li>
 
 									</ul>
-									<p><span class="CTA">Read More</span></p>
+									<p><span class="CTA">Apply Now</span></p>
 
 								</a>
 							</div>

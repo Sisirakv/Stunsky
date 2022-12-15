@@ -23,7 +23,7 @@
 								<b>Stunksy</b>
 								<span class="bannersubline"></span>
 							</div>
-							<h1 class="fz-60 fz-40--md fw-extrabold lh-1p1 has-white-color">
+							<h1 class="fz-60 fz-60--md fw-extrabold lh-1p1 has-white-color">
 								Digital Solutions <br>At It’s Best
 							</h1>
 						</div>
@@ -36,7 +36,7 @@
 									business boosted with the experts of stunsky Design & Technologies.
 								</p>
 					
-								<div class="ptf-animated-block mt-5" data-aos="fade" data-aos-delay="0">
+								<div class="ptf-animated-block mt-5 pt-5" data-aos="fade" data-aos-delay="0">
 									<a class="ptf-btn ptf-btn--primary ptf-btn--instyle=" border-radius:
 										9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
 										href="{% url 'about us' %}" target="_self">Learn More</a>
@@ -44,17 +44,24 @@
 										9.25px;box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)"
 										href="{% url 'contact' %}" target="_self">Get A Quote</a>
 								</div>
-
-								<div class="ptf-animated-block bannerbottomlg d-flex pl-0 ml-0">
-									<div class="item p-1">
-										<i class="lnil lnil-phone bannericon text-white"></i>
-										<b class="phone-email text-white">+91 9526 850 904 </b>
+								<div class="row ml-2">
+									<div class=" col-lg-6 col-md-12 ptf-animated-block bannerbottomlg pl-0 ml-0">
+										<div class="item p-1">
+											<i class="lnil lnil-phone bannericon text-white"></i>
+											<b class="phone-email text-white">+91 9526 850 904 </b>
+										</div>
 									</div>
-									<div class="item p-1">
-										<i class="lnil lnil-envelope-alt bannericon1 text-white"></i>
-										<b class="phone-email text-white">info@stunsky.com </b>
+									<div class="col-lg-6 col-md-12 ptf-animated-block bannerbottomlg1 pl-0 ml-0">
+										<div class="item p-1">
+											<i class="lnil lnil-envelope-alt bannericon1 text-white"></i>
+											<b class="phone-email text-white">info@stunsky.com </b>
+										</div>
 									</div>
 								</div>
+								<!-- <div class="ptf-animated-block bannerbottomlg d-flex pl-0 ml-0">
+									
+									
+								</div> -->
 
 							</div>
 						</div>
@@ -260,6 +267,13 @@
 							</div>
 						</div>
 						{% endfor %}
+						<div class="ptf-animated-block text-center">
+							<div class="ptf-spacer" style=" --ptf-xxl: 2.5rem;">
+							</div>
+							<a class="ptf-btn ptf-btn--primary ptf-btn--in orangebutton" href="/about%20us" target="_self">Learn More
+								<i style="padding-left:7px;" class="lnil lnil-arrow-right"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -293,8 +307,7 @@
 								style="--ptf-title-color: var(--ptf-color-white);">
 
 								<div class="ptf-approach-box__content text-center">
-									<p class="parabox "><img src="{% static 'img/phoneicon.png' %} " alt="phone icon"
-											style="width: 5%;"> CALL US DIRECTLY</p>
+									<p class="parabox "><img class="phoneiconyellow" src="{% static 'img/phoneicon.png' %} " alt="phone icon"> CALL US DIRECTLY</p>
 									<p class="yellowphone"><a href="tel:9526850904" class="atag">+91 9526 850 904</a>
 									</p>
 								</div>

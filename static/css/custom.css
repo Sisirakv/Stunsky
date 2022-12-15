@@ -1862,7 +1862,7 @@ menu button span:last-of-type {
         left: 10px;
         top: 11px;
         width: calc(63% - 24px);
-        height: calc(105% - 85px);
+        height: calc(111% - 85px);
         text-align: center;
         box-shadow: 0 10px 40px 0 rgb(0 0 0 / 20%);
     }
@@ -1876,12 +1876,15 @@ menu button span:last-of-type {
     .categoryvacc {
         color: #222;
         font-weight: 200;
-        margin: 0px 20px 7px 16px;
+        margin: 0px 0px 6px 3px;
     }
 
     .white-card img {
-        width: 24px;
+        width: 27px;
         margin-top: 44px;
+    }
+    .bannerbottomlg {
+        margin-top: 72px !important;
     }
 }
 
@@ -1943,4 +1946,16 @@ menu button span:last-of-type {
 
 .bannerdigital{
     margin-top: 87px;
+}
+
+.careerul ul{
+    font-size: 12px !important;
+}
+.right p{
+    font-size: 12px !important;
+}
+
+input::file-selector-button {
+    padding: 4px 12px;
+    border-radius: 3px;
 }

@@ -4221,8 +4221,8 @@ p.form-submit {
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    margin-top: 1.625rem;
-    margin-left: 2.5rem;
+    margin-top: 0.625rem;
+    margin-left: 1.5rem;
     cursor: pointer;
     -webkit-transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);
     transition: all var(--ptf-transition-duration) var(--ptf-transition-easing);

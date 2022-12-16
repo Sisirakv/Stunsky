@@ -1959,3 +1959,8 @@ input::file-selector-button {
     padding: 4px 12px;
     border-radius: 3px;
 }
+@media screen and (max-width: 490px) {
+    .ptf-service-box__content {
+        width: 100%;
+    }
+}
